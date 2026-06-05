@@ -1,20 +1,57 @@
-/* AUGIC — Couleurs logo raffinées : Vert #023c22 · Or #d4af37 · Rouge bordeaux #720501 */
+/* ==========================================================================
+   AUGIC — Premium Design System (Navy Blue, Steel Blue, Orange Accent)
+   ========================================================================== */
 
 :root {
-    --green: #023c22;
-    --green-dark: #012214;
-    --gold: #d4af37;
-    --wine: #720501;
+    --navy: #0F172A;
+    --navy-dark: #0F172A;
+    --steel-blue: #1E40AF;
+    --orange: #F97316;
+    --orange-hover: #EA580C;
     --white: #FFFFFF;
-    --bg-light: #f8faf8;
-    --outline: #d2dbd2;
+    --bg-light: #F8FAFC;
+    --text-charcoal: #1F2937;
+    --text-light: #4B5563;
+    --outline: #CBD5E1;
+    --outline-light: #E2E8F0;
+    
+    /* Legacy aliases to maintain compatibility with existing HTML classes */
+    --green: #0F172A;
+    --green-dark: #090D1A;
+    --gold: #F97316;
+    --wine: #1E40AF;
 }
 
-::-webkit-scrollbar { width: 7px; }
-::-webkit-scrollbar-track { background: var(--white); }
-::-webkit-scrollbar-thumb { background: var(--green); border-radius: 4px; }
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-light);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--steel-blue);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--navy);
+}
 
-video { max-width: 100%; }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-charcoal);
+    background-color: var(--bg-light);
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+video {
+    max-width: 100%;
+}
 
 .material-symbols-outlined {
     font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
@@ -23,311 +60,326 @@ video { max-width: 100%; }
     vertical-align: middle;
 }
 
-/* Barre tricolore raffinée — 2px d'épaisseur au sommet */
-.augic-tricolor {
-    height: 2.5px;
-    width: 100%;
-    background: linear-gradient(90deg,
-        #023c22 0%, #023c22 33.33%,
-        #d4af37 33.33%, #d4af37 66.66%,
-        #720501 66.66%, #720501 100%);
-}
+/* ==========================================================================
+   Header & Navigation (Sticky with Top Bar)
+   ========================================================================== */
 
-/* Floating Glassmorphic Header Capsule */
-.augic-header {
+.site-header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 50;
-    padding: 1.25rem 1rem;
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    background: transparent;
-    border: none;
-}
-.augic-header > div:first-child {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 9999px;
-    box-shadow: 0 10px 30px rgba(12, 15, 20, 0.03);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    padding-left: 2rem;
-    padding-right: 2rem;
-    height: 4.5rem !important;
-}
-.augic-header .augic-tricolor {
-    display: none; /* Hidden on floating header to maintain clean capsule form */
-}
-.augic-header.is-scrolled {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-.augic-header.is-scrolled > div:first-child {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 20px 40px rgba(12, 15, 20, 0.05), 0 0 1px rgba(212, 175, 55, 0.15);
-    border-color: rgba(212, 175, 55, 0.15);
-    max-width: 1200px;
-    height: 4rem !important;
+    transition: transform 0.4s ease;
 }
 
-/* Navigation Links underline slide effect */
-.augic-header nav a {
+/* Top bar styles */
+.header-topbar {
+    background-color: var(--navy);
+    color: rgba(255, 255, 255, 0.85);
+    height: 40px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-topbar a {
+    transition: color 0.2s ease;
+}
+
+.header-topbar a:hover {
+    color: var(--orange);
+}
+
+/* Main Navbar */
+.header-navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    height: 80px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid var(--outline-light);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+}
+
+/* Scrolled Header State */
+.site-header.is-scrolled .header-topbar {
+    margin-top: -40px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.site-header.is-scrolled .header-navbar {
+    height: 70px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+/* Nav Link Hover Underline Effect */
+.nav-link {
     position: relative;
     transition: color 0.3s ease;
 }
-.augic-header nav a::after {
+
+.nav-link::after {
     content: "";
     position: absolute;
     bottom: -4px;
     left: 0;
     width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, #023c22, #d4af37, #720501);
+    height: 2.5px;
+    background-color: var(--orange);
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.augic-header nav a:hover::after {
+
+.nav-link:hover::after,
+.nav-link.active::after {
     transform: scaleX(1);
     transform-origin: left;
 }
 
+/* ==========================================================================
+   Buttons (Ref sweeps & Orange CTA)
+   ========================================================================== */
+
+/* Orange primary button */
+.augic-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(249, 115, 22, 0.25);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.augic-btn-orange::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 30%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(30deg);
+    transition: all 0.6s ease;
+    pointer-events: none;
+}
+
+.augic-btn-orange:hover::after {
+    left: 140%;
+}
+
+.augic-btn-orange:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+    background-color: var(--orange-hover);
+    border-color: var(--orange-hover);
+}
+
+.augic-btn-orange:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Navy secondary button */
+.augic-btn-navy {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--navy);
+    border: 1px solid var(--navy);
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.2);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.augic-btn-navy::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 30%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(30deg);
+    transition: all 0.6s ease;
+    pointer-events: none;
+}
+
+.augic-btn-navy:hover::after {
+    left: 140%;
+}
+
+.augic-btn-navy:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.35);
+    background-color: var(--steel-blue);
+    border-color: var(--steel-blue);
+}
+
+/* Outline button */
+.augic-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.augic-btn-outline:hover {
+    background-color: var(--white);
+    color: var(--navy);
+    border-color: var(--white);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Backward compatibility classes */
+.augic-btn-gold {
+    composes: augic-btn-orange;
+    background-color: var(--orange);
+    border-color: var(--orange);
+}
+.augic-btn-gold:hover {
+    background-color: var(--orange-hover);
+    border-color: var(--orange-hover);
+}
+.augic-btn-green {
+    composes: augic-btn-navy;
+    background-color: var(--navy);
+    border-color: var(--navy);
+}
+
+/* ==========================================================================
+   Hero Section & Overlays
+   ========================================================================== */
+
+.augic-hero__overlay {
+    background: linear-gradient(135deg, 
+        rgba(15, 23, 42, 0.95) 0%, 
+        rgba(15, 23, 42, 0.8) 50%, 
+        rgba(15, 23, 42, 0.4) 100%
+    );
+}
+
+.text-shadow-hero {
+    text-shadow: 0 4px 24px rgba(15, 23, 42, 0.5);
+}
+
 .augic-tag {
     display: inline-block;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: var(--gold);
-    padding: 5px 14px;
-    background: rgba(212, 175, 55, 0.08);
+    color: var(--orange);
+    padding: 6px 14px;
+    background: rgba(249, 115, 22, 0.08);
     border-radius: 9999px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(249, 115, 22, 0.2);
 }
+
+/* ==========================================================================
+   Service Cards & Badges
+   ========================================================================== */
 
 .augic-card {
     background: var(--white);
-    border: 1px solid rgba(2, 60, 34, 0.08);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid var(--outline-light);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
 }
+
 .augic-card::before {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #023c22, #d4af37, #720501);
+    background: linear-gradient(90deg, var(--navy), var(--steel-blue), var(--orange));
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .augic-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(212, 175, 55, 0.35);
-    box-shadow: 0 20px 40px rgba(2, 60, 34, 0.05), 0 0 20px rgba(212, 175, 55, 0.08);
+    transform: translateY(-6px);
+    border-color: rgba(30, 64, 175, 0.15);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
 }
-.augic-card:hover::before { transform: scaleX(1); }
+
+.augic-card:hover::before { 
+    transform: scaleX(1); 
+}
 
 .augic-card__icon {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(2, 60, 34, 0.03);
-    border: 1px solid rgba(2, 60, 34, 0.08);
-    color: var(--green);
+    background: rgba(30, 64, 175, 0.05);
+    border: 1px solid rgba(30, 64, 175, 0.1);
+    color: var(--steel-blue);
     transition: all 0.3s ease;
 }
+
 .augic-card:hover .augic-card__icon {
-    background: var(--green);
-    border-color: var(--green);
+    background: var(--steel-blue);
+    border-color: var(--steel-blue);
     color: var(--white);
-    transform: rotate(5deg) scale(1.05);
+    transform: scale(1.05) rotate(3deg);
 }
 
-/* Button sweep light reflections & transitions */
-.augic-btn-gold {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    font-family: Montserrat, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--white);
-    background: var(--gold);
-    border: 1px solid var(--gold);
-    border-radius: 8px;
-    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.25);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    position: relative;
-    overflow: hidden;
-}
-.augic-btn-gold::after {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -60%;
-    width: 30%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.25);
-    transform: rotate(30deg);
-    transition: all 0.6s ease;
-    pointer-events: none;
-}
-.augic-btn-gold:hover::after {
-    left: 140%;
-}
-.augic-btn-gold:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-    background: #cba32d;
-}
-.augic-btn-gold:active { transform: translateY(0) scale(0.98); }
-
-.augic-btn-green {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    font-family: Montserrat, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--white);
-    background: var(--green);
-    border: 1px solid var(--green);
-    border-radius: 8px;
-    box-shadow: 0 4px 14px rgba(2, 60, 34, 0.2);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    position: relative;
-    overflow: hidden;
-}
-.augic-btn-green::after {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -60%;
-    width: 30%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.25);
-    transform: rotate(30deg);
-    transition: all 0.6s ease;
-    pointer-events: none;
-}
-.augic-btn-green:hover::after {
-    left: 140%;
-}
-.augic-btn-green:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(2, 60, 34, 0.35);
-    background: #034f2d;
-}
-.augic-btn-green:active { transform: translateY(0) scale(0.98); }
-
-.augic-btn-outline {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    font-family: Montserrat, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--white);
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-.augic-btn-outline:hover {
-    background: var(--white);
-    color: var(--green);
-    border-color: var(--white);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
-}
-
-/* Cinematic Dark overlay for background images in hero sections — Deep Obsidian/Charcoal Gradient */
-.augic-hero__overlay {
-    background: linear-gradient(135deg, rgba(12, 15, 20, 0.96) 0%, rgba(12, 15, 20, 0.75) 60%, rgba(12, 15, 20, 0.4) 100%);
-}
-
-.augic-hero__accent {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 16px;
-}
-.augic-hero__dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-}
-.augic-hero__dot--green { background: var(--green); }
-.augic-hero__dot--gold { background: var(--gold); }
-.augic-hero__dot--wine { background: var(--wine); }
-
-.text-shadow-hero {
-    text-shadow: 0 4px 24px rgba(12, 15, 20, 0.55);
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-main { flex: 1 0 auto; }
-
-.augic-footer {
-    flex-shrink: 0;
-    background-color: #0c0f14;
-    color: #FFFFFF;
-    position: relative;
-    width: 100%;
-    z-index: 10;
-    border-top: 1px solid rgba(212, 175, 55, 0.08);
-}
-.augic-footer .augic-tricolor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2.5px;
-}
-.augic-footer h4 { color: var(--gold); }
-.augic-footer p,
-.augic-footer li,
-.augic-footer a { color: rgba(255, 255, 255, 0.7); }
-.augic-footer a:hover { color: var(--gold); }
-.augic-footer .augic-footer__copy { color: var(--gold); }
-
+/* Badges */
 .augic-badge-wine {
     display: inline-block;
     padding: 6px 14px;
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #FFFFFF;
-    background: var(--wine);
+    color: var(--white);
+    background-color: var(--orange);
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(114, 5, 1, 0.25);
+    box-shadow: 0 4px 10px rgba(249, 115, 22, 0.25);
 }
 
 .augic-badge-gold {
@@ -335,76 +387,168 @@ main { flex: 1 0 auto; }
     padding: 6px 14px;
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #FFFFFF;
-    background: var(--gold);
+    color: var(--white);
+    background-color: var(--steel-blue);
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 4px 10px rgba(30, 64, 175, 0.2);
 }
 
+/* Sections */
 .augic-section-alt {
-    background: #f3f6f3;
-    border-top: 1px solid rgba(2, 60, 34, 0.04);
-    border-bottom: 1px solid rgba(2, 60, 34, 0.04);
+    background-color: var(--bg-light);
+    border-top: 1px solid var(--outline-light);
+    border-bottom: 1px solid var(--outline-light);
 }
+
+/* ==========================================================================
+   Project & Gallery Layouts
+   ========================================================================== */
 
 .augic-project {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    border: 1px solid rgba(2, 60, 34, 0.08);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+    border: 1px solid var(--outline-light);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
 }
+
 .augic-project img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.augic-project:hover img { transform: scale(1.05); }
+
+.augic-project:hover img { 
+    transform: scale(1.08); 
+}
+
 .augic-project__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(12, 15, 20, 0.95) 0%, rgba(12, 15, 20, 0.3) 70%, transparent 100%);
+    background: linear-gradient(to top, 
+        rgba(15, 23, 42, 0.95) 0%, 
+        rgba(15, 23, 42, 0.4) 65%, 
+        transparent 100%
+    );
     opacity: 0;
     transition: opacity 0.35s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 2rem;
-    color: #FFFFFF;
+    color: var(--white);
 }
-.augic-project:hover .augic-project__overlay { opacity: 1; }
+
+.augic-project:hover .augic-project__overlay { 
+    opacity: 1; 
+}
+
 .augic-project__tag {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: var(--orange);
     margin-bottom: 6px;
 }
 
+/* Filter buttons */
+.filter-btn {
+    padding: 8px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 9999px;
+    border: 1.5px solid var(--outline);
+    color: var(--text-light);
+    background-color: transparent;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    border-color: var(--steel-blue);
+    color: var(--steel-blue);
+}
+
+.filter-btn.active {
+    background-color: var(--steel-blue);
+    border-color: var(--steel-blue);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+}
+
+/* ==========================================================================
+   Testimonial Quotes
+   ========================================================================== */
+
 .augic-quote {
     background: var(--white);
-    border: 1px solid rgba(2, 60, 34, 0.06);
-    border-left: 4px solid var(--gold);
+    border: 1px solid var(--outline-light);
+    border-left: 4px solid var(--orange);
     border-radius: 4px 12px 12px 4px;
     padding: 2.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.015);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
     transition: all 0.3s ease;
 }
+
 .augic-quote:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(2, 60, 34, 0.04);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.05);
 }
+
+/* ==========================================================================
+   Footer (Obsidian Dark Navy)
+   ========================================================================== */
+
+.augic-footer {
+    flex-shrink: 0;
+    background-color: #0b0f19;
+    color: #FFFFFF;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.augic-footer h4 { 
+    color: var(--white); 
+}
+
+.augic-footer p,
+.augic-footer li,
+.augic-footer a { 
+    color: rgba(255, 255, 255, 0.65); 
+}
+
+.augic-footer a:hover { 
+    color: var(--orange); 
+}
+
+.augic-footer .augic-footer__copy { 
+    color: rgba(255, 255, 255, 0.4); 
+}
+
+/* ==========================================================================
+   Generic Components & Utilities
+   ========================================================================== */
 
 .reveal {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.reveal.active { opacity: 1; transform: translateY(0); }
+
+.reveal.active { 
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
 @media (prefers-reduced-motion: reduce) {
     .reveal { opacity: 1; transform: none; transition: none; }
 }
@@ -414,13 +558,20 @@ main { flex: 1 0 auto; }
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.3s ease;
 }
-.faq-grid-transition.open { grid-template-rows: 1fr; }
-.faq-grid-content { overflow: hidden; }
+
+.faq-grid-transition.open { 
+    grid-template-rows: 1fr; 
+}
+
+.faq-grid-content { 
+    overflow: hidden; 
+}
 
 .map-pulse {
     animation: mapPulse 2s infinite;
     transform-origin: center;
 }
+
 @keyframes mapPulse {
     0% { transform: scale(0.8); opacity: 0.5; }
     50% { transform: scale(1.4); opacity: 1; }
@@ -432,37 +583,41 @@ main { flex: 1 0 auto; }
     position: absolute;
     top: 0; bottom: 0; left: 50%;
     width: 2px;
-    background: rgba(2, 60, 34, 0.08);
+    background: rgba(30, 64, 175, 0.1);
     transform: translateX(-50%);
 }
+
 @media (max-width: 768px) {
     .timeline-container::before { left: 20px; }
 }
 
-/* Luminous Background Glow Blobs */
+/* Glow Blobs */
 .glow-blob {
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
-    filter: blur(120px);
+    filter: blur(100px);
     z-index: 0;
     pointer-events: none;
-    opacity: 0.08;
-}
-.glow-blob-gold {
-    background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
-}
-.glow-blob-green {
-    background: radial-gradient(circle, var(--green) 0%, transparent 70%);
+    opacity: 0.06;
 }
 
-/* Animations */
+.glow-blob-gold {
+    background: radial-gradient(circle, var(--orange) 0%, transparent 70%);
+}
+
+.glow-blob-green {
+    background: radial-gradient(circle, var(--steel-blue) 0%, transparent 70%);
+}
+
+/* Keyframes & Animations */
 @keyframes float {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
+    50% { transform: translateY(-6px); }
     100% { transform: translateY(0px); }
 }
+
 .animate-float {
     animation: float 4s ease-in-out infinite;
 }

@@ -3,31 +3,31 @@ tailwind.config = {
     theme: {
         extend: {
             colors: {
-                primary: "#023c22",
-                "primary-container": "#034f2d",
+                primary: "#0F172A",
+                "primary-container": "#1E293B",
                 "on-primary": "#FFFFFF",
-                secondary: "#d4af37",
-                "secondary-container": "#e0c266",
-                "on-secondary": "#101820",
-                "on-secondary-container": "#101820",
-                tertiary: "#720501",
-                "tertiary-container": "#8b0702",
-                "on-tertiary": "#FFFFFF",
-                wine: "#720501",
-                gold: "#d4af37",
-                green: "#023c22",
-                background: "#f8faf8",
+                secondary: "#1E40AF",
+                "secondary-container": "#2563EB",
+                "on-secondary": "#FFFFFF",
+                accent: "#F97316",
+                "accent-container": "#FB923C",
+                "on-accent": "#FFFFFF",
+                orange: "#F97316",
+                gold: "#F97316", // alias gold to orange to support existing elements cleanly
+                green: "#1E40AF", // alias green to secondary steel blue
+                wine: "#0F172A",  // alias wine to primary navy
+                background: "#F8FAFC",
                 surface: "#FFFFFF",
-                "surface-container-low": "#faf9f6",
-                "surface-container": "#e6ebe6",
-                "on-surface": "#0a1c14",
-                "on-surface-variant": "#435249",
-                "on-background": "#0a1c14",
-                outline: "#d2dbd2",
-                "outline-variant": "#e6ebe6",
-                error: "#720501",
+                "surface-container-low": "#F1F5F9",
+                "surface-container": "#E2E8F0",
+                "on-surface": "#1F2937",
+                "on-surface-variant": "#4B5563",
+                "on-background": "#1F2937",
+                outline: "#CBD5E1",
+                "outline-variant": "#E2E8F0",
+                error: "#EF4444",
                 "on-error": "#FFFFFF",
-                "dark-neutral": "#0c0f14"
+                "dark-neutral": "#0B0F19"
             },
             borderRadius: {
                 DEFAULT: "0.25rem",

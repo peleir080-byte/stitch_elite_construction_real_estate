@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     // 7. Form Submissions Alerts
     // ==========================================================================
-    const forms = ['contactForm', 'inquiryForm'];
+    const forms = ['contactForm', 'inquiryForm', 'footerContactForm'];
     forms.forEach(formId => {
         const formEl = document.getElementById(formId);
         if (formEl) {
@@ -362,4 +362,44 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    // ==========================================================================
+    // 8. Statistics Counter Animation
+    // ==========================================================================
+    const counters = document.querySelectorAll('.counter-value');
+    if (counters.length > 0) {
+        const runCounter = (counter) => {
+            const target = +counter.getAttribute('data-target');
+            const duration = 2000; // 2 seconds
+            const stepTime = 15;
+            const steps = duration / stepTime;
+            const increment = target / steps;
+            let current = 0;
+            
+            const step = () => {
+                current += increment;
+                if (current >= target) {
+                    counter.innerText = target;
+                } else {
+                    counter.innerText = Math.floor(current);
+                    setTimeout(step, stepTime);
+                }
+            };
+            step();
+        };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    runCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+    }
 });
+
