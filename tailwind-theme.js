@@ -3,31 +3,31 @@ tailwind.config = {
     theme: {
         extend: {
             colors: {
-                primary: "#0F172A",
-                "primary-container": "#1E293B",
+                primary: "#023c22",
+                "primary-container": "#034f2d",
                 "on-primary": "#FFFFFF",
-                secondary: "#1E40AF",
-                "secondary-container": "#2563EB",
-                "on-secondary": "#FFFFFF",
-                accent: "#F97316",
-                "accent-container": "#FB923C",
+                secondary: "#d4af37",
+                "secondary-container": "#e0c266",
+                "on-secondary": "#1F2937",
+                accent: "#720501",
+                "accent-container": "#8b0702",
                 "on-accent": "#FFFFFF",
-                orange: "#F97316",
-                gold: "#F97316", // alias gold to orange to support existing elements cleanly
-                green: "#1E40AF", // alias green to secondary steel blue
-                wine: "#0F172A",  // alias wine to primary navy
+                orange: "#d4af37",
+                gold: "#d4af37",
+                green: "#023c22",
+                wine: "#720501",
                 background: "#F8FAFC",
                 surface: "#FFFFFF",
-                "surface-container-low": "#F1F5F9",
-                "surface-container": "#E2E8F0",
+                "surface-container-low": "#FFFFFF",
+                "surface-container": "#F1F5F9",
                 "on-surface": "#1F2937",
                 "on-surface-variant": "#4B5563",
                 "on-background": "#1F2937",
-                outline: "#CBD5E1",
-                "outline-variant": "#E2E8F0",
-                error: "#EF4444",
+                outline: "#E2E8F0",
+                "outline-variant": "#F1F5F9",
+                error: "#720501",
                 "on-error": "#FFFFFF",
-                "dark-neutral": "#0B0F19"
+                "dark-neutral": "#0a0f0c"
             },
             borderRadius: {
                 DEFAULT: "0.25rem",
@@ -38,7 +38,7 @@ tailwind.config = {
             spacing: {
                 "margin-mobile": "16px",
                 "margin-desktop": "64px",
-                "section-gap": "96px",
+                "section-gap": "120px",
                 "container-max": "1280px",
                 gutter: "24px"
             },
