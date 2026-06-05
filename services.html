@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" href="assets/images/logo.png" type="image/png"/>
+    <title>Nos Services | AUGIC</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Découvrez nos expertises techniques haut de gamme : Construction gros œuvre, réseaux routiers, génie civil d'art, promotion immobilière et suivi de chantier.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <script src="tailwind-theme.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-on-surface antialiased">
+
+    <header class="augic-header" id="siteHeader">
+        <div class="flex justify-between items-center gap-4 h-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <a href="index.html" class="inline-flex shrink-0 items-center">
+                <img src="assets/images/logo.png" alt="AUGIC" class="h-12 md:h-14 w-auto max-w-[160px] sm:max-w-[180px] md:max-w-[200px] object-contain"/>
+            </a>
+            <nav class="hidden md:flex items-center gap-7">
+                <a href="index.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Accueil</a>
+                <a href="services.html" class="text-primary font-semibold border-b-2 border-secondary pb-0.5 font-label-md text-label-md">Services</a>
+                <a href="projets.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Projets</a>
+                <a href="immobilier.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
+                <a href="a-propos.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">À Propos</a>
+                <a href="contact.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <a href="contact.html" class="augic-btn-green hidden md:inline-flex !py-2.5 !px-5 !text-[13px]">Demander un devis</a>
+            <button class="md:hidden text-primary focus:outline-none" id="menuToggle" aria-label="Ouvrir le menu">
+                <span class="material-symbols-outlined !text-3xl">menu</span>
+            </button>
+        </div>
+        <div class="augic-tricolor"></div>
+    </header>
+
+<!-- Mobile Nav Drawer -->
+    <div id="mobileNav" class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white p-6 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+            <div>
+                <div class="augic-tricolor mb-8 -mx-6 -mt-6"></div>
+                <div class="flex justify-between items-center mb-8">
+                    <a href="index.html" class="inline-block max-w-[180px]">
+                        <img src="assets/images/logo.png" alt="AUGIC" class="h-12 w-auto object-contain"/>
+                    </a>
+                    <button id="menuClose" class="text-primary focus:outline-none" aria-label="Fermer le menu">
+                        <span class="material-symbols-outlined !text-3xl">close</span>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-6">
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="index.html">Accueil</a>
+                    <a class="text-primary font-bold font-label-md text-label-md border-l-4 border-secondary pl-3" href="services.html">Services</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="projets.html">Projets</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="immobilier.html">Immobilier</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="a-propos.html">À Propos</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <a href="contact.html" class="augic-btn-green block w-full justify-center !py-4">Demander un devis</a>
+        </div>
+    </div>
+
+<main>
+        <!-- Hero Section -->
+        <section class="reveal relative h-[50vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Grand chantier de génie civil et bétonnage" class="w-full h-full object-cover scale-105" src="assets/images/real/hero.jpg"/>
+                <div class="absolute inset-0 augic-hero__overlay"></div>
+            </div>
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
+                <div class="max-w-3xl">
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-shadow-hero">
+                        Nos Services &amp; Expertises
+                    </h1>
+                    <p class="font-body-lg text-body-lg opacity-90 leading-relaxed max-w-2xl">
+                        Des solutions d'ingénierie et de Construction haut de gamme, fondées sur la précision technique, le respect des normes et la recherche constante de l'excellence.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Details Section -->
+        <!-- Service 1: Batiments -->
+        <section id="batiments" class="reveal bg-surface-container-low py-20 border-b border-outline-variant/30 scroll-mt-24">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Architecture &amp; Construction</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 leading-tight">Construction de bâtiments de prestige</h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+                            <p>De la villa d'architecte minimaliste aux complexes immobiliers résidentiels et commerciaux d'envergure, AUGIC réalise des projets qui repoussent les limites de la Construction moderne.</p>
+                            <p>Nous prenons en charge la phase de gros œuvre ainsi que le second œuvre avec une attention méticuleuse portée aux finitions. Nos conceptions intègrent des solutions de domotique avancée, d'efficacité énergétique et des matériaux nobles pour garantir durabilité et esthétique.</p>
+                        </div>
+                        <ul class="space-y-3 font-body-md text-on-surface-variant font-medium">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Immeubles de bureaux intelligents (Smart Buildings)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Villas résidentielles contemporaines clés en main
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Rénovations lourdes et extensions structurelles
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-1 md:order-2 group">
+                        <div class="relative overflow-hidden rounded-xl border border-outline-variant shadow-lg">
+                            <img src="assets/images/real/chantier-industriel.jpg" alt="Coulage de dallage industriel — Construction AUGIC" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
+                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 2: Routes -->
+        <section id="routes" class="reveal bg-white py-20 border-b border-outline-variant/30 scroll-mt-24">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl border border-outline-variant shadow-lg">
+                            <img src="assets/images/real/compactage-voirie.jpg" alt="Compactage de plateforme routière" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
+                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Travaux Publics</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 leading-tight">Infrastructures routières &amp; voiries</h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+                            <p>La connectivité et le désenclavement exigent des infrastructures routières de premier ordre. AUGIC dispose du matériel lourd et de l'expertise géotechnique pour mener à bien des chantiers routiers majeurs.</p>
+                            <p>Nous réalisons l'étude de sol, les terrassements, la pose d'enrobés et de bitume de haute résistance, ainsi que la création de réseaux d'assainissement et d'évacuation des eaux pluviales indispensables à la pérennité des ouvrages.</p>
+                        </div>
+                        <ul class="space-y-3 font-body-md text-on-surface-variant font-medium">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Routes nationales et voies express
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Voiries et réseaux divers (VRD) de lotissements
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Aménagements urbains, pavage et bordures
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 3: Genie Civil -->
+        <section id="genie-civil" class="reveal bg-surface-container-low py-20 border-b border-outline-variant/30 scroll-mt-24">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Ingénierie Structure</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 leading-tight">Génie civil &amp; Ouvrages d'art</h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+                            <p>Le bureau d'études techniques de AUGIC réalise des calculs de structures complexes conformes aux Eurocodes et normes internationales (calcul sismique, résistance au vent, charges dynamiques).</p>
+                            <p>Nous encadrons les chantiers de génie civil les plus techniques : dalles monumentales, fondations profondes sur pieux, ponts urbains, soutènements de grande hauteur et réservoirs industriels en béton armé.</p>
+                        </div>
+                        <ul class="space-y-3 font-body-md text-on-surface-variant font-medium">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Études de béton armé et charpentes métalliques (BIM)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Fondations spéciales et soutènements complexes
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Ponts, passerelles et structures industrielles
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-1 md:order-2 group">
+                        <div class="relative overflow-hidden rounded-xl border border-outline-variant shadow-lg">
+                            <img src="assets/images/real/structure-beton.jpg" alt="Ouvrage béton armé en cours de Construction" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
+                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 4: Vente Immobiliere -->
+        <section id="vente-immobiliere" class="reveal bg-white py-20 border-b border-outline-variant/30 scroll-mt-24">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="group">
+                        <div class="relative overflow-hidden rounded-xl border border-outline-variant shadow-lg">
+                            <img src="assets/images/real/batiment-public.jpg" alt="Bâtiment public — promotion et Construction" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
+                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Promotion Immobilière</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 leading-tight">Vente immobilière de prestige</h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+                            <p>En tant que promoteur immobilier de référence, AUGIC conçoit et commercialise des programmes résidentiels d'exception dans les quartiers les plus recherchés.</p>
+                            <p>Nos villas et appartements allient architecture avant-gardiste, confort haut de gamme et conformité légale absolue (titres fonciers sécurisés). Nous proposons un accompagnement sur mesure, du plan à la remise des clés.</p>
+                        </div>
+                        <ul class="space-y-3 font-body-md text-on-surface-variant font-medium">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Villas d'architectes haut de gamme et manoirs
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Penthouses de luxe avec panoramas d'exception
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Parcelles viabilisées dans des copropriétés sécurisées
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service 5: Suivi de chantier -->
+        <section id="suivi-chantier" class="reveal bg-surface-container-low py-20 border-b border-outline-variant/30 scroll-mt-24">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Gestion de Projet</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 leading-tight">Suivi de chantier &amp; Maîtrise d'ouvrage</h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+                            <p>La réussite d'un projet de BTP réside dans sa planification et son contrôle permanent. AUGIC assure des missions d'Assistance à Maîtrise d'Ouvrage (AMO) et de pilotage (OPC).</p>
+                            <p>Nos ingénieurs veillent au respect scrupuleux du cahier des charges, de la qualité des bétons et matériaux livrés, de l'avancement des plannings financiers et temporels, avec des comptes-rendus digitaux réguliers.</p>
+                        </div>
+                        <ul class="space-y-3 font-body-md text-on-surface-variant font-medium">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Planification opérationnelle et contrôle budgétaire
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Contrôles qualité rigoureux (géotechnique, béton, aciers)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary">check_circle</span>
+                                Suivi en temps réel de l'avancement du projet
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-1 md:order-2 group">
+                        <div class="relative overflow-hidden rounded-xl border border-outline-variant shadow-lg">
+                            <img src="assets/images/real/terrassement.jpg" alt="Terrassement et contrôle qualité sur chantier" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
+                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galerie & vidéos chantier -->
+        <section class="reveal py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Médias</span>
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-4">Nos chantiers en images et vidéos</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                <video class="w-full rounded-xl aspect-video object-cover bg-black shadow-md hover:shadow-xl transition-shadow duration-300" controls playsinline preload="metadata" poster="assets/images/real/engins-btp.jpg">
+                    <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
+                </video>
+                <video class="w-full rounded-xl aspect-video object-cover bg-black shadow-md hover:shadow-xl transition-shadow duration-300" controls playsinline preload="metadata" poster="assets/images/real/logistique-flotte.jpg">
+                    <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/real/engins-btp.jpg" alt="Engins de terrassement" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/real/genie-civil.jpg" alt="Préfabrication béton" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/real/logistique-flotte.jpg" alt="Flotte logistique" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/real/parc-camions.jpg" alt="Parc de camions" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/real/hall-industriel.jpg" alt="Hall industriel" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/real/grue-levage.jpg" alt="Grue de levage" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="reveal bg-surface-container-low py-section-gap px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Questions Fréquentes</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-4">Tout ce que vous devez savoir</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="faq-item bg-white border border-outline-variant rounded">
+                        <button class="faq-header flex justify-between items-center w-full p-6 text-left focus:outline-none" aria-expanded="false">
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary">Comment se déroule la phase de conception initiale ?</h3>
+                            <span class="faq-arrow material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="faq-grid-transition">
+                            <div class="faq-grid-content">
+                                <div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md leading-relaxed border-t border-outline-variant/40 pt-4">
+                                    Chaque projet commence par une phase d'écoute et d'étude de faisabilité. Nos architectes élaborent des esquisses en accord avec vos attentes esthétiques et votre enveloppe financière. Par la suite, notre bureau d'études structures effectue les calculs de béton armé et de fondation requis avant l'introduction du permis de construire.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="faq-item bg-white border border-outline-variant rounded">
+                        <button class="faq-header flex justify-between items-center w-full p-6 text-left focus:outline-none" aria-expanded="false">
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary">Quelles garanties offrez-vous sur vos Constructions ?</h3>
+                            <span class="faq-arrow material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="faq-grid-transition">
+                            <div class="faq-grid-content">
+                                <div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md leading-relaxed border-t border-outline-variant/40 pt-4">
+                                    STRUCTU BTP applique les standards internationaux. Nous vous faisons bénéficier de la garantie décennale sur l'ensemble de nos ouvrages en béton armé (stabilité de l'édifice et des fondations) ainsi que de la garantie de parfait achèvement durant la première année suivant la livraison.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="faq-item bg-white border border-outline-variant rounded">
+                        <button class="faq-header flex justify-between items-center w-full p-6 text-left focus:outline-none" aria-expanded="false">
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary">Pouvez-vous intervenir en dehors du Togo ?</h3>
+                            <span class="faq-arrow material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="faq-grid-transition">
+                            <div class="faq-grid-content">
+                                <div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md leading-relaxed border-t border-outline-variant/40 pt-4">
+                                    Absolument. AUGIC dispose de bureaux et de partenaires régionaux en Côte d'Ivoire (Abidjan) et au Rwanda (Kigali). Nous pouvons mobiliser nos équipes d'ingénieurs et nos équipements de terrassement pour des chantiers d'envergure partout en Afrique de l'Ouest et de l'Est.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="faq-item bg-white border border-outline-variant rounded">
+                        <button class="faq-header flex justify-between items-center w-full p-6 text-left focus:outline-none" aria-expanded="false">
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary">Quels sont vos délais moyens de Construction pour une villa ?</h3>
+                            <span class="faq-arrow material-symbols-outlined text-secondary transition-transform duration-300">expand_more</span>
+                        </button>
+                        <div class="faq-grid-transition">
+                            <div class="faq-grid-content">
+                                <div class="px-6 pb-6 text-on-surface-variant font-body-md text-body-md leading-relaxed border-t border-outline-variant/40 pt-4">
+                                    Pour une villa contemporaine individuelle haut de gamme de 400 m², le délai moyen constaté varie entre 10 et 14 mois. Cela intègre les travaux de terrassement, le gros œuvre, les temps réglementaires de séchage du béton, ainsi que l'ensemble des finitions intérieures et extérieures.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="reveal bg-primary text-on-primary py-section-gap px-margin-mobile md:px-margin-desktop text-center relative overflow-hidden">
+            <div class="max-w-3xl mx-auto">
+                <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Concrétisons votre projet</span>
+                <h2 class="font-display-lg text-display-lg-mobile md:text-4xl text-white mb-6 leading-tight">Prêt à construire ou investir avec l'élite ?</h2>
+                <p class="font-body-lg text-body-lg opacity-85 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Discutez dès maintenant avec l'un de nos ingénieurs conseils pour obtenir un chiffrage prévisionnel précis ou planifier une visite de nos villas disponibles.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="contact.html" class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded font-label-md text-label-md hover:bg-secondary transition-all shadow-lg active:scale-95">
+                        Nous contacter
+                    </a>
+                    <a href="immobilier.html" class="border-2 border-white text-white px-8 py-4 rounded font-label-md text-label-md hover:bg-white/10 transition-all active:scale-95">
+                        Voir les ventes
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="augic-footer pt-16 pb-10" role="contentinfo">
+        <div class="augic-tricolor"></div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-10 mb-12 pt-12">
+            <div class="md:col-span-5 space-y-5">
+                <a class="inline-block bg-white rounded-lg p-3" href="index.html">
+                    <img src="assets/images/logo.png" alt="AUGIC" class="h-12 w-auto object-contain max-w-[200px]"/>
+                </a>
+                <p class="font-body-md text-body-md text-white leading-relaxed max-w-sm">
+                    Architecture • Urbanisme • Gestion immobilière • Construction. Concevoir, aménager, gérer et construire — l'avenir, ensemble.
+                </p>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Navigation</h4>
+                <ul class="space-y-2 font-body-md text-caption text-white">
+                    <li><a href="index.html" class="hover:text-secondary transition-colors">Accueil</a></li>
+                    <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
+                    <li><a href="projets.html" class="hover:text-secondary transition-colors">Projets</a></li>
+                    <li><a href="immobilier.html" class="hover:text-secondary transition-colors">Immobilier</a></li>
+                    <li><a href="a-propos.html" class="hover:text-secondary transition-colors">À Propos</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Bureaux</h4>
+                <ul class="space-y-2 font-body-md text-caption text-white">
+                    <li>Lomé, Togo</li>
+                    <li>Abidjan, Côte d'Ivoire</li>
+                    <li>Kigali, Rwanda</li>
+                </ul>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Contact</h4>
+                <p class="font-body-md text-caption text-white">contact@AUGIC.com<br>+228 22 21 00 00</p>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-caption text-caption text-gold">&copy; 2026 AUGIC. Tous droits réservés.</p>
+            <div class="flex gap-6 font-caption text-gold">
+                <a href="#" class="hover:text-secondary transition-colors">Mentions Légales</a>
+                <a href="#" class="hover:text-secondary transition-colors">Confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Interactive JS File -->
+    <script src="app.js"></script>
+</body>
+</html>

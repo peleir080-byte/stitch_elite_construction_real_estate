@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" href="assets/images/logo.png" type="image/png"/>
+    <title>Nos Projets | AUGIC</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Découvrez notre portfolio technique : villas de prestige, autoroutes urbaines, centres d'affaires et ponts d'art réalisés en Afrique.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+        <script src="tailwind-theme.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-on-surface antialiased">
+
+    <header class="augic-header" id="siteHeader">
+        <div class="flex justify-between items-center gap-4 h-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <a href="index.html" class="inline-flex shrink-0 items-center">
+                <img src="assets/images/logo.png" alt="AUGIC" class="h-12 md:h-14 w-auto max-w-[160px] sm:max-w-[180px] md:max-w-[200px] object-contain"/>
+            </a>
+            <nav class="hidden md:flex items-center gap-7">
+                <a href="index.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Accueil</a>
+                <a href="services.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Services</a>
+                <a href="projets.html" class="text-primary font-semibold border-b-2 border-secondary pb-0.5 font-label-md text-label-md">Projets</a>
+                <a href="immobilier.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
+                <a href="a-propos.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">À Propos</a>
+                <a href="contact.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <a href="contact.html" class="augic-btn-green hidden md:inline-flex !py-2.5 !px-5 !text-[13px]">Demander un devis</a>
+            <button class="md:hidden text-primary focus:outline-none" id="menuToggle" aria-label="Ouvrir le menu">
+                <span class="material-symbols-outlined !text-3xl">menu</span>
+            </button>
+        </div>
+        <div class="augic-tricolor"></div>
+    </header>
+
+<!-- Mobile Nav Drawer -->
+    <div id="mobileNav" class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white p-6 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+            <div>
+                <div class="augic-tricolor mb-8 -mx-6 -mt-6"></div>
+                <div class="flex justify-between items-center mb-8">
+                    <a href="index.html" class="inline-block max-w-[180px]">
+                        <img src="assets/images/logo.png" alt="AUGIC" class="h-12 w-auto object-contain"/>
+                    </a>
+                    <button id="menuClose" class="text-primary focus:outline-none" aria-label="Fermer le menu">
+                        <span class="material-symbols-outlined !text-3xl">close</span>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-6">
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="index.html">Accueil</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="services.html">Services</a>
+                    <a class="text-primary font-bold font-label-md text-label-md border-l-4 border-secondary pl-3" href="projets.html">Projets</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="immobilier.html">Immobilier</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="a-propos.html">À Propos</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <a href="contact.html" class="augic-btn-green block w-full justify-center !py-4">Demander un devis</a>
+        </div>
+    </div>
+
+<main>
+        <!-- Hero Section -->
+        <section class="reveal relative h-[50vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Parc d'engins et chantiers AUGIC" class="w-full h-full object-cover scale-105" src="assets/images/real/hero.jpg"/>
+                <div class="absolute inset-0 augic-hero__overlay"></div>
+            </div>
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
+                <div class="max-w-3xl">
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-shadow-hero">
+                        Nos Réalisations d'Ingénierie
+                    </h1>
+                    <p class="font-body-lg text-body-lg opacity-90 leading-relaxed max-w-2xl">
+                        Découvrez notre portfolio d'infrastructures routières majeures, de structures en génie civil complexes et de bâtiments résidentiels de prestige.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery & Filters Section -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            
+            <!-- Category Filters -->
+            <div class="reveal flex flex-wrap gap-4 justify-center md:justify-start mb-16">
+                <button data-filter="all" class="bg-primary text-white px-6 py-3 rounded font-label-md text-label-md transition-all active:scale-95 cursor-pointer">
+                    Tous les projets
+                </button>
+                <button data-filter="batiment" class="border border-outline-variant text-on-surface-variant px-6 py-3 rounded font-label-md text-label-md hover:bg-surface-container-low transition-all active:scale-95 cursor-pointer">
+                    Bâtiments
+                </button>
+                <button data-filter="routes" class="border border-outline-variant text-on-surface-variant px-6 py-3 rounded font-label-md text-label-md hover:bg-surface-container-low transition-all active:scale-95 cursor-pointer">
+                    Routes &amp; VRD
+                </button>
+                <button data-filter="genie" class="border border-outline-variant text-on-surface-variant px-6 py-3 rounded font-label-md text-label-md hover:bg-surface-container-low transition-all active:scale-95 cursor-pointer">
+                    Génie Civil
+                </button>
+                <button data-filter="promo" class="border border-outline-variant text-on-surface-variant px-6 py-3 rounded font-label-md text-label-md hover:bg-surface-container-low transition-all active:scale-95 cursor-pointer">
+                    Promotion
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="reveal grid grid-cols-1 md:grid-cols-12 gap-8">
+                <!-- Project 1: Villa Contemporaine Horizon -->
+                <a href="#" data-project-trigger="villa-horizon" data-category="batiment" class="md:col-span-8 group cursor-pointer relative overflow-hidden rounded h-[500px]">
+                    <img alt="Coulage de dallage industriel sous hangar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/images/real/chantier-industriel.jpg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <span class="text-secondary-fixed text-caption mb-2 font-bold tracking-widest uppercase">Bâtiment / Industriel</span>
+                        <h3 class="text-white font-headline-md text-headline-md">Hall Industriel — Dallage béton</h3>
+                        <span class="text-secondary-fixed font-label-md text-caption mt-2 flex items-center gap-1">
+                            Fiche Technique <span class="material-symbols-outlined !text-sm">arrow_right_alt</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Project 2: Autoroute Est -->
+                <a href="#" data-project-trigger="autoroute-est" data-category="routes" class="md:col-span-4 group cursor-pointer relative overflow-hidden rounded h-[500px]">
+                    <img alt="Compactage de plateforme routière" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/images/real/compactage-voirie.jpg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <span class="text-secondary-fixed text-caption mb-2 font-bold tracking-widest uppercase">Routes &amp; Voiries</span>
+                        <h3 class="text-white font-headline-md text-headline-md">Compactage plateforme voirie</h3>
+                        <span class="text-secondary-fixed font-label-md text-caption mt-2 flex items-center gap-1">
+                            Fiche Technique <span class="material-symbols-outlined !text-sm">arrow_right_alt</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Project 3: Onyx Tower -->
+                <a href="#" data-project-trigger="onyx-tower" data-category="batiment" class="md:col-span-12 group cursor-pointer relative overflow-hidden rounded h-[400px]">
+                    <img alt="Structure béton armé en cours de coffrage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/images/real/structure-beton.jpg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <span class="text-secondary-fixed text-caption mb-2 font-bold tracking-widest uppercase">Génie civil / Ouvrage</span>
+                        <h3 class="text-white font-headline-md text-headline-md">Ouvrage béton armé — Structure courbe</h3>
+                        <span class="text-secondary-fixed font-label-md text-caption mt-2 flex items-center gap-1">
+                            Fiche Technique <span class="material-symbols-outlined !text-sm">arrow_right_alt</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Project 4: Pont de la Lagune -->
+                <a href="#" data-project-trigger="pont-lagune" data-category="genie" class="md:col-span-6 group cursor-pointer relative overflow-hidden rounded h-[400px]">
+                    <img alt="Préfabrication d'anneaux béton sur site" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/images/real/genie-civil.jpg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <span class="text-secondary-fixed text-caption mb-2 font-bold tracking-widest uppercase">Génie Civil / Infrastructure</span>
+                        <h3 class="text-white font-headline-md text-headline-md">Préfabrication — Anneaux béton</h3>
+                        <span class="text-secondary-fixed font-label-md text-caption mt-2 flex items-center gap-1">
+                            Fiche Technique <span class="material-symbols-outlined !text-sm">arrow_right_alt</span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Project 5: Résidence Prestige Marina -->
+                <a href="#" data-project-trigger="prestige-marina" data-category="promo" class="md:col-span-6 group cursor-pointer relative overflow-hidden rounded h-[400px]">
+                    <img alt="Parc d'engins de terrassement Liugong" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="assets/images/real/engins-btp.jpg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-10 translate-y-4 group-hover:translate-y-0 transition-transform">
+                        <span class="text-secondary-fixed text-caption mb-2 font-bold tracking-widest uppercase">Équipements / Logistique</span>
+                        <h3 class="text-white font-headline-md text-headline-md">Parc engins & logistique lourde</h3>
+                        <span class="text-secondary-fixed font-label-md text-caption mt-2 flex items-center gap-1">
+                            Fiche Technique <span class="material-symbols-outlined !text-sm">arrow_right_alt</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-20">
+                <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Vidéos chantier</span>
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-4 mb-8">Réalisations filmées sur site</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <video class="w-full rounded-xl aspect-video object-cover bg-black shadow-md hover:shadow-xl transition-shadow duration-300" controls playsinline preload="metadata" poster="assets/images/real/engins-btp.jpg">
+                        <source src="assets/videos/chantier-01.mp4" type="video/mp4"/>
+                    </video>
+                    <video class="w-full rounded-xl aspect-video object-cover bg-black shadow-md hover:shadow-xl transition-shadow duration-300" controls playsinline preload="metadata" poster="assets/images/real/grue-levage.jpg">
+                        <source src="assets/videos/chantier-02.mp4" type="video/mp4"/>
+                    </video>
+                    <video class="w-full rounded-xl aspect-video object-cover bg-black shadow-md hover:shadow-xl transition-shadow duration-300" controls playsinline preload="metadata" poster="assets/images/real/terrassement.jpg">
+                        <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
+                    </video>
+                    <video class="w-full rounded-xl aspect-video object-cover bg-black shadow-md hover:shadow-xl transition-shadow duration-300" controls playsinline preload="metadata" poster="assets/images/real/hall-industriel.jpg">
+                        <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="assets/images/real/parc-camions.jpg" alt="Parc de camions et logistique" class="w-full h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="assets/images/real/fondations.jpg" alt="Travaux de fondations et terrassement" class="w-full h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="assets/images/real/logistique-flotte.jpg" alt="Flotte de transport AUGIC" class="w-full h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="assets/images/real/materiel-lourd.jpg" alt="Matériel lourd sur site" class="w-full h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Detail Modal -->
+        <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300 hidden">
+            <div id="modalBackdrop" class="absolute inset-0 cursor-pointer"></div>
+            
+            <!-- Modal Box -->
+            <div class="transform scale-95 transition-transform duration-300 relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded shadow-2xl flex flex-col md:flex-row">
+                <!-- Close Button -->
+                <button class="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white text-primary w-10 h-10 rounded-full shadow flex items-center justify-center transition-all cursor-pointer focus:outline-none" id="modalClose" aria-label="Fermer">
+                    <span class="material-symbols-outlined !text-xl">close</span>
+                </button>
+                
+                <!-- Left: Hero image -->
+                <div class="w-full md:w-1/2 h-64 md:h-auto min-h-[300px] relative">
+                    <img id="modalImg" src="" alt="" class="absolute inset-0 w-full h-full object-cover"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent md:bg-none"></div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-between">
+                    <div>
+                        <span id="modalCat" class="text-secondary font-label-md text-caption tracking-widest uppercase block mb-2"></span>
+                        <h2 id="modalTitle" class="font-headline-lg text-headline-lg-mobile md:text-2xl text-primary mb-6 leading-tight"></h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+                            <p id="modalDesc1"></p>
+                            <p id="modalDesc2"></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Specifications -->
+                    <div class="grid grid-cols-2 gap-6 border-t border-outline-variant/60 pt-6">
+                        <div>
+                            <span class="block text-outline font-label-md text-caption uppercase tracking-wider mb-1">Maître d'ouvrage</span>
+                            <p id="modalClient" class="font-body-md text-body-md font-semibold text-primary"></p>
+                        </div>
+                        <div>
+                            <span class="block text-outline font-label-md text-caption uppercase tracking-wider mb-1">Localisation</span>
+                            <p id="modalLoc" class="font-body-md text-body-md font-semibold text-primary"></p>
+                        </div>
+                        <div>
+                            <span class="block text-outline font-label-md text-caption uppercase tracking-wider mb-1">Durée des travaux</span>
+                            <p id="modalDuration" class="font-body-md text-body-md font-semibold text-primary"></p>
+                        </div>
+                        <div>
+                            <span class="block text-outline font-label-md text-caption uppercase tracking-wider mb-1">Statut</span>
+                            <p id="modalStatus" class="font-body-md text-body-md font-semibold text-primary"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="augic-footer pt-16 pb-10" role="contentinfo">
+        <div class="augic-tricolor"></div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-10 mb-12 pt-12">
+            <div class="md:col-span-5 space-y-5">
+                <a class="inline-block bg-white rounded-lg p-3" href="index.html">
+                    <img src="assets/images/logo.png" alt="AUGIC" class="h-12 w-auto object-contain max-w-[200px]"/>
+                </a>
+                <p class="font-body-md text-body-md text-white leading-relaxed max-w-sm">
+                    Architecture • Urbanisme • Gestion immobilière • Construction. Concevoir, aménager, gérer et construire — l'avenir, ensemble.
+                </p>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Navigation</h4>
+                <ul class="space-y-2 font-body-md text-caption text-white">
+                    <li><a href="index.html" class="hover:text-secondary transition-colors">Accueil</a></li>
+                    <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
+                    <li><a href="projets.html" class="hover:text-secondary transition-colors">Projets</a></li>
+                    <li><a href="immobilier.html" class="hover:text-secondary transition-colors">Immobilier</a></li>
+                    <li><a href="a-propos.html" class="hover:text-secondary transition-colors">À Propos</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Bureaux</h4>
+                <ul class="space-y-2 font-body-md text-caption text-white">
+                    <li>Lomé, Togo</li>
+                    <li>Abidjan, Côte d'Ivoire</li>
+                    <li>Kigali, Rwanda</li>
+                </ul>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Contact</h4>
+                <p class="font-body-md text-caption text-white">contact@AUGIC.com<br>+228 22 21 00 00</p>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-caption text-caption text-gold">&copy; 2026 AUGIC. Tous droits réservés.</p>
+            <div class="flex gap-6 font-caption text-gold">
+                <a href="#" class="hover:text-secondary transition-colors">Mentions Légales</a>
+                <a href="#" class="hover:text-secondary transition-colors">Confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Interactive JS File -->
+    <script src="app.js"></script>
+</body>
+</html>

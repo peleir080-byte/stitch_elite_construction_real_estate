@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" href="assets/images/logo.png" type="image/png"/>
+    <title>À Propos | AUGIC</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Découvrez l'histoire de AUGIC : plus de 20 ans d'ingénierie d'excellence, notre équipe de direction et nos valeurs d'innovation et de rigueur.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+        <script src="tailwind-theme.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-on-surface antialiased">
+
+    <header class="augic-header" id="siteHeader">
+        <div class="flex justify-between items-center gap-4 h-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <a href="index.html" class="inline-flex shrink-0 items-center">
+                <img src="assets/images/logo.png" alt="AUGIC" class="h-12 md:h-14 w-auto max-w-[160px] sm:max-w-[180px] md:max-w-[200px] object-contain"/>
+            </a>
+            <nav class="hidden md:flex items-center gap-7">
+                <a href="index.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Accueil</a>
+                <a href="services.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Services</a>
+                <a href="projets.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Projets</a>
+                <a href="immobilier.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
+                <a href="a-propos.html" class="text-primary font-semibold border-b-2 border-secondary pb-0.5 font-label-md text-label-md">À Propos</a>
+                <a href="contact.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <a href="contact.html" class="augic-btn-green hidden md:inline-flex !py-2.5 !px-5 !text-[13px]">Demander un devis</a>
+            <button class="md:hidden text-primary focus:outline-none" id="menuToggle" aria-label="Ouvrir le menu">
+                <span class="material-symbols-outlined !text-3xl">menu</span>
+            </button>
+        </div>
+        <div class="augic-tricolor"></div>
+    </header>
+
+<!-- Mobile Nav Drawer -->
+    <div id="mobileNav" class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white p-6 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+            <div>
+                <div class="augic-tricolor mb-8 -mx-6 -mt-6"></div>
+                <div class="flex justify-between items-center mb-8">
+                    <a href="index.html" class="inline-block max-w-[180px]">
+                        <img src="assets/images/logo.png" alt="AUGIC" class="h-12 w-auto object-contain"/>
+                    </a>
+                    <button id="menuClose" class="text-primary focus:outline-none" aria-label="Fermer le menu">
+                        <span class="material-symbols-outlined !text-3xl">close</span>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-6">
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="index.html">Accueil</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="services.html">Services</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="projets.html">Projets</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="immobilier.html">Immobilier</a>
+                    <a class="text-primary font-bold font-label-md text-label-md border-l-4 border-secondary pl-3" href="a-propos.html">À Propos</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <a href="contact.html" class="augic-btn-green block w-full justify-center !py-4">Demander un devis</a>
+        </div>
+    </div>
+
+<main>
+        <!-- Page Hero -->
+        <section class="reveal relative h-[50vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Ingénieurs sur le terrain d'un grand projet de gratte-ciel" class="w-full h-full object-cover scale-105" src="assets/images/real/grue-levage.jpg"/>
+                <div class="absolute inset-0 augic-hero__overlay"></div>
+            </div>
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
+                <div class="max-w-3xl">
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-shadow-hero">
+                        Bâtir l'excellence depuis 20 ans
+                    </h1>
+                    <p class="font-body-lg text-body-lg opacity-90 leading-relaxed max-w-2xl">
+                        Découvrez l'histoire de AUGIC, notre mission d'ingénierie globale, nos valeurs et l'équipe d'ingénieurs et de promoteurs d'élite qui dessine l'Afrique de demain.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mission -->
+                <div class="reveal bg-white border border-outline-variant p-10 rounded hover:shadow-xl hover:border-primary/20 transition-all duration-300">
+                    <div class="text-secondary mb-6">
+                        <span class="material-symbols-outlined !text-4xl">travel_explore</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Notre Mission</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Concevoir et réaliser des infrastructures durables de haute qualité technique et esthétique, permettant de relier les hommes, sécuriser les investissements immobiliers et accompagner la modernisation urbaine du continent africain.
+                    </p>
+                </div>
+
+                <!-- Vision -->
+                <div class="reveal bg-white border border-outline-variant p-10 rounded hover:shadow-xl hover:border-primary/20 transition-all duration-300">
+                    <div class="text-secondary mb-6">
+                        <span class="material-symbols-outlined !text-4xl">visibility</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Notre Vision</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Être le standard d'excellence et la signature de référence dans le BTP et la promotion immobilière en Afrique, reconnue pour notre rigueur méthodologique, notre intégrité structurelle et notre capacité d'innovation technologique (BIM, Smart Cities).
+                    </p>
+                </div>
+
+                <!-- Valeurs -->
+                <div class="reveal bg-white border border-outline-variant p-10 rounded hover:shadow-xl hover:border-primary/20 transition-all duration-300">
+                    <div class="text-secondary mb-6">
+                        <span class="material-symbols-outlined !text-4xl">verified</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Nos Valeurs</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Notre philosophie repose sur trois piliers indissociables : la Rigueur technique qui garantit la stabilité et la sécurité des ouvrages ; l'Innovation constante de nos procédés ; et le Respect absolu de la parole donnée à nos clients et partenaires.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="reveal bg-surface-container-low py-section-gap px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-20">
+                    <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Chronologie</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-4">Notre Parcours vers l'Excellence</h2>
+                </div>
+
+                <!-- Timeline Container -->
+                <div class="relative timeline-container max-w-4xl mx-auto">
+                    
+                    <!-- Milestone 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-16 group">
+                        <!-- Node Circle -->
+                        <div class="absolute left-5 md:left-1/2 w-8 h-8 rounded-full bg-secondary border-4 border-white shadow -translate-x-[11px] md:-translate-x-4 z-10 transition-transform duration-300 group-hover:scale-110"></div>
+                        <!-- Content Side -->
+                        <div class="w-full md:w-[45%] pl-12 md:pl-0 md:text-right">
+                            <span class="inline-block bg-primary-container text-primary font-headline-md text-lg font-bold px-4 py-1 rounded mb-3">2006</span>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Fondation de AUGIC</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Création de la société à Lomé (Togo) par un collectif d'ingénieurs formés internationalement, avec pour but initial le calcul de structure et le gros œuvre de bâtiments privés.</p>
+                        </div>
+                        <div class="hidden md:block w-[45%]"></div>
+                    </div>
+
+                    <!-- Milestone 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-16 group">
+                        <div class="absolute left-5 md:left-1/2 w-8 h-8 rounded-full bg-secondary border-4 border-white shadow -translate-x-[11px] md:-translate-x-4 z-10 transition-transform duration-300 group-hover:scale-110"></div>
+                        <div class="hidden md:block w-[45%]"></div>
+                        <div class="w-full md:w-[45%] pl-12 md:pl-0">
+                            <span class="inline-block bg-primary-container text-primary font-headline-md text-lg font-bold px-4 py-1 rounded mb-3">2012</span>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Pôle Travaux Publics &amp; Voiries</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Acquisition de parcs de matériel lourd et exécution de notre premier marché public de terrassement et bitumage de route nationale, confirmant notre expertise VRD.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-16 group">
+                        <div class="absolute left-5 md:left-1/2 w-8 h-8 rounded-full bg-secondary border-4 border-white shadow -translate-x-[11px] md:-translate-x-4 z-10 transition-transform duration-300 group-hover:scale-110"></div>
+                        <div class="w-full md:w-[45%] pl-12 md:pl-0 md:text-right">
+                            <span class="inline-block bg-primary-container text-primary font-headline-md text-lg font-bold px-4 py-1 rounded mb-3">2018</span>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Expansion et Siège Régional à Kigali</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">AUGIC se déploie à Kigali, au Rwanda, pour répondre aux standards élevés de développement d'infrastructures de l'Afrique de l'Est et du génie civil d'art.</p>
+                        </div>
+                        <div class="hidden md:block w-[45%]"></div>
+                    </div>
+
+                    <!-- Milestone 4 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:justify-between mb-16 group">
+                        <div class="absolute left-5 md:left-1/2 w-8 h-8 rounded-full bg-secondary border-4 border-white shadow -translate-x-[11px] md:-translate-x-4 z-10 transition-transform duration-300 group-hover:scale-110"></div>
+                        <div class="hidden md:block w-[45%]"></div>
+                        <div class="w-full md:w-[45%] pl-12 md:pl-0">
+                            <span class="inline-block bg-primary-container text-primary font-headline-md text-lg font-bold px-4 py-1 rounded mb-3">2022</span>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Lancement de la Promotion de Prestige</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Création de la branche promotion immobilière haut de gamme, avec la Construction de complexes résidentiels, de villas intelligentes et de penthouses d'architectes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 5 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:justify-between group">
+                        <div class="absolute left-5 md:left-1/2 w-8 h-8 rounded-full bg-secondary border-4 border-white shadow -translate-x-[11px] md:-translate-x-4 z-10 transition-transform duration-300 group-hover:scale-110"></div>
+                        <div class="w-full md:w-[45%] pl-12 md:pl-0 md:text-right">
+                            <span class="inline-block bg-primary-container text-primary font-headline-md text-lg font-bold px-4 py-1 rounded mb-3">2026</span>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">20 Ans &amp; Modernité BIM</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">AUGIC fête ses 20 ans d'existence en intégrant pleinement le standard BIM de conception numérique 3D et en développant ses premiers complexes écologiques intelligents.</p>
+                        </div>
+                        <div class="hidden md:block w-[45%]"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="reveal py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="text-center mb-20">
+                <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Sur le terrain</span>
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-4">Nos équipes en action</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mt-4">Ingénieurs, conducteurs de travaux et opérateurs d'engins mobilisés chaque jour sur nos chantiers au Togo et en Afrique de l'Ouest.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Team 1 -->
+                <div class="bg-white border border-outline-variant/80 overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:border-secondary/20 rounded-xl">
+                    <div class="relative overflow-hidden h-96">
+                        <!-- Standard styled avatar background -->
+                        <div class="absolute inset-0 bg-primary/5 flex items-center justify-center text-primary/10 select-none">
+                            <span class="material-symbols-outlined !text-9xl">account_circle</span>
+                        </div>
+                        <!-- If images are found, they zoom on hover -->
+                        <img src="assets/images/real/equipe-chantier.jpg" alt="Équipe AUGIC sur chantier" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-80 group-hover:opacity-75 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="font-headline-md text-body-lg font-bold">Direction chantier</h4>
+                            <p class="font-body-md text-caption text-secondary">Coordination &amp; sécurité</p>
+                        </div>
+                    </div>
+                    <div class="p-6 border-t border-outline-variant/60">
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Pilotage des opérations terrain, planning, respect des normes HSE et livraison dans les délais convenus.</p>
+                    </div>
+                </div>
+
+                <!-- Team 2 -->
+                <div class="bg-white border border-outline-variant/80 overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:border-secondary/20 rounded-xl">
+                    <div class="relative overflow-hidden h-96">
+                        <div class="absolute inset-0 bg-primary/5 flex items-center justify-center text-primary/10 select-none">
+                            <span class="material-symbols-outlined !text-9xl">account_circle</span>
+                        </div>
+                        <img src="assets/images/real/betonnage.jpg" alt="Bétonnage et production sur chantier" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-80 group-hover:opacity-75 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="font-headline-md text-body-lg font-bold">Production béton</h4>
+                            <p class="font-body-md text-caption text-secondary">Gros œuvre &amp; structure</p>
+                        </div>
+                    </div>
+                    <div class="p-6 border-t border-outline-variant/60">
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Coulage, ferraillage, contrôle des dosages and qualité du béton sur l'ensemble de nos ouvrages.</p>
+                    </div>
+                </div>
+
+                <!-- Team 3 -->
+                <div class="bg-white border border-outline-variant/80 overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:border-secondary/20 rounded-xl">
+                    <div class="relative overflow-hidden h-96">
+                        <div class="absolute inset-0 bg-primary/5 flex items-center justify-center text-primary/10 select-none">
+                            <span class="material-symbols-outlined !text-9xl">account_circle</span>
+                        </div>
+                        <img src="assets/images/real/grue-levage.jpg" alt="Levage et logistique lourde" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-80 group-hover:opacity-75 transition-opacity duration-300"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <h4 class="font-headline-md text-body-lg font-bold">Levage &amp; logistique</h4>
+                            <p class="font-body-md text-caption text-secondary">Engins &amp; transport</p>
+                        </div>
+                    </div>
+                    <div class="p-6 border-t border-outline-variant/60">
+                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Mobilisation de grues, camions et engins lourds pour le déplacement de charges et l'approvisionnement des chantiers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="augic-footer pt-16 pb-10" role="contentinfo">
+        <div class="augic-tricolor"></div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-10 mb-12 pt-12">
+            <div class="md:col-span-5 space-y-5">
+                <a class="inline-block bg-white rounded-lg p-3" href="index.html">
+                    <img src="assets/images/logo.png" alt="AUGIC" class="h-12 w-auto object-contain max-w-[200px]"/>
+                </a>
+                <p class="font-body-md text-body-md text-white leading-relaxed max-w-sm">
+                    Architecture • Urbanisme • Gestion immobilière • Construction. Concevoir, aménager, gérer et construire — l'avenir, ensemble.
+                </p>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Navigation</h4>
+                <ul class="space-y-2 font-body-md text-caption text-white">
+                    <li><a href="index.html" class="hover:text-secondary transition-colors">Accueil</a></li>
+                    <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
+                    <li><a href="projets.html" class="hover:text-secondary transition-colors">Projets</a></li>
+                    <li><a href="immobilier.html" class="hover:text-secondary transition-colors">Immobilier</a></li>
+                    <li><a href="a-propos.html" class="hover:text-secondary transition-colors">À Propos</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Bureaux</h4>
+                <ul class="space-y-2 font-body-md text-caption text-white">
+                    <li>Lomé, Togo</li>
+                    <li>Abidjan, Côte d'Ivoire</li>
+                    <li>Kigali, Rwanda</li>
+                </ul>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Contact</h4>
+                <p class="font-body-md text-caption text-white">contact@AUGIC.com<br>+228 22 21 00 00</p>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-caption text-caption text-gold">&copy; 2026 AUGIC. Tous droits réservés.</p>
+            <div class="flex gap-6 font-caption text-gold">
+                <a href="#" class="hover:text-secondary transition-colors">Mentions Légales</a>
+                <a href="#" class="hover:text-secondary transition-colors">Confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Interactive JS File -->
+    <script src="app.js"></script>
+</body>
+</html>

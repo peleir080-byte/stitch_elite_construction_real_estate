@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" href="assets/images/logo.png" type="image/png"/>
+    <title>Immobilier &amp; Construction | AUGIC</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Découvrez notre catalogue exclusif de villas d'architectes et d'appartements contemporains haut de gamme en vente dans les grandes capitales africaines.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+        <script src="tailwind-theme.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-on-surface antialiased">
+
+    <header class="augic-header" id="siteHeader">
+        <div class="flex justify-between items-center gap-4 h-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <a href="index.html" class="inline-flex shrink-0 items-center">
+                <img src="assets/images/logo.png" alt="AUGIC" class="h-12 md:h-14 w-auto max-w-[160px] sm:max-w-[180px] md:max-w-[200px] object-contain"/>
+            </a>
+            <nav class="hidden md:flex items-center gap-7">
+                <a href="index.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Accueil</a>
+                <a href="services.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Services</a>
+                <a href="projets.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Projets</a>
+                <a href="immobilier.html" class="text-primary font-semibold border-b-2 border-secondary pb-0.5 font-label-md text-label-md">Immobilier</a>
+                <a href="a-propos.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">À Propos</a>
+                <a href="contact.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <a href="contact.html" class="augic-btn-green hidden md:inline-flex !py-2.5 !px-5 !text-[13px]">Demander un devis</a>
+            <button class="md:hidden text-primary focus:outline-none" id="menuToggle" aria-label="Ouvrir le menu">
+                <span class="material-symbols-outlined !text-3xl">menu</span>
+            </button>
+        </div>
+        <div class="augic-tricolor"></div>
+    </header>
+
+<!-- Mobile Nav Drawer -->
+    <div id="mobileNav" class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white p-6 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+            <div>
+                <div class="augic-tricolor mb-8 -mx-6 -mt-6"></div>
+                <div class="flex justify-between items-center mb-8">
+                    <a href="index.html" class="inline-block max-w-[180px]">
+                        <img src="assets/images/logo.png" alt="AUGIC" class="h-12 w-auto object-contain"/>
+                    </a>
+                    <button id="menuClose" class="text-primary focus:outline-none" aria-label="Fermer le menu">
+                        <span class="material-symbols-outlined !text-3xl">close</span>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-6">
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="index.html">Accueil</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="services.html">Services</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="projets.html">Projets</a>
+                    <a class="text-primary font-bold font-label-md text-label-md border-l-4 border-secondary pl-3" href="immobilier.html">Immobilier</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="a-propos.html">À Propos</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <a href="contact.html" class="augic-btn-green block w-full justify-center !py-4">Demander un devis</a>
+        </div>
+    </div>
+
+<main>
+        <!-- Page Hero -->
+        <section class="reveal relative h-[50vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Bâtiment et promotion immobilière AUGIC" class="w-full h-full object-cover scale-105" src="assets/images/real/batiment-public.jpg"/>
+                <div class="absolute inset-0 augic-hero__overlay"></div>
+            </div>
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
+                <div class="max-w-3xl">
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-shadow-hero">
+                        Catalogue Immobilier de Prestige
+                    </h1>
+                    <p class="font-body-lg text-body-lg opacity-90 leading-relaxed max-w-2xl">
+                        Découvrez notre sélection exclusive de résidences d'exception, alliant architecture contemporaine haut de gamme, matériaux nobles et sécurité juridique absolue.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search & Filters Bar -->
+        <section class="reveal py-10 bg-white border-b border-outline-variant">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 items-end">
+                    <!-- City selection -->
+                    <div>
+                        <label for="filterCity" class="block font-label-md text-caption text-outline mb-2 uppercase tracking-wide">Localisation</label>
+                        <select id="filterCity" class="w-full border border-outline-variant bg-transparent rounded py-3 focus:ring-1 focus:ring-primary focus:border-primary text-on-surface-variant font-body-md">
+                            <option value="all">Toutes les destinations</option>
+                            <option value="kigali">Kigali, RW</option>
+                            <option value="lome">Lomé, TG</option>
+                            <option value="abidjan">Abidjan, CI</option>
+                            <option value="dakar">Dakar, SN</option>
+                        </select>
+                    </div>
+                    <!-- Price selection -->
+                    <div>
+                        <label for="filterPrice" class="block font-label-md text-caption text-outline mb-2 uppercase tracking-wide">Budget maximum</label>
+                        <select id="filterPrice" class="w-full border border-outline-variant bg-transparent rounded py-3 focus:ring-1 focus:ring-primary focus:border-primary text-on-surface-variant font-body-md">
+                            <option value="all">Tous les budgets</option>
+                            <option value="400">Moins de 400 000 $</option>
+                            <option value="600">400 000 $ - 600 000 $</option>
+                            <option value="900">Plus de 600 000 $</option>
+                        </select>
+                    </div>
+                    <!-- Rooms selection -->
+                    <div>
+                        <label for="filterRooms" class="block font-label-md text-caption text-outline mb-2 uppercase tracking-wide">Nombre de chambres</label>
+                        <select id="filterRooms" class="w-full border border-outline-variant bg-transparent rounded py-3 focus:ring-1 focus:ring-primary focus:border-primary text-on-surface-variant font-body-md">
+                            <option value="all">Toutes configurations</option>
+                            <option value="3">3 Chambres</option>
+                            <option value="4">4 Chambres</option>
+                            <option value="5">5 Chambres et plus</option>
+                        </select>
+                    </div>
+                    <!-- Reset button -->
+                    <div>
+                        <button id="resetFilters" class="w-full bg-primary-container/20 text-primary border border-primary/20 hover:bg-primary hover:text-white py-3 rounded font-label-md text-label-md transition-all active:scale-95 cursor-pointer">
+                            Réinitialiser
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Listings Grid -->
+        <section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="reveal grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                
+                <!-- Villa 1: Eden -->
+                <article class="estate-card bg-white border border-outline-variant overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/20 rounded" data-city="kigali" data-price="450" data-rooms="5" data-id="villa-eden">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="assets/images/real/batiment-public.jpg" alt="Bâtiment public en briques — chantier AUGIC" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                        <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 font-label-md text-caption shadow-md uppercase tracking-wider">En cours</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-on-surface-variant mb-2">
+                            <span class="material-symbols-outlined !text-[18px]">location_on</span>
+                            <span class="font-body-md text-caption uppercase">Lomé, Togo</span>
+                        </div>
+                        <h3 class="font-headline-md text-body-lg font-bold text-primary mb-4">Bâtiment public — Gros œuvre</h3>
+                        <div class="flex gap-4 text-on-surface-variant font-body-md text-caption mb-6 border-b border-outline-variant/40 pb-4">
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">bed</span>
+                                <span>5 Ch.</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">bathtub</span>
+                                <span>4 SdB.</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">straighten</span>
+                                <span>420 m²</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-headline-md text-headline-md text-secondary">Sur devis</span>
+                            <button data-inquiry-trigger="Bâtiment public — Gros œuvre" class="bg-primary text-white px-6 py-2 rounded font-label-md text-label-md hover:bg-primary-container hover:shadow-lg transition-all active:scale-95 cursor-pointer">
+                                S'informer
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Villa 2: Horizon Blue -->
+                <article class="estate-card bg-white border border-outline-variant overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/20 rounded" data-city="abidjan" data-price="525" data-rooms="3" data-id="penthouse-horizon">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="assets/images/real/grue-levage.jpg" alt="Grue mobile et opérations de levage" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                        <span class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 font-label-md text-caption shadow-md uppercase tracking-wider">Service</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-on-surface-variant mb-2">
+                            <span class="material-symbols-outlined !text-[18px]">location_on</span>
+                            <span class="font-body-md text-caption uppercase">Zone portuaire, TG</span>
+                        </div>
+                        <h3 class="font-headline-md text-body-lg font-bold text-primary mb-4">Levage &amp; logistique lourde</h3>
+                        <div class="flex gap-4 text-on-surface-variant font-body-md text-caption mb-6 border-b border-outline-variant/40 pb-4">
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">bed</span>
+                                <span>3 Ch.</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">bathtub</span>
+                                <span>3 SdB.</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">straighten</span>
+                                <span>210 m²</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-headline-md text-headline-md text-secondary">Prestation</span>
+                            <button data-inquiry-trigger="Levage & logistique lourde" class="bg-primary text-white px-6 py-2 rounded font-label-md text-label-md hover:bg-primary-container hover:shadow-lg transition-all active:scale-95 cursor-pointer">
+                                S'informer
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Villa 3: Manoir Royal Garden -->
+                <article class="estate-card bg-white border border-outline-variant overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/20 rounded" data-city="dakar" data-price="890" data-rooms="5" data-id="manoir-royal">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="assets/images/real/chantier-industriel.jpg" alt="Hall industriel — coulage de dallage" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                        <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 font-label-md text-caption shadow-md uppercase tracking-wider">Livré</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-on-surface-variant mb-2">
+                            <span class="material-symbols-outlined !text-[18px]">location_on</span>
+                            <span class="font-body-md text-caption uppercase">Zone industrielle, TG</span>
+                        </div>
+                        <h3 class="font-headline-md text-body-lg font-bold text-primary mb-4">Hall industriel — Dallage</h3>
+                        <div class="flex gap-4 text-on-surface-variant font-body-md text-caption mb-6 border-b border-outline-variant/40 pb-4">
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">bed</span>
+                                <span>6 Ch.</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">bathtub</span>
+                                <span>5 SdB.</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">straighten</span>
+                                <span>510 m²</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-headline-md text-headline-md text-secondary">Réf. 2025</span>
+                            <button data-inquiry-trigger="Hall industriel — Dallage" class="bg-primary text-white px-6 py-2 rounded font-label-md text-label-md hover:bg-primary-container hover:shadow-lg transition-all active:scale-95 cursor-pointer">
+                                S'informer
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Villa 4: Villa Sunset Bay -->
+                <article class="estate-card bg-white border border-outline-variant overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/20 rounded" data-city="lome" data-price="650" data-rooms="4" data-id="villa-sunset">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="assets/images/real/parc-camions.jpg" alt="Parc logistique et flotte de camions" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                        <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 font-label-md text-caption shadow-md uppercase tracking-wider">Disponible</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-on-surface-variant mb-2">
+                            <span class="material-symbols-outlined !text-[18px]">location_on</span>
+                            <span class="font-body-md text-caption uppercase">Lomé, Togo</span>
+                        </div>
+                        <h3 class="font-headline-md text-body-lg font-bold text-primary mb-4">Parc logistique &amp; transport</h3>
+                        <div class="flex gap-4 text-on-surface-variant font-body-md text-caption mb-6 border-b border-outline-variant/40 pb-4">
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">bed</span>
+                                <span>4 Ch.</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">bathtub</span>
+                                <span>4 SdB.</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">straighten</span>
+                                <span>380 m²</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-headline-md text-headline-md text-secondary">Sur devis</span>
+                            <button data-inquiry-trigger="Parc logistique & transport" class="bg-primary text-white px-6 py-2 rounded font-label-md text-label-md hover:bg-primary-container hover:shadow-lg transition-all active:scale-95 cursor-pointer">
+                                S'informer
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Villa 5: Duplex Azur -->
+                <article class="estate-card bg-white border border-outline-variant overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/20 rounded" data-city="abidjan" data-price="380" data-rooms="3" data-id="duplex-azur">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="assets/images/real/transport-remorque.jpg" alt="Transport lourd — semi-remorque Foton" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                        <span class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 font-label-md text-caption shadow-md uppercase tracking-wider">Flotte</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 text-on-surface-variant mb-2">
+                            <span class="material-symbols-outlined !text-[18px]">location_on</span>
+                            <span class="font-body-md text-caption uppercase">Togo</span>
+                        </div>
+                        <h3 class="font-headline-md text-body-lg font-bold text-primary mb-4">Transport &amp; livraison matériaux</h3>
+                        <div class="flex gap-4 text-on-surface-variant font-body-md text-caption mb-6 border-b border-outline-variant/40 pb-4">
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">bed</span>
+                                <span>3 Ch.</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">bathtub</span>
+                                <span>3 SdB.</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="material-symbols-outlined !text-lg">straighten</span>
+                                <span>240 m²</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-headline-md text-headline-md text-secondary">Prestation</span>
+                            <button data-inquiry-trigger="Transport & livraison matériaux" class="bg-primary text-white px-6 py-2 rounded font-label-md text-label-md hover:bg-primary-container hover:shadow-lg transition-all active:scale-95 cursor-pointer">
+                                S'informer
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Empty State -->
+            <div id="noResults" class="reveal text-center py-20 hidden">
+                <span class="material-symbols-outlined !text-6xl text-outline-variant mb-6">search_off</span>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Aucun bien trouvé</h3>
+                <p class="font-body-md text-on-surface-variant">Essayez de modifier ou de réinitialiser vos critères de recherche.</p>
+            </div>
+
+            <div class="reveal mt-16">
+                <h3 class="font-headline-md text-headline-md text-primary mb-6 text-center">Galerie — nos réalisations sur le terrain</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="assets/images/real/fondations.jpg" alt="Travaux de fondations" class="w-full h-40 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="assets/images/real/infrastructure.jpg" alt="Infrastructure et génie civil" class="w-full h-40 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="assets/images/real/chantier-equipe.jpg" alt="Équipe sur chantier" class="w-full h-40 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                    </div>
+                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <img src="assets/images/real/materiel-lourd.jpg" alt="Matériel lourd AUGIC" class="w-full h-40 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Private Viewing Form Section -->
+        <section id="visiteSection" class="reveal bg-surface-container-low py-20 px-margin-mobile md:px-margin-desktop scroll-mt-24">
+            <div class="max-w-2xl mx-auto bg-white p-8 md:p-12 border border-outline-variant shadow-lg rounded">
+                <div class="text-center mb-10">
+                    <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-2">Visite Privée</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-2xl text-primary leading-tight">Demander des informations ou planifier une visite</h2>
+                    <p class="font-body-md text-on-surface-variant mt-3 leading-relaxed">
+                        Intéressé par l'un de nos biens ? Complétez ce formulaire et notre directeur de la promotion immobilière vous recontactera sous 24h.
+                    </p>
+                </div>
+                <form id="inquiryForm" class="space-y-6">
+                    <div>
+                        <label for="inquiryProperty" class="block font-label-md text-caption text-outline mb-2">Bien immobilier sélectionné</label>
+                        <input type="text" id="inquiryProperty" class="w-full border border-outline-variant bg-transparent rounded py-3 focus:ring-1 focus:ring-primary focus:border-primary text-on-surface-variant font-body-md placeholder:text-surface-variant" placeholder="Sélectionnez un bien ou saisissez son nom" required>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="inquiryName" class="block font-label-md text-caption text-outline mb-2">Nom complet</label>
+                            <input type="text" id="inquiryName" class="w-full border border-outline-variant bg-transparent rounded py-3 focus:ring-1 focus:ring-primary focus:border-primary text-on-surface-variant font-body-md placeholder:text-surface-variant" placeholder="Ex: Marie Diallo" required>
+                        </div>
+                        <div>
+                            <label for="inquiryPhone" class="block font-label-md text-caption text-outline mb-2">Téléphone</label>
+                            <input type="tel" id="inquiryPhone" class="w-full border border-outline-variant bg-transparent rounded py-3 focus:ring-1 focus:ring-primary focus:border-primary text-on-surface-variant font-body-md placeholder:text-surface-variant" placeholder="Ex: +228 ..." required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="inquiryEmail" class="block font-label-md text-caption text-outline mb-2">Adresse e-mail</label>
+                        <input type="email" id="inquiryEmail" class="w-full border border-outline-variant bg-transparent rounded py-3 focus:ring-1 focus:ring-primary focus:border-primary text-on-surface-variant font-body-md placeholder:text-surface-variant" placeholder="Ex: marie@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="inquiryMsg" class="block font-label-md text-caption text-outline mb-2">Votre demande particulière</label>
+                        <textarea id="inquiryMsg" rows="4" class="w-full border border-outline-variant bg-transparent rounded py-3 focus:ring-1 focus:ring-primary focus:border-primary text-on-surface-variant font-body-md placeholder:text-surface-variant" placeholder="Indiquez vos créneaux de disponibilité pour la visite ou vos questions..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-white py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-primary-container hover:shadow-lg transition-all active:scale-[0.98] rounded cursor-pointer">
+                        Soumettre ma demande de visite
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="augic-footer pt-16 pb-10" role="contentinfo">
+        <div class="augic-tricolor"></div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-10 mb-12 pt-12">
+            <div class="md:col-span-5 space-y-5">
+                <a class="inline-block bg-white rounded-lg p-3" href="index.html">
+                    <img src="assets/images/logo.png" alt="AUGIC" class="h-12 w-auto object-contain max-w-[200px]"/>
+                </a>
+                <p class="font-body-md text-body-md text-white leading-relaxed max-w-sm">
+                    Architecture • Urbanisme • Gestion immobilière • Construction. Concevoir, aménager, gérer et construire — l'avenir, ensemble.
+                </p>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Navigation</h4>
+                <ul class="space-y-2 font-body-md text-caption text-white">
+                    <li><a href="index.html" class="hover:text-secondary transition-colors">Accueil</a></li>
+                    <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
+                    <li><a href="projets.html" class="hover:text-secondary transition-colors">Projets</a></li>
+                    <li><a href="immobilier.html" class="hover:text-secondary transition-colors">Immobilier</a></li>
+                    <li><a href="a-propos.html" class="hover:text-secondary transition-colors">À Propos</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Bureaux</h4>
+                <ul class="space-y-2 font-body-md text-caption text-white">
+                    <li>Lomé, Togo</li>
+                    <li>Abidjan, Côte d'Ivoire</li>
+                    <li>Kigali, Rwanda</li>
+                </ul>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Contact</h4>
+                <p class="font-body-md text-caption text-white">contact@AUGIC.com<br>+228 22 21 00 00</p>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-caption text-caption text-gold">&copy; 2026 AUGIC. Tous droits réservés.</p>
+            <div class="flex gap-6 font-caption text-gold">
+                <a href="#" class="hover:text-secondary transition-colors">Mentions Légales</a>
+                <a href="#" class="hover:text-secondary transition-colors">Confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Interactive JS File -->
+    <script src="app.js"></script>
+</body>
+</html>

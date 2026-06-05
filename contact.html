@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" href="assets/images/logo.png" type="image/png"/>
+    <title>Contact | AUGIC</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <meta name="description" content="Prenez contact avec nos experts à Lomé, Abidjan et Kigali pour concevoir vos projets BTP ou planifier votre investissement immobilier de prestige.">
+    <meta name="keywords" content="BTP, contact, Construction, génie civil, routes et voiries, immobilier moderne, villa de luxe, Lomé, Kigali, Abidjan">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Google Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+        <script src="tailwind-theme.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-on-surface antialiased">
+
+    <header class="augic-header" id="siteHeader">
+        <div class="flex justify-between items-center gap-4 h-20 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <a href="index.html" class="inline-flex shrink-0 items-center">
+                <img src="assets/images/logo.png" alt="AUGIC" class="h-12 md:h-14 w-auto max-w-[160px] sm:max-w-[180px] md:max-w-[200px] object-contain"/>
+            </a>
+            <nav class="hidden md:flex items-center gap-7">
+                <a href="index.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Accueil</a>
+                <a href="services.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Services</a>
+                <a href="projets.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Projets</a>
+                <a href="immobilier.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
+                <a href="a-propos.html" class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">À Propos</a>
+                <a href="contact.html" class="text-primary font-semibold border-b-2 border-secondary pb-0.5 font-label-md text-label-md">Contact</a>
+            </nav>
+            <a href="contact.html" class="augic-btn-green hidden md:inline-flex !py-2.5 !px-5 !text-[13px]">Demander un devis</a>
+            <button class="md:hidden text-primary focus:outline-none" id="menuToggle" aria-label="Ouvrir le menu">
+                <span class="material-symbols-outlined !text-3xl">menu</span>
+            </button>
+        </div>
+        <div class="augic-tricolor"></div>
+    </header>
+
+<!-- Mobile Nav Drawer -->
+    <div id="mobileNav" class="fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="fixed top-0 right-0 h-full w-4/5 max-w-sm bg-white p-6 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+            <div>
+                <div class="augic-tricolor mb-8 -mx-6 -mt-6"></div>
+                <div class="flex justify-between items-center mb-8">
+                    <a href="index.html" class="inline-block max-w-[180px]">
+                        <img src="assets/images/logo.png" alt="AUGIC" class="h-12 w-auto object-contain"/>
+                    </a>
+                    <button id="menuClose" class="text-primary focus:outline-none" aria-label="Fermer le menu">
+                        <span class="material-symbols-outlined !text-3xl">close</span>
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-6">
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="index.html">Accueil</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="services.html">Services</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="projets.html">Projets</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="immobilier.html">Immobilier</a>
+                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="a-propos.html">À Propos</a>
+                    <a class="text-primary font-bold font-label-md text-label-md border-l-4 border-secondary pl-3" href="contact.html">Contact</a>
+                </nav>
+            </div>
+            <a href="contact.html" class="augic-btn-green block w-full justify-center !py-4">Demander un devis</a>
+        </div>
+    </div>
+
+<main>
+        <!-- Page Hero -->
+        <section class="reveal relative h-[50vh] flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="assets/images/real/hero.jpg" alt="Grand chantier BTP avec grues" class="w-full h-full object-cover scale-105">
+                <div class="absolute inset-0 augic-hero__overlay"></div>
+            </div>
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
+                <div class="max-w-3xl">
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-shadow-hero">
+                        Parlons de votre projet
+                    </h1>
+                    <p class="font-body-lg text-body-lg opacity-90 leading-relaxed max-w-2xl">
+                        Que vous ayez un projet de Construction d'immeuble, de voiries d'envergure ou d'acquisition d'une villa de prestige, nos équipes vous répondent sous 24h.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/real/chantier-industriel.jpg" alt="Chantier industriel AUGIC" class="w-full h-28 md:h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/real/compactage-voirie.jpg" alt="Travaux de voirie" class="w-full h-28 md:h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/real/engins-btp.jpg" alt="Parc d'engins" class="w-full h-28 md:h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <img src="assets/images/real/logistique-camion.jpg" alt="Transport lourd" class="w-full h-28 md:h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Channels & Form -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+                
+                <!-- Left: Offices Channels -->
+                <div class="reveal space-y-8">
+                    <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block">Nos implantations</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-2">Nos bureaux régionaux</h2>
+                    <p class="font-body-lg text-body-md text-on-surface-variant leading-relaxed mb-8">
+                        AUGIC s'est déployée dans des zones économiques stratégiques d'Afrique pour être au plus proche de vos chantiers et opportunités immobilières.
+                    </p>
+                    
+                    <div class="flex flex-col gap-6">
+                        <!-- Office 1: Lome HQ -->
+                        <div class="bg-white border border-outline-variant p-6 rounded hover:shadow-lg transition-shadow duration-300">
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary flex items-center gap-2 mb-3">
+                                <svg viewBox="0 0 24 24" class="w-5 h-5 fill-secondary"><path d="M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2M12,4A5,5 0 0,1 17,9C17,12.24 13.6,17.59 12,19.4C10.41,17.59 7,12.24 7,9A5,5 0 0,1 12,4M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6Z"/></svg>
+                                Siège Principal — Lomé, Togo
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
+                                Boulevard du 13 Janvier, Quartier Dekon. BP 1245, Lomé.<br>
+                                Tél : +228 22 00 00 00 / WhatsApp : +228 90 00 00 00<br>
+                                E-mail : lome@AUGIC-btp.com
+                            </p>
+                            <a href="https://wa.me/22890000000" target="_blank" rel="noopener noreferrer" class="text-secondary font-label-md text-label-md hover:underline flex items-center gap-1">
+                                Nous écrire sur WhatsApp &rarr;
+                            </a>
+                        </div>
+
+                        <!-- Office 2: Abidjan -->
+                        <div class="bg-white border border-outline-variant p-6 rounded hover:shadow-lg transition-shadow duration-300">
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary flex items-center gap-2 mb-3">
+                                <svg viewBox="0 0 24 24" class="w-5 h-5 fill-secondary"><path d="M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2M12,4A5,5 0 0,1 17,9C17,12.24 13.6,17.59 12,19.4C10.41,17.59 7,12.24 7,9A5,5 0 0,1 12,4M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6Z"/></svg>
+                                Filiale Côte d'Ivoire — Abidjan
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                Immeuble CCIA, Plateau Center, Abidjan.<br>
+                                Tél : +225 27 00 00 00 / +225 07 00 00 00<br>
+                                E-mail : abidjan@AUGIC-btp.com
+                            </p>
+                        </div>
+
+                        <!-- Office 3: Kigali -->
+                        <div class="bg-white border border-outline-variant p-6 rounded hover:shadow-lg transition-shadow duration-300">
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary flex items-center gap-2 mb-3">
+                                <svg viewBox="0 0 24 24" class="w-5 h-5 fill-secondary"><path d="M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2M12,4A5,5 0 0,1 17,9C17,12.24 13.6,17.59 12,19.4C10.41,17.59 7,12.24 7,9A5,5 0 0,1 12,4M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6Z"/></svg>
+                                Bureau Afrique de l'Est — Kigali, Rwanda
+                            </h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                Century Park, Nyarutarama Road, Kigali.<br>
+                                Tél : +250 788 000 000<br>
+                                E-mail : kigali@AUGIC-btp.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Advanced inquiry form -->
+                <div class="bg-white p-10 border border-outline-variant shadow-lg hover:shadow-xl transition-shadow duration-300 rounded reveal">
+                    <form id="contactForm" class="space-y-6">
+                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-1">Formulaire de demande</span>
+                        <h2 class="font-headline-lg text-2xl text-primary font-bold mb-6">Demander une consultation d'experts</h2>
+                        
+                        <div class="space-y-2">
+                            <label for="formName" class="block font-label-md text-caption text-outline mb-1">Nom complet</label>
+                            <input type="text" id="formName" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all placeholder:text-surface-variant font-body-md text-on-surface" placeholder="Ex: Jean Koffi" required>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label for="formPhone" class="block font-label-md text-caption text-outline mb-1">Téléphone</label>
+                                <input type="tel" id="formPhone" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all placeholder:text-surface-variant font-body-md text-on-surface" placeholder="Ex: +228 90 00 00 00" required>
+                            </div>
+                            <div class="space-y-2">
+                                <label for="formEmail" class="block font-label-md text-caption text-outline mb-1">E-mail</label>
+                                <input type="email" id="formEmail" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all placeholder:text-surface-variant font-body-md text-on-surface" placeholder="Ex: jean@gmail.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label for="formService" class="block font-label-md text-caption text-outline mb-1">Service concerné</label>
+                            <select id="formService" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all text-on-surface-variant font-body-md" required>
+                                <option value="" class="text-on-surface">Sélectionnez une expertise...</option>
+                                <option value="batiment" class="text-on-surface">Construction de bâtiments</option>
+                                <option value="routes" class="text-on-surface">Infrastructures routières</option>
+                                <option value="genie" class="text-on-surface">Bureau d'études Génie Civil</option>
+                                <option value="immobilier" class="text-on-surface">Achat immobilier de prestige</option>
+                                <option value="suivi" class="text-on-surface">Contrôle technique et suivi de chantier</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label for="formBudget" class="block font-label-md text-caption text-outline mb-1">Budget prévisionnel (USD)</label>
+                            <select id="formBudget" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all text-on-surface-variant font-body-md" required>
+                                <option value="" class="text-on-surface">Sélectionnez une tranche...</option>
+                                <option value="inf100" class="text-on-surface">Moins de 100 000 $</option>
+                                <option value="100-300" class="text-on-surface">100 000 $ - 300 000 $</option>
+                                <option value="300-600" class="text-on-surface">300 000 $ - 600 000 $</option>
+                                <option value="sup600" class="text-on-surface">Plus de 600 000 $</option>
+                            </select>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label for="formMessage" class="block font-label-md text-caption text-outline mb-1">Description du projet</label>
+                            <textarea id="formMessage" rows="4" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all placeholder:text-surface-variant font-body-md text-on-surface" placeholder="Décrivez succinctement les dimensions du terrain, le type de structure ou vos objectifs..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary text-white py-4 font-label-md text-label-md uppercase tracking-widest hover:bg-primary-container hover:shadow-lg transition-all active:scale-[0.98] rounded cursor-pointer">
+                            Envoyer le cahier des charges
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Footprint Map (SVG Interactive) -->
+            <div class="reveal mt-20 relative bg-primary rounded overflow-hidden border border-outline-variant shadow-lg h-[450px] flex items-center justify-center">
+                <div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+                
+                <!-- Simple high-end stylised SVG map of Africa (lines connecting offices) -->
+                <svg class="w-full max-w-[400px] h-auto z-10" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Network paths -->
+                    <path d="M120 180 L 180 200 L 300 240 L 120 180 Z" stroke="#FD8B00" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0.6"/>
+                    <path d="M120 180 L 130 90 L 180 200" stroke="#FD8B00" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.4"/>
+                    
+                    <!-- Dakar Office node -->
+                    <circle cx="70" cy="140" r="4" fill="#FFFFFF"/>
+                    <circle cx="70" cy="140" r="10" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+                    <text x="50" y="125" fill="#FFFFFF" font-size="10" font-family="Montserrat" font-weight="700">Dakar (SN)</text>
+
+                    <!-- Abidjan Office node -->
+                    <circle cx="120" cy="180" r="6" fill="#FD8B00"/>
+                    <circle cx="120" cy="180" r="14" fill="none" stroke="#FD8B00" stroke-width="1" opacity="0.6"/>
+                    <text x="100" y="165" fill="#FFFFFF" font-size="11" font-family="Montserrat" font-weight="700">Abidjan (CI)</text>
+
+                    <!-- Lome HQ node -->
+                    <circle cx="180" cy="200" r="8" fill="#FD8B00"/>
+                    <circle cx="180" cy="200" r="18" fill="none" stroke="#FD8B00" stroke-width="2">
+                        <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" />
+                        <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite" />
+                    </circle>
+                    <text x="195" y="205" fill="#FD8B00" font-size="12" font-family="Montserrat" font-weight="800">Lomé (TG) - Siège</text>
+
+                    <!-- Kigali Office node -->
+                    <circle cx="300" cy="240" r="6" fill="#FD8B00"/>
+                    <circle cx="300" cy="240" r="14" fill="none" stroke="#FD8B00" stroke-width="1" opacity="0.6"/>
+                    <text x="280" y="225" fill="#FFFFFF" font-size="11" font-family="Montserrat" font-weight="700">Kigali (RW)</text>
+                </svg>
+
+                <div class="absolute bottom-6 left-6 right-6 md:right-auto md:max-w-sm bg-white/10 backdrop-blur-md p-6 border border-white/10 rounded text-white z-20">
+                    <h3 class="font-headline-md text-body-lg font-bold text-secondary-fixed mb-1">Réseau Panafricain AUGIC</h3>
+                    <p class="font-body-md text-caption text-white/80 leading-relaxed">Une synergie d'ingénierie reliant l'Afrique de l'Ouest et de l'Est.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="augic-footer pt-16 pb-10" role="contentinfo">
+        <div class="augic-tricolor"></div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-10 mb-12 pt-12">
+            <div class="md:col-span-5 space-y-5">
+                <a class="inline-block bg-white rounded-lg p-3" href="index.html">
+                    <img src="assets/images/logo.png" alt="AUGIC" class="h-12 w-auto object-contain max-w-[200px]"/>
+                </a>
+                <p class="font-body-md text-body-md text-white leading-relaxed max-w-sm">
+                    Architecture • Urbanisme • Gestion immobilière • Construction. Concevoir, aménager, gérer et construire — l'avenir, ensemble.
+                </p>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Navigation</h4>
+                <ul class="space-y-2 font-body-md text-caption text-white">
+                    <li><a href="index.html" class="hover:text-secondary transition-colors">Accueil</a></li>
+                    <li><a href="services.html" class="hover:text-secondary transition-colors">Services</a></li>
+                    <li><a href="projets.html" class="hover:text-secondary transition-colors">Projets</a></li>
+                    <li><a href="immobilier.html" class="hover:text-secondary transition-colors">Immobilier</a></li>
+                    <li><a href="a-propos.html" class="hover:text-secondary transition-colors">À Propos</a></li>
+                </ul>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Bureaux</h4>
+                <ul class="space-y-2 font-body-md text-caption text-white">
+                    <li>Lomé, Togo</li>
+                    <li>Abidjan, Côte d'Ivoire</li>
+                    <li>Kigali, Rwanda</li>
+                </ul>
+            </div>
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-gold uppercase tracking-wider">Contact</h4>
+                <p class="font-body-md text-caption text-white">contact@AUGIC.com<br>+228 22 21 00 00</p>
+            </div>
+        </div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-caption text-caption text-gold">&copy; 2026 AUGIC. Tous droits réservés.</p>
+            <div class="flex gap-6 font-caption text-gold">
+                <a href="#" class="hover:text-secondary transition-colors">Mentions Légales</a>
+                <a href="#" class="hover:text-secondary transition-colors">Confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+<!-- Interactive JS File -->
+    <script src="app.js"></script>
+</body>
+</html>
