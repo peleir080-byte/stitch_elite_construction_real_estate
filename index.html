@@ -56,7 +56,7 @@
                     <a href="index.html" class="nav-link active text-primary font-semibold font-label-md text-label-md">Accueil</a>
                     <a href="services.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Services</a>
                     <a href="projets.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Projets</a>
-                    <a href="immobilier.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
+<a href="immobilier.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
                     <a href="a-propos.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">À Propos</a>
                     <a href="contact.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Contact</a>
                 </nav>
@@ -84,7 +84,7 @@
                     <a class="text-primary font-bold font-label-md text-label-md border-l-4 border-secondary pl-3" href="index.html">Accueil</a>
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3 transition-colors" href="services.html">Services</a>
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3 transition-colors" href="projets.html">Projets</a>
-                    <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3 transition-colors" href="immobilier.html">Immobilier</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3 transition-colors" href="immobilier.html">Immobilier</a>
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3 transition-colors" href="a-propos.html">À Propos</a>
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3 transition-colors" href="contact.html">Contact</a>
                 </nav>
@@ -98,51 +98,79 @@
         <!-- ═══════════════════════════════════════════════
              HERO SECTION
         ═══════════════════════════════════════════════ -->
-        <section class="reveal relative min-h-[85vh] flex items-center overflow-hidden">
-            <div id="heroSlides" class="absolute inset-0 z-0">
-                <!-- Slide 1 (Video) -->
-                <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out" data-type="video" data-duration="15000">
-                    <video class="w-full h-full object-cover" muted playsinline>
-                        <source src="assets/videos/chantier-01.mp4" type="video/mp4"/>
-                    </video>
+        <section class="augic-carousel augic-carousel--hero relative min-h-[88vh] overflow-hidden" id="homeHeroCarousel" data-autoplay="true">
+            <div class="augic-carousel__stage absolute inset-0 z-0 bg-black">
+                <div class="augic-carousel__slide" data-type="video" data-duration="18000" data-tag="Chantier filmé" data-label="Coulage et gros œuvre en direct">
+                    <div class="augic-carousel__media">
+                        <video class="hero-media-sharp" muted playsinline preload="auto">
+                            <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
                 </div>
-                <!-- Slide 2 (Image) -->
-                <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out" data-type="image" data-duration="6000">
-                    <img alt="Parc d'engins et chantier BTP" class="w-full h-full object-cover" src="assets/images/real/hero.jpg"/>
+                <div class="augic-carousel__slide" data-type="video" data-duration="18000" data-tag="Terrain" data-label="Mobilisation d'engins et équipes">
+                    <div class="augic-carousel__media">
+                        <video class="hero-media-sharp" muted playsinline preload="auto">
+                            <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
                 </div>
-                <!-- Slide 3 (Video) -->
-                <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out" data-type="video" data-duration="15000">
-                    <video class="w-full h-full object-cover" muted playsinline>
-                        <source src="assets/videos/chantier-02.mp4" type="video/mp4"/>
-                    </video>
+                <div class="augic-carousel__slide" data-type="image" data-duration="7000" data-tag="Ingénierie" data-label="Expertise BTP et infrastructures majeures">
+                    <div class="augic-carousel__media">
+                        <img src="assets/images/hero-services.jpg" alt="Chantier BTP AUGIC" class="hero-media-sharp"/>
+                    </div>
                 </div>
-                <!-- Slide 4 (Image) -->
-                <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out" data-type="image" data-duration="6000">
-                    <img alt="Mise en œuvre béton et structures" class="w-full h-full object-cover" src="assets/images/real/betonnage.jpg"/>
+                <div class="augic-carousel__slide" data-type="video" data-duration="16000" data-tag="Réalisations" data-label="Nos opérations sur le terrain">
+                    <div class="augic-carousel__media">
+                        <video class="hero-media-sharp" muted playsinline preload="auto">
+                            <source src="photo/video-3.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
                 </div>
-                <!-- Dark Forest Overlay -->
-                <div class="absolute inset-0 augic-hero__overlay"></div>
+                <div class="augic-carousel__slide" data-type="image" data-duration="7000" data-tag="Immobilier" data-label="Promotion immobilière de prestige">
+                    <div class="augic-carousel__media">
+                        <img src="assets/images/hero-immobilier.jpg" alt="Résidence de prestige AUGIC" class="hero-media-sharp"/>
+                    </div>
+                </div>
             </div>
-            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-white py-20">
+            <div class="augic-carousel__vivid-overlay augic-hero__overlay"></div>
+            <div class="augic-carousel__frame" aria-hidden="true"></div>
+
+            <div class="augic-carousel__content relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-white">
                 <div class="max-w-3xl">
-                    <!-- Badge accroche -->
-                    <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full mb-6 text-[11px] font-bold font-label-md text-secondary tracking-widest uppercase shadow-sm animate-float">
-                        <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                    <div class="augic-carousel__live-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-6 text-[11px] font-bold font-label-md tracking-widest uppercase animate-float">
+                        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
                         Ingénierie BTP &amp; Immobilier d'Exception
                     </div>
                     <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-shadow-hero">
                         Construisons les <span class="text-secondary">infrastructures</span> de demain
                     </h1>
-                    <p class="font-body-lg text-body-lg mb-8 text-slate-200 leading-relaxed max-w-2xl">
-                        Experts en routes, bâtiments, génie civil et promotion immobilière. AUGIC façonne des ouvrages durables et valorise vos investissements.
+                    <p class="font-body-lg text-body-lg mb-8 text-slate-100 leading-relaxed max-w-2xl">
+                        Groupe d'ingénierie et de construction implanté au Togo, au Rwanda et en Côte d'Ivoire. Nous concevons, bâtissons et valorisons des infrastructures durables — du gros œuvre aux voiries, de la promotion immobilière aux ouvrages d'art.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a class="augic-btn-orange" href="contact.html">
                             Demander un devis
                             <span class="material-symbols-outlined !text-lg">arrow_forward</span>
                         </a>
-                        <a class="augic-btn-outline" href="projets.html">Voir nos réalisations</a>
+                        <a class="augic-btn-outline" href="projets.html">Nos réalisations</a>
                     </div>
+                </div>
+            </div>
+
+            <div class="augic-carousel__chrome">
+                <div class="augic-carousel__caption">
+                    <span class="augic-carousel__tag"></span>
+                    <span class="augic-carousel__label"></span>
+                </div>
+                <div class="augic-carousel__progress" aria-hidden="true"><span></span></div>
+                <div class="augic-carousel__controls">
+                    <button type="button" class="augic-carousel__arrow augic-carousel__arrow--prev" aria-label="Slide précédent">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <div class="augic-carousel__dots" role="tablist" aria-label="Slides du carrousel"></div>
+                    <button type="button" class="augic-carousel__arrow augic-carousel__arrow--next" aria-label="Slide suivant">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -150,8 +178,8 @@
         <!-- ═══════════════════════════════════════════════
              STATISTICS SECTION — bg-primary (vert forêt)
         ═══════════════════════════════════════════════ -->
-        <section class="reveal bg-primary text-white py-16 relative overflow-hidden border-y border-white/5">
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/20 via-transparent to-transparent opacity-60"></div>
+        <section class="reveal bg-primary text-white py-16 relative overflow-hidden border-y-2 border-secondary/30">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-secondary/20 via-transparent to-transparent opacity-70"></div>
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 text-center">
                     <!-- Stat 1 -->
@@ -278,83 +306,117 @@
                         </a>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-                    <!-- Project 1 (Large) -->
-                    <a href="projets.html?project=villa-horizon" class="augic-project md:col-span-8 h-[500px] block">
-                        <img alt="Coulage de dallage industriel sous hangar métallique" src="assets/images/real/chantier-industriel.jpg"/>
-                        <div class="augic-project__overlay">
-                            <span class="augic-project__tag">Bâtiment / Industriel</span>
-                            <h3 class="font-headline-md text-headline-md">Hall Industriel — Dallage béton</h3>
+                <div class="featured-realisations">
+                    <div class="featured-realisations__media rounded-xl overflow-hidden shadow-xl border border-outline-variant/60">
+                        <video class="w-full h-full min-h-[280px] md:min-h-[360px] object-cover gallery-media-sharp" muted playsinline preload="metadata" controls>
+                            <source src="photo/video-3.mp4" type="video/mp4"/>
+                        </video>
+                        <span class="featured-realisations__badge">Chantier filmé</span>
+                    </div>
+                    <div class="featured-realisations__content">
+                        <p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                            Nos réalisations sur le terrain : coulage de grandes dalles, compactage de voiries, fondations de bâtiments publics et mobilisation de notre flotte logistique.
+                        </p>
+                        <div class="grid sm:grid-cols-2 gap-4 mb-8">
+                            <a href="projets.html?project=villa-horizon" class="featured-realisations__thumb group">
+                                <img src="photo/13.jpeg" alt="Coulage de dalle industrielle de nuit" loading="lazy"/>
+                                <div class="featured-realisations__thumb-caption">
+                                    <span class="text-secondary text-[10px] font-bold uppercase tracking-wider">Industriel</span>
+                                    <span class="text-white text-sm font-semibold">Dallage hall — 1 200 m²</span>
+                                </div>
+                            </a>
+                            <a href="projets.html?project=autoroute-est" class="featured-realisations__thumb group">
+                                <img src="photo/43.jpeg" alt="Compactage plateforme avec rouleau compresseur" loading="lazy"/>
+                                <div class="featured-realisations__thumb-caption">
+                                    <span class="text-secondary text-[10px] font-bold uppercase tracking-wider">Voiries</span>
+                                    <span class="text-white text-sm font-semibold">Compactage plateforme routière</span>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                    <a href="projets.html?project=autoroute-est" class="augic-project md:col-span-4 h-[500px] block">
-                        <img alt="Compactage de plateforme routière" src="assets/images/real/compactage-voirie.jpg"/>
-                        <div class="augic-project__overlay">
-                            <span class="augic-project__tag">Routes &amp; Voiries</span>
-                            <h3 class="font-headline-md text-headline-md">Compactage plateforme voirie</h3>
-                        </div>
-                    </a>
-                    <a href="projets.html?project=onyx-tower" class="augic-project md:col-span-12 h-[400px] block">
-                        <img alt="Structure béton armé" src="assets/images/real/structure-beton.jpg"/>
-                        <div class="augic-project__overlay">
-                            <span class="augic-project__tag">Génie civil / Ouvrage</span>
-                            <h3 class="font-headline-md text-headline-md">Ouvrage béton armé — Structure courbe</h3>
-                        </div>
-                    </a>
+                        <a href="projets.html" class="inline-flex items-center gap-2 text-primary font-semibold text-sm border-b-2 border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors">
+                            Explorer tous nos projets
+                            <span class="material-symbols-outlined !text-lg">arrow_forward</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- ═══════════════════════════════════════════════
-             CHANTIERS EN VIDÉO — fond blanc
+             MÉTHODOLOGIE & ENGAGEMENTS — contenu éditorial
         ═══════════════════════════════════════════════ -->
-        <section class="reveal bg-white py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="chantiers-video">
-            <div class="mb-12 text-center md:text-left">
-                <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Sur le terrain</span>
-                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-4">Nos chantiers en action</h2>
-                <div class="accent-line mt-4"></div>
-                <p class="font-body-md text-on-surface-variant mt-4 max-w-2xl">Images et vidéos authentiques de nos équipes, engins et réalisations sur le terrain.</p>
+        <section class="reveal bg-white py-section-gap" id="methode">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+                    <div>
+                        <span class="augic-tag">Notre méthode</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-5">De l'étude à la réception des ouvrages</h2>
+                        <div class="accent-line mt-4"></div>
+                        <p class="font-body-md text-on-surface-variant mt-6 leading-relaxed max-w-xl">
+                            Chaque projet AUGIC suit un processus rigoureux inspiré des standards internationaux de gestion de chantier. Notre approche intégrée couvre l'ingénierie, l'exécution et le contrôle qualité — pour des livraisons conformes, dans les délais et en toute sécurité.
+                        </p>
+                        <ol class="method-steps">
+                            <li>
+                                <h4>Étude &amp; faisabilité</h4>
+                                <p>Analyse géotechnique, dimensionnement structurel, planning prévisionnel et chiffrage détaillé avant engagement contractuel.</p>
+                            </li>
+                            <li>
+                                <h4>Conception &amp; ingénierie</h4>
+                                <p>Plans d'exécution, modélisation BIM, coordination des corps de métier et validation technique par nos ingénieurs.</p>
+                            </li>
+                            <li>
+                                <h4>Exécution terrain</h4>
+                                <p>Mobilisation des engins, suivi journalier des travaux, contrôle des matériaux et respect des normes HSE sur site.</p>
+                            </li>
+                            <li>
+                                <h4>Réception &amp; garantie</h4>
+                                <p>Procès-verbal de réception, dossier des ouvrages exécutés (DOE) et accompagnement post-livraison.</p>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="space-y-5">
+                        <div class="pro-pillar">
+                            <div class="pro-pillar__icon"><span class="material-symbols-outlined">health_and_safety</span></div>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Sécurité &amp; HSE</h3>
+                            <p class="font-body-md text-on-surface-variant text-sm leading-relaxed">Protocoles de sécurité sur tous nos chantiers, équipements de protection individuelle, briefings quotidiens et zéro tolérance sur les risques majeurs.</p>
+                        </div>
+                        <div class="pro-pillar">
+                            <div class="pro-pillar__icon"><span class="material-symbols-outlined">verified</span></div>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Qualité &amp; conformité</h3>
+                            <p class="font-body-md text-on-surface-variant text-sm leading-relaxed">Contrôle des matériaux, essais de compactage, vérification du ferraillage et traçabilité complète des opérations de coulage.</p>
+                        </div>
+                        <div class="pro-pillar">
+                            <div class="pro-pillar__icon"><span class="material-symbols-outlined">schedule</span></div>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Respect des délais</h3>
+                            <p class="font-body-md text-on-surface-variant text-sm leading-relaxed">Planning détaillé, reporting hebdomadaire au maître d'ouvrage et mobilisation de nos propres moyens logistiques pour tenir les échéances.</p>
+                        </div>
+                        <a href="a-propos.html#mediatheque" class="inline-flex items-center gap-2 text-primary font-semibold text-sm border-b-2 border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors mt-4">
+                            Découvrir notre médiathèque chantiers
+                            <span class="material-symbols-outlined !text-lg">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="relative overflow-hidden rounded-xl bg-black aspect-video group shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <video class="w-full h-full object-cover" controls playsinline preload="metadata" poster="assets/images/real/engins-btp.jpg">
-                        <source src="assets/videos/chantier-01.mp4" type="video/mp4"/>
-                    </video>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════
+             SECTEURS D'INTERVENTION
+        ═══════════════════════════════════════════════ -->
+        <section class="reveal bg-background py-section-gap" id="secteurs">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-14">
+                    <span class="augic-tag">Domaines d'expertise</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-5">Secteurs d'intervention</h2>
+                    <div class="accent-line mx-auto mt-4"></div>
+                    <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mt-6">AUGIC intervient sur l'ensemble de la chaîne de valeur du BTP et de l'immobilier, du gros œuvre aux infrastructures routières.</p>
                 </div>
-                <div class="relative overflow-hidden rounded-xl bg-black aspect-video group shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <video class="w-full h-full object-cover" controls playsinline preload="metadata" poster="assets/images/real/grue-levage.jpg">
-                        <source src="assets/videos/chantier-02.mp4" type="video/mp4"/>
-                    </video>
-                </div>
-                <div class="relative overflow-hidden rounded-xl bg-black aspect-video group shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <video class="w-full h-full object-cover" controls playsinline preload="metadata" poster="assets/images/real/terrassement.jpg">
-                        <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
-                    </video>
-                </div>
-                <div class="relative overflow-hidden rounded-xl bg-black aspect-video group shadow-md hover:shadow-xl transition-shadow duration-300">
-                    <video class="w-full h-full object-cover" controls playsinline preload="metadata" poster="assets/images/real/hall-industriel.jpg">
-                        <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
-                    </video>
-                </div>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
-                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/images/real/engins-btp.jpg" alt="Parc d'engins Liugong sur chantier" class="w-full h-40 md:h-48 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/images/real/terrassement.jpg" alt="Terrassement avec chargeuse Caterpillar" class="w-full h-40 md:h-48 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/images/real/betonnage.jpg" alt="Bétonnage sur chantier communautaire" class="w-full h-40 md:h-48 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/images/real/logistique-camion.jpg" alt="Camion de transport lourd Foton au Togo" class="w-full h-40 md:h-48 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/images/real/chantier-equipe.jpg" alt="Équipes AUGIC en activité sur chantier" class="w-full h-40 md:h-48 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/images/real/infrastructure.jpg" alt="Travaux d'infrastructure et génie civil" class="w-full h-40 md:h-48 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="sector-card"><h4>Bâtiments industriels &amp; commerciaux</h4><p>Halls de production, entrepôts logistiques, bureaux et surfaces commerciales — gros œuvre, charpente et enveloppe.</p></div>
+                    <div class="sector-card"><h4>Génie civil &amp; ouvrages d'art</h4><p>Fondations profondes, structures béton armé, ouvrages hydrauliques et préfabrication sur site.</p></div>
+                    <div class="sector-card"><h4>Routes, voiries &amp; VRD</h4><p>Terrassement, assainissement, compactage de plateformes et aménagements urbains durables.</p></div>
+                    <div class="sector-card"><h4>Promotion immobilière</h4><p>Conception, commercialisation et livraison de résidences et programmes immobiliers haut standing.</p></div>
+                    <div class="sector-card"><h4>Logistique &amp; engins lourds</h4><p>Parc d'engins BTP, transport de matériaux, levage et approvisionnement des chantiers.</p></div>
+                    <div class="sector-card"><h4>Études techniques &amp; BIM</h4><p>Modélisation 3D, audits structurels, plans d'exécution et assistance à maîtrise d'ouvrage.</p></div>
                 </div>
             </div>
         </section>
@@ -369,8 +431,8 @@
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
                 <div class="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
                     <div class="text-center md:text-left">
-                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Immobilier d'exception</span>
-                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-4 text-primary">Projets &amp; biens disponibles</h2>
+                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Offre AUGIC</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-4 text-primary">Projets &amp; prestations disponibles</h2>
                         <div class="accent-line mt-4"></div>
                     </div>
                     <div>
@@ -380,54 +442,57 @@
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-                    <!-- Bien 1 -->
+                    <!-- Prestation 1 -->
                     <div class="bg-white border border-outline-variant overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/20 rounded-lg">
-                        <div class="relative overflow-hidden h-64">
-                            <img alt="Bâtiment public en briques — promotion immobilière" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="assets/images/real/batiment-public.jpg"/>
-                            <div class="absolute top-4 right-4 augic-badge-gold">EN VENTE</div>
+                        <div class="relative overflow-hidden h-56">
+                            <img alt="Fondations et gros œuvre — bâtiment public en cours" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="photo/38.jpeg"/>
+                            <div class="absolute top-4 right-4 augic-badge-gold">EN COURS</div>
                         </div>
                         <div class="p-6">
                             <div class="flex items-center gap-2 mb-2 text-on-surface-variant">
-                                <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
-                                <span class="font-body-md text-caption uppercase">Lomé, Togo</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary">foundation</span>
+                                <span class="font-body-md text-caption uppercase">Gros œuvre · Lomé</span>
                             </div>
-                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-4">Bâtiment public — Gros œuvre</h3>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Bâtiment public — Fondations</h3>
+                            <p class="font-body-md text-sm text-on-surface-variant mb-4 leading-relaxed">Coffrage, ferraillage et coulage de fondations profondes pour un équipement public.</p>
                             <div class="flex justify-between items-center">
                                 <span class="font-headline-md text-headline-md text-secondary">Sur devis</span>
                                 <a href="immobilier.html?id=villa-eden" class="augic-btn-navy !py-2 !px-5 !text-[12px]">S'informer</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Bien 2 -->
+                    <!-- Prestation 2 -->
                     <div class="bg-white border border-outline-variant overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/20 rounded-lg">
-                        <div class="relative overflow-hidden h-64">
-                            <img alt="Levage et logistique lourde sur chantier" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="assets/images/real/grue-levage.jpg"/>
-                            <div class="absolute top-4 right-4 augic-badge-gold">NOUVEAU</div>
+                        <div class="relative overflow-hidden h-56">
+                            <img alt="Semi-remorque Foton — transport de matériaux lourds" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="photo/40.jpeg"/>
+                            <div class="absolute top-4 right-4 augic-badge-gold">SERVICE</div>
                         </div>
                         <div class="p-6">
                             <div class="flex items-center gap-2 mb-2 text-on-surface-variant">
-                                <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
-                                <span class="font-body-md text-caption uppercase">Zone industrielle, TG</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary">local_shipping</span>
+                                <span class="font-body-md text-caption uppercase">Logistique · Togo</span>
                             </div>
-                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-4">Levage &amp; logistique lourde</h3>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Levage &amp; logistique lourde</h3>
+                            <p class="font-body-md text-sm text-on-surface-variant mb-4 leading-relaxed">Transport d'engins et de matériaux par semi-remorque et flotte Foton AUGIC.</p>
                             <div class="flex justify-between items-center">
                                 <span class="font-headline-md text-headline-md text-secondary">Prestation</span>
                                 <a href="immobilier.html?id=penthouse-horizon" class="augic-btn-navy !py-2 !px-5 !text-[12px]">S'informer</a>
                             </div>
                         </div>
                     </div>
-                    <!-- Bien 3 -->
+                    <!-- Prestation 3 -->
                     <div class="bg-white border border-outline-variant overflow-hidden group transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-primary/20 rounded-lg">
-                        <div class="relative overflow-hidden h-64">
-                            <img alt="Projet industriel livré — hall et équipements" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="assets/images/real/hall-industriel.jpg"/>
-                            <div class="absolute top-4 right-4 augic-badge-gold">DERNIER LOT</div>
+                        <div class="relative overflow-hidden h-56">
+                            <img alt="Coulage de dalle industrielle sous hangar métallique" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="photo/13.jpeg"/>
+                            <div class="absolute top-4 right-4 augic-badge-gold">LIVRÉ</div>
                         </div>
                         <div class="p-6">
                             <div class="flex items-center gap-2 mb-2 text-on-surface-variant">
-                                <span class="material-symbols-outlined text-[18px] text-primary">location_on</span>
-                                <span class="font-body-md text-caption uppercase">Parc engins, TG</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary">domain</span>
+                                <span class="font-body-md text-caption uppercase">Industriel · Zone portuaire</span>
                             </div>
-                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-4">Hall industriel — Livré</h3>
+                            <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Hall industriel — Dallage livré</h3>
+                            <p class="font-body-md text-sm text-on-surface-variant mb-4 leading-relaxed">Dallage béton armé de grande surface, coulé et fini sous structure métallique.</p>
                             <div class="flex justify-between items-center">
                                 <span class="font-headline-md text-headline-md text-secondary">Réf. 2025</span>
                                 <a href="immobilier.html?id=manoir-royal" class="augic-btn-navy !py-2 !px-5 !text-[12px]">S'informer</a>
@@ -464,9 +529,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative h-[600px] hidden md:block group">
-                    <img alt="Grue mobile et opérations de levage sur site" class="absolute inset-0 w-full h-full object-cover rounded opacity-60 mix-blend-overlay transition-all duration-700 group-hover:scale-105 group-hover:opacity-85" src="assets/images/real/grue-levage.jpg"/>
-                    <div class="absolute inset-0 border-[20px] border-secondary/15 -m-6 pointer-events-none transition-all duration-500 group-hover:m-0 group-hover:border-secondary/25"></div>
+                <div class="relative h-[600px] hidden md:block overflow-hidden rounded-xl shadow-2xl border border-white/10 group">
+                    <video class="absolute inset-0 w-full h-full hero-media-sharp transition-transform duration-700 group-hover:scale-[1.02]" autoplay muted loop playsinline preload="auto">
+                        <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
+                    </video>
                 </div>
             </div>
         </section>
@@ -654,6 +720,8 @@
                     <li><a href="index.html" class="hover:text-secondary transition-colors">Accueil</a></li>
                     <li><a href="services.html" class="hover:text-secondary transition-colors">Nos Services</a></li>
                     <li><a href="projets.html" class="hover:text-secondary transition-colors">Nos Projets</a></li>
+                    <li>
+</li>
                     <li><a href="immobilier.html" class="hover:text-secondary transition-colors">Immobilier</a></li>
                     <li><a href="a-propos.html" class="hover:text-secondary transition-colors">À Propos</a></li>
                 </ul>
@@ -696,10 +764,9 @@
             <div class="lg:col-span-2 space-y-4">
                 <h4 class="font-headline-md text-body-md font-bold text-white uppercase tracking-wider">Chantier Direct</h4>
                 <div class="relative overflow-hidden rounded-lg border border-white/10 aspect-video lg:aspect-square group">
-                    <video class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay muted loop playsinline poster="assets/images/real/logistique-flotte.jpg">
-                        <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
+                    <video class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay muted loop playsinline>
+                        <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
                     </video>
-                    <div class="absolute inset-0 bg-primary/15 pointer-events-none"></div>
                 </div>
             </div>
 
@@ -715,6 +782,7 @@
     </footer>
 
     <!-- Interactive JS File -->
+    <script src="media-manifest.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -54,7 +54,7 @@
                     <a href="index.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Accueil</a>
                     <a href="services.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Services</a>
                     <a href="projets.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Projets</a>
-                    <a href="immobilier.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
+<a href="immobilier.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
                     <a href="a-propos.html" class="nav-link active text-primary font-semibold font-label-md text-label-md">À Propos</a>
                     <a href="contact.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Contact</a>
                 </nav>
@@ -82,7 +82,7 @@
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="services.html">Services</a>
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="projets.html">Projets</a>
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="immobilier.html">Immobilier</a>
-                    <a class="text-primary font-bold font-label-md text-label-md border-l-4 border-accent pl-3" href="a-propos.html">À Propos</a>
+                    <a class="text-primary font-bold font-label-md text-label-md border-l-4 border-secondary pl-3" href="a-propos.html">À Propos</a>
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="contact.html">Contact</a>
                 </nav>
             </div>
@@ -91,58 +91,117 @@
     </div>
 
     <main class="pt-[80px] lg:pt-[120px]">
-        <!-- ===== HERO SECTION ===== -->
-        <section class="reveal relative min-h-[55vh] flex items-center overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <img alt="Ingénieurs sur le terrain d'un grand projet de gratte-ciel" class="w-full h-full object-cover scale-105" src="assets/images/real/equipe-chantier.jpg"/>
-                <div class="absolute inset-0 augic-hero__overlay"></div>
+        <!-- ===== HERO CARROUSEL ===== -->
+        <section class="augic-carousel augic-carousel--hero augic-carousel--compact reveal relative min-h-[62vh] overflow-hidden" id="aboutHeroCarousel" data-autoplay="true">
+            <div class="augic-carousel__stage absolute inset-0 z-0 bg-black">
+                <div class="augic-carousel__slide" data-type="image" data-duration="6000" data-tag="Notre histoire" data-label="20 ans d'ingénierie et de construction">
+                    <div class="augic-carousel__media">
+                        <img src="assets/images/hero-projets.jpg" alt="Plans et ingénierie AUGIC" class="hero-media-sharp"/>
+                    </div>
+                </div>
+                <div class="augic-carousel__slide" data-type="image" data-duration="6000" data-tag="Gros œuvre" data-label="Fondations et structures de bâtiments publics">
+                    <div class="augic-carousel__media">
+                        <img src="photo/38.jpeg" alt="Fondations bâtiment public" class="hero-media-sharp"/>
+                    </div>
+                </div>
+                <div class="augic-carousel__slide" data-type="image" data-duration="6000" data-tag="Équipes" data-label="Nos ingénieurs et chefs de chantier sur le terrain">
+                    <div class="augic-carousel__media">
+                        <img src="photo/42.jpeg" alt="Flotte et équipes AUGIC" class="hero-media-sharp"/>
+                    </div>
+                </div>
+                <div class="augic-carousel__slide" data-type="video" data-duration="15000" data-tag="Chantier" data-label="Opérations filmées sur nos sites">
+                    <div class="augic-carousel__media">
+                        <video class="hero-media-sharp" muted playsinline preload="auto">
+                            <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
+                        </video>
+                    </div>
+                </div>
+                <div class="augic-carousel__slide" data-type="image" data-duration="6000" data-tag="Structures" data-label="Génie civil et ouvrages d'art">
+                    <div class="augic-carousel__media">
+                        <img src="photo/23.jpeg" alt="Structure béton courbe" class="hero-media-sharp"/>
+                    </div>
+                </div>
             </div>
-            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
+            <div class="augic-carousel__vivid-overlay augic-hero__overlay"></div>
+            <div class="augic-carousel__frame" aria-hidden="true"></div>
+
+            <div class="augic-carousel__content relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-white">
                 <div class="max-w-3xl">
+                    <div class="augic-carousel__live-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-5 text-[11px] font-bold tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        À Propos · AUGIC
+                    </div>
                     <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-shadow-hero">
-                        Bâtir l'excellence depuis 20 ans
+                        Bâtir l'<span class="text-secondary">excellence</span> depuis 20 ans
                     </h1>
-                    <p class="font-body-lg text-body-lg opacity-90 leading-relaxed max-w-2xl">
+                    <p class="font-body-lg text-body-lg text-slate-100 leading-relaxed max-w-2xl">
                         Découvrez l'histoire de AUGIC, notre mission d'ingénierie globale, nos valeurs et l'équipe d'ingénieurs et de promoteurs d'élite qui dessine l'Afrique de demain.
                     </p>
+                </div>
+            </div>
+
+            <div class="augic-carousel__chrome">
+                <div class="augic-carousel__caption">
+                    <span class="augic-carousel__tag"></span>
+                    <span class="augic-carousel__label"></span>
+                </div>
+                <div class="augic-carousel__progress" aria-hidden="true"><span></span></div>
+                <div class="augic-carousel__controls">
+                    <button type="button" class="augic-carousel__arrow augic-carousel__arrow--prev" aria-label="Slide précédent">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <div class="augic-carousel__dots" role="tablist" aria-label="Slides du carrousel"></div>
+                    <button type="button" class="augic-carousel__arrow augic-carousel__arrow--next" aria-label="Slide suivant">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
                 </div>
             </div>
         </section>
 
         <!-- Values Section -->
-        <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Mission -->
-                <div class="reveal bg-white border border-outline-variant p-10 rounded hover:shadow-xl hover:border-primary/20 transition-all duration-300">
-                    <div class="text-secondary mb-6">
-                        <span class="material-symbols-outlined !text-4xl">travel_explore</span>
-                    </div>
-                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Notre Mission</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                        Concevoir et réaliser des infrastructures durables de haute qualité technique et esthétique, permettant de relier les hommes, sécuriser les investissements immobiliers et accompagner la modernisation urbaine du continent africain.
-                    </p>
+        <section class="reveal value-cards-section py-section-gap px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-14">
+                    <span class="augic-tag">Notre ADN</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-5">Mission, Vision &amp; Valeurs</h2>
+                    <div class="accent-line mx-auto mt-4"></div>
                 </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <article class="value-card value-card--mission reveal">
+                        <span class="value-card__num" aria-hidden="true">01</span>
+                        <div class="value-card__icon">
+                            <span class="material-symbols-outlined">travel_explore</span>
+                        </div>
+                        <span class="value-card__chip">Mission</span>
+                        <h3 class="value-card__title">Notre Mission</h3>
+                        <p class="value-card__text">
+                            Concevoir et réaliser des infrastructures durables de haute qualité technique et esthétique, permettant de relier les hommes, sécuriser les investissements immobiliers et accompagner la modernisation urbaine du continent africain.
+                        </p>
+                    </article>
 
-                <!-- Vision -->
-                <div class="reveal bg-white border border-outline-variant p-10 rounded hover:shadow-xl hover:border-primary/20 transition-all duration-300">
-                    <div class="text-secondary mb-6">
-                        <span class="material-symbols-outlined !text-4xl">visibility</span>
-                    </div>
-                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Notre Vision</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                        Être le standard d'excellence et la signature de référence dans le BTP et la promotion immobilière en Afrique, reconnue pour notre rigueur méthodologique, notre intégrité structurelle et notre capacité d'innovation technologique (BIM, Smart Cities).
-                    </p>
-                </div>
+                    <article class="value-card value-card--vision reveal">
+                        <span class="value-card__num" aria-hidden="true">02</span>
+                        <div class="value-card__icon">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </div>
+                        <span class="value-card__chip">Vision</span>
+                        <h3 class="value-card__title">Notre Vision</h3>
+                        <p class="value-card__text">
+                            Être le standard d'excellence et la signature de référence dans le BTP et la promotion immobilière en Afrique, reconnue pour notre rigueur méthodologique, notre intégrité structurelle et notre capacité d'innovation technologique (BIM, Smart Cities).
+                        </p>
+                    </article>
 
-                <!-- Valeurs -->
-                <div class="reveal bg-white border border-outline-variant p-10 rounded hover:shadow-xl hover:border-primary/20 transition-all duration-300">
-                    <div class="text-secondary mb-6">
-                        <span class="material-symbols-outlined !text-4xl">verified</span>
-                    </div>
-                    <h3 class="font-headline-md text-headline-md text-primary mb-4">Nos Valeurs</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                        Notre philosophie repose sur trois piliers indissociables : la Rigueur technique qui garantit la stabilité et la sécurité des ouvrages ; l'Innovation constante de nos procédés ; et le Respect absolu de la parole donnée à nos clients et partenaires.
-                    </p>
+                    <article class="value-card value-card--valeurs reveal">
+                        <span class="value-card__num" aria-hidden="true">03</span>
+                        <div class="value-card__icon">
+                            <span class="material-symbols-outlined">verified</span>
+                        </div>
+                        <span class="value-card__chip">Valeurs</span>
+                        <h3 class="value-card__title">Nos Valeurs</h3>
+                        <p class="value-card__text">
+                            Notre philosophie repose sur trois piliers indissociables : la Rigueur technique qui garantit la stabilité et la sécurité des ouvrages ; l'Innovation constante de nos procédés ; et le Respect absolu de la parole donnée à nos clients et partenaires.
+                        </p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -219,69 +278,90 @@
             </div>
         </section>
 
+        <!-- Certifications & Standards -->
+        <section class="reveal bg-white py-section-gap px-margin-mobile md:px-margin-desktop">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-14">
+                    <span class="augic-tag">Exigence &amp; conformité</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-5">Standards de qualité</h2>
+                    <div class="accent-line mx-auto mt-4"></div>
+                    <p class="font-body-md text-on-surface-variant max-w-2xl mx-auto mt-6">Nos procédures s'alignent sur les référentiels internationaux du BTP pour garantir la fiabilité, la traçabilité et la sécurité de chaque ouvrage livré.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="cert-badge">
+                        <div class="cert-badge__icon"><span class="material-symbols-outlined">architecture</span></div>
+                        <div>
+                            <h4 class="font-bold text-primary mb-1">Conception BIM &amp; modélisation 3D</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Plans numériques, détection des conflits et coordination multi-métiers avant le démarrage chantier.</p>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-badge__icon"><span class="material-symbols-outlined">health_and_safety</span></div>
+                        <div>
+                            <h4 class="font-bold text-primary mb-1">Politique HSE intégrée</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Briefings sécurité, EPI obligatoires, analyse des risques et suivi des incidents sur l'ensemble de nos sites.</p>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-badge__icon"><span class="material-symbols-outlined">science</span></div>
+                        <div>
+                            <h4 class="font-bold text-primary mb-1">Contrôle matériaux &amp; essais</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Vérification des granulats, dosages béton, taux de compactage et conformité aux cahiers des charges.</p>
+                        </div>
+                    </div>
+                    <div class="cert-badge">
+                        <div class="cert-badge__icon"><span class="material-symbols-outlined">handshake</span></div>
+                        <div>
+                            <h4 class="font-bold text-primary mb-1">Engagement contractuel</h4>
+                            <p class="text-sm text-on-surface-variant leading-relaxed">Transparence budgétaire, reporting régulier et respect de la parole donnée à nos maîtres d'ouvrage publics et privés.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Médiathèque — accès galerie -->
+        <section class="reveal bg-dark-neutral text-white py-section-gap px-margin-mobile md:px-margin-desktop" id="mediatheque">
+            <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Archives terrain</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mt-5 mb-6">Médiathèque chantiers</h2>
+                    <p class="font-body-md text-slate-300 leading-relaxed mb-4">
+                        Retrouvez l'ensemble de nos archives visuelles : photos et vidéos authentiques de nos opérations sur le terrain — engins, structures, équipes et livraisons.
+                    </p>
+                    <p id="mediaCountSummary" class="font-label-md text-secondary font-semibold mb-8"></p>
+                    <a href="galerie.html" class="augic-btn-orange inline-flex items-center gap-2">
+                        Ouvrir la médiathèque
+                        <span class="material-symbols-outlined !text-lg">collections</span>
+                    </a>
+                </div>
+                <div id="aboutGalleryPreview" class="augic-carousel augic-carousel--gallery" data-autoplay="true"></div>
+            </div>
+        </section>
+
         <!-- Team Section -->
         <section class="reveal py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <div class="text-center mb-20">
-                <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Sur le terrain</span>
-                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-4">Nos équipes en action</h2>
-                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mt-4">Ingénieurs, conducteurs de travaux et opérateurs d'engins mobilisés chaque jour sur nos chantiers au Togo et en Afrique de l'Ouest.</p>
+                <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Organisation</span>
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-4">Nos pôles métiers</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mt-4">Des équipes pluridisciplinaires — ingénierie, conduite de travaux, production et logistique — mobilisées sur chaque projet.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <!-- Team 1 -->
-                <div class="bg-white border border-outline-variant/80 overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:border-secondary/20 rounded-xl">
-                    <div class="relative overflow-hidden h-96">
-                        <!-- Standard styled avatar background -->
-                        <div class="absolute inset-0 bg-primary/5 flex items-center justify-center text-primary/10 select-none">
-                            <span class="material-symbols-outlined !text-9xl">account_circle</span>
-                        </div>
-                        <!-- If images are found, they zoom on hover -->
-                        <img src="assets/images/real/equipe-chantier.jpg" alt="Équipe AUGIC sur chantier" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-80 group-hover:opacity-75 transition-opacity duration-300"></div>
-                        <div class="absolute bottom-6 left-6 text-white">
-                            <h4 class="font-headline-md text-body-lg font-bold">Direction chantier</h4>
-                            <p class="font-body-md text-caption text-secondary">Coordination &amp; sécurité</p>
-                        </div>
-                    </div>
-                    <div class="p-6 border-t border-outline-variant/60">
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Pilotage des opérations terrain, planning, respect des normes HSE et livraison dans les délais convenus.</p>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="pro-pillar">
+                    <div class="pro-pillar__icon"><span class="material-symbols-outlined">engineering</span></div>
+                    <h4 class="font-headline-md text-body-lg font-bold text-primary mb-2">Direction chantier</h4>
+                    <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">Pilotage des opérations terrain, planning, respect des normes HSE et livraison dans les délais convenus.</p>
                 </div>
-
-                <!-- Team 2 -->
-                <div class="bg-white border border-outline-variant/80 overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:border-secondary/20 rounded-xl">
-                    <div class="relative overflow-hidden h-96">
-                        <div class="absolute inset-0 bg-primary/5 flex items-center justify-center text-primary/10 select-none">
-                            <span class="material-symbols-outlined !text-9xl">account_circle</span>
-                        </div>
-                        <img src="assets/images/real/betonnage.jpg" alt="Bétonnage et production sur chantier" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-80 group-hover:opacity-75 transition-opacity duration-300"></div>
-                        <div class="absolute bottom-6 left-6 text-white">
-                            <h4 class="font-headline-md text-body-lg font-bold">Production béton</h4>
-                            <p class="font-body-md text-caption text-secondary">Gros œuvre &amp; structure</p>
-                        </div>
-                    </div>
-                    <div class="p-6 border-t border-outline-variant/60">
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Coulage, ferraillage, contrôle des dosages and qualité du béton sur l'ensemble de nos ouvrages.</p>
-                    </div>
+                <div class="pro-pillar">
+                    <div class="pro-pillar__icon"><span class="material-symbols-outlined">foundation</span></div>
+                    <h4 class="font-headline-md text-body-lg font-bold text-primary mb-2">Production &amp; gros œuvre</h4>
+                    <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">Coulage, ferraillage, contrôle des dosages et qualité du béton sur l'ensemble de nos ouvrages.</p>
                 </div>
-
-                <!-- Team 3 -->
-                <div class="bg-white border border-outline-variant/80 overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:border-secondary/20 rounded-xl">
-                    <div class="relative overflow-hidden h-96">
-                        <div class="absolute inset-0 bg-primary/5 flex items-center justify-center text-primary/10 select-none">
-                            <span class="material-symbols-outlined !text-9xl">account_circle</span>
-                        </div>
-                        <img src="assets/images/real/grue-levage.jpg" alt="Levage et logistique lourde" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent opacity-80 group-hover:opacity-75 transition-opacity duration-300"></div>
-                        <div class="absolute bottom-6 left-6 text-white">
-                            <h4 class="font-headline-md text-body-lg font-bold">Levage &amp; logistique</h4>
-                            <p class="font-body-md text-caption text-secondary">Engins &amp; transport</p>
-                        </div>
-                    </div>
-                    <div class="p-6 border-t border-outline-variant/60">
-                        <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">Mobilisation de grues, camions et engins lourds pour le déplacement de charges et l'approvisionnement des chantiers.</p>
-                    </div>
+                <div class="pro-pillar">
+                    <div class="pro-pillar__icon"><span class="material-symbols-outlined">local_shipping</span></div>
+                    <h4 class="font-headline-md text-body-lg font-bold text-primary mb-2">Levage &amp; logistique</h4>
+                    <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">Mobilisation de grues, camions et engins lourds pour l'approvisionnement et le déplacement de charges.</p>
                 </div>
             </div>
         </section>
@@ -357,10 +437,9 @@
             <div class="lg:col-span-2 space-y-4">
                 <h4 class="font-headline-md text-body-md font-bold text-white uppercase tracking-wider">Chantier Direct</h4>
                 <div class="relative overflow-hidden rounded-lg border border-white/10 aspect-video lg:aspect-square group">
-                    <video class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay muted loop playsinline poster="assets/images/real/logistique-flotte.jpg">
-                        <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
+                    <video class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay muted loop playsinline>
+                        <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
                     </video>
-                    <div class="absolute inset-0 bg-primary/15 pointer-events-none"></div>
                 </div>
             </div>
 
@@ -376,6 +455,7 @@
     </footer>
 
 <!-- Interactive JS File -->
+    <script src="media-manifest.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

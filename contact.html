@@ -56,7 +56,7 @@
                     <a href="index.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Accueil</a>
                     <a href="services.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Services</a>
                     <a href="projets.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Projets</a>
-                    <a href="immobilier.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
+<a href="immobilier.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
                     <a href="a-propos.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">À Propos</a>
                     <a href="contact.html" class="nav-link active text-primary font-semibold font-label-md text-label-md">Contact</a>
                 </nav>
@@ -85,7 +85,7 @@
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="projets.html">Projets</a>
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="immobilier.html">Immobilier</a>
                     <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary pl-3" href="a-propos.html">À Propos</a>
-                    <a class="text-primary font-bold font-label-md text-label-md border-l-4 border-accent pl-3" href="contact.html">Contact</a>
+                    <a class="text-primary font-bold font-label-md text-label-md border-l-4 border-secondary pl-3" href="contact.html">Contact</a>
                 </nav>
             </div>
             <a href="contact.html" class="augic-btn-orange block w-full justify-center !py-4 text-center">Demander un devis</a>
@@ -96,7 +96,7 @@
         <!-- Page Hero -->
         <section class="reveal relative h-[50vh] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="assets/images/real/hero.jpg" alt="Grand chantier BTP avec grues" class="w-full h-full object-cover scale-105">
+                <img src="photo/42.jpeg" alt="Parc d'engins et flotte logistique AUGIC" class="w-full h-full object-cover">
                 <div class="absolute inset-0 augic-hero__overlay"></div>
             </div>
             <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
@@ -112,19 +112,12 @@
         </section>
 
         <section class="py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/images/real/chantier-industriel.jpg" alt="Chantier industriel AUGIC" class="w-full h-28 md:h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/images/real/compactage-voirie.jpg" alt="Travaux de voirie" class="w-full h-28 md:h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/images/real/engins-btp.jpg" alt="Parc d'engins" class="w-full h-28 md:h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                </div>
-                <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <img src="assets/images/real/logistique-camion.jpg" alt="Transport lourd" class="w-full h-28 md:h-36 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                </div>
+            <div class="text-center bg-surface-container-low rounded-xl p-8 border border-outline-variant">
+                <p class="font-body-md text-on-surface-variant mb-4">Découvrez l'ensemble de nos photos et vidéos de chantier dans la médiathèque.</p>
+                <a href="a-propos.html#mediatheque" class="inline-flex items-center gap-2 text-primary font-semibold text-sm border-b-2 border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors">
+                    Voir la médiathèque
+                    <span class="material-symbols-outlined !text-lg">collections</span>
+                </a>
             </div>
         </section>
 
@@ -353,10 +346,9 @@
             <div class="lg:col-span-2 space-y-4">
                 <h4 class="font-headline-md text-body-md font-bold text-white uppercase tracking-wider">Chantier Direct</h4>
                 <div class="relative overflow-hidden rounded-lg border border-white/10 aspect-video lg:aspect-square group">
-                    <video class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay muted loop playsinline poster="assets/images/real/logistique-flotte.jpg">
-                        <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
+                    <video class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay muted loop playsinline>
+                        <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
                     </video>
-                    <div class="absolute inset-0 bg-primary/15 pointer-events-none"></div>
                 </div>
             </div>
 
@@ -372,6 +364,7 @@
     </footer>
 
 <!-- Interactive JS File -->
+    <script src="media-manifest.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

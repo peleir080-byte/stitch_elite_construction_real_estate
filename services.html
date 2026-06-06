@@ -61,7 +61,7 @@
                     <a href="index.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Accueil</a>
                     <a href="services.html" class="nav-link active text-primary font-semibold font-label-md text-label-md">Services</a>
                     <a href="projets.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Projets</a>
-                    <a href="immobilier.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
+<a href="immobilier.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Immobilier</a>
                     <a href="a-propos.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">À Propos</a>
                     <a href="contact.html" class="nav-link text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors">Contact</a>
                 </nav>
@@ -100,95 +100,135 @@
 
     <main class="pt-[80px] lg:pt-[120px]">
 
-        <!-- ===== HERO SECTION ===== -->
-        <section class="reveal relative min-h-[55vh] flex items-center overflow-hidden">
+        <!-- ===== HERO ===== -->
+        <section class="reveal relative min-h-[62vh] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img alt="Grand chantier de génie civil et bétonnage" class="w-full h-full object-cover scale-105" src="assets/images/real/structure-beton.jpg"/>
+                <img alt="Chantier BTP et ingénierie — expertise AUGIC" class="w-full h-full object-cover gallery-media-sharp" src="assets/images/hero-services.jpg"/>
                 <div class="absolute inset-0 augic-hero__overlay"></div>
             </div>
-            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-white">
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-white py-16">
                 <div class="max-w-3xl">
-                    <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Notre Expertise</span>
+                    <div class="inline-flex items-center gap-2 bg-black/40 border border-white/20 px-3.5 py-1.5 rounded-full mb-5 text-[11px] font-bold tracking-widest uppercase text-secondary">
+                        <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                        Catalogue d'expertises
+                    </div>
                     <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-shadow-hero text-white">
                         Nos Services &amp; Expertises
                     </h1>
                     <p class="font-body-lg text-body-lg opacity-90 leading-relaxed max-w-2xl">
-                        Des solutions d'ingénierie et de Construction haut de gamme, fondées sur la précision technique, le respect des normes et la recherche constante de l'excellence.
+                        Des solutions d'ingénierie et de construction haut de gamme, fondées sur la précision technique, le respect des normes et la recherche constante de l'excellence.
+                    </p>
+                    <div class="svc-stats-bar">
+                        <div class="svc-stats-bar__item">
+                            <div class="svc-stats-bar__value">5</div>
+                            <div class="svc-stats-bar__label">Pôles métiers</div>
+                        </div>
+                        <div class="svc-stats-bar__item">
+                            <div class="svc-stats-bar__value">250+</div>
+                            <div class="svc-stats-bar__label">Projets livrés</div>
+                        </div>
+                        <div class="svc-stats-bar__item">
+                            <div class="svc-stats-bar__value">3</div>
+                            <div class="svc-stats-bar__label">Pays</div>
+                        </div>
+                        <div class="svc-stats-bar__item">
+                            <div class="svc-stats-bar__value">BIM</div>
+                            <div class="svc-stats-bar__label">Ingénierie intégrée</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SOUS-NAVIGATION STICKY ===== -->
+        <div class="svc-subnav-wrap">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <nav class="svc-subnav" id="svcSubnav" aria-label="Navigation des expertises">
+                    <a href="#batiments" class="is-active"><span class="material-symbols-outlined">domain</span> Bâtiments</a>
+                    <a href="#genie-civil"><span class="material-symbols-outlined">engineering</span> Génie civil</a>
+                    <a href="#routes"><span class="material-symbols-outlined">edit_road</span> Routes &amp; VRD</a>
+                    <a href="#vente-immobiliere"><span class="material-symbols-outlined">home_work</span> Immobilier</a>
+                    <a href="#etudes-techniques"><span class="material-symbols-outlined">architecture</span> Études &amp; BIM</a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- ===== INTRO ===== -->
+        <section class="reveal bg-white py-16 border-b border-outline-variant/30">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="svc-intro">
+                    <span class="augic-tag">Pourquoi AUGIC</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-5">Un interlocuteur unique pour l'ensemble de la chaîne BTP</h2>
+                    <div class="accent-line mx-auto mt-4"></div>
+                    <p class="font-body-md text-on-surface-variant mt-6 leading-relaxed">
+                        De la conception à la réception, nos équipes coordonnent gros œuvre, infrastructures, promotion immobilière et études techniques. Chaque expertise dispose de ses propres moyens — engins, bureau d'études, flotte logistique — pour garantir autonomie et maîtrise des délais.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- ===== SERVICE 1 : BÂTIMENTS ===== -->
-        <section id="batiments" class="reveal bg-white py-20 border-b border-outline-variant/30 scroll-mt-24">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <!-- Texte -->
-                    <div class="order-2 md:order-1">
-                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Architecture &amp; Construction</span>
-                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 leading-tight">Construction de bâtiments de prestige</h2>
-                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
-                            <p>De la villa d'architecte minimaliste aux complexes immobiliers résidentiels et commerciaux d'envergure, AUGIC réalise des projets qui repoussent les limites de la Construction moderne.</p>
+        <section id="batiments" class="svc-panel reveal bg-white py-section-gap border-b border-outline-variant/30">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+                <span class="svc-panel__index" aria-hidden="true">01</span>
+                <div class="svc-panel__inner">
+                    <div class="svc-panel__content">
+                        <span class="svc-panel__tag"><span class="material-symbols-outlined !text-base">domain</span> Architecture &amp; Construction</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-5 leading-tight">Construction de bâtiments de prestige</h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 leading-relaxed">
+                            <p>De la villa d'architecte minimaliste aux complexes immobiliers résidentiels et commerciaux d'envergure, AUGIC réalise des projets qui repoussent les limites de la construction moderne.</p>
                             <p>Nous prenons en charge la phase de gros œuvre ainsi que le second œuvre avec une attention méticuleuse portée aux finitions. Nos conceptions intègrent des solutions de domotique avancée, d'efficacité énergétique et des matériaux nobles pour garantir durabilité et esthétique.</p>
                         </div>
-                        <ul class="space-y-3 font-body-md text-on-surface-variant font-medium">
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Immeubles de bureaux intelligents (Smart Buildings)
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Villas résidentielles contemporaines clés en main
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Rénovations lourdes et extensions structurelles
-                            </li>
+                        <div class="svc-panel__chips">
+                            <span class="svc-chip"><span class="material-symbols-outlined">apartment</span> Smart Buildings</span>
+                            <span class="svc-chip"><span class="material-symbols-outlined">villa</span> Villas clés en main</span>
+                            <span class="svc-chip"><span class="material-symbols-outlined">construction</span> Extensions structurelles</span>
+                        </div>
+                        <ul class="svc-checklist mt-8">
+                            <li><span class="material-symbols-outlined">check_circle</span> Immeubles de bureaux intelligents (Smart Buildings)</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Villas résidentielles contemporaines clés en main</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Rénovations lourdes et extensions structurelles</li>
                         </ul>
                     </div>
-                    <!-- Image -->
-                    <div class="order-1 md:order-2 group">
-                        <div class="relative overflow-hidden rounded-xl border border-outline-variant/40 shadow-lg">
-                            <img src="assets/images/real/chantier-industriel.jpg" alt="Coulage de dallage industriel — Construction AUGIC" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
-                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                    <div class="svc-panel__visual">
+                        <div class="svc-panel__frame">
+                            <img src="photo/38.jpeg" alt="Fondations et gros œuvre — bâtiment public en construction" class="gallery-media-sharp" loading="lazy"/>
+                            <span class="svc-panel__badge">Gros œuvre</span>
                         </div>
+                        <div class="svc-panel__frame-accent" aria-hidden="true"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===== SERVICE 2 : GÉNIE CIVIL ===== -->
-        <section id="genie-civil" class="reveal bg-background py-20 border-b border-outline-variant/30 scroll-mt-24">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <!-- Image -->
-                    <div class="group">
-                        <div class="relative overflow-hidden rounded-xl border border-outline-variant/40 shadow-lg">
-                            <img src="assets/images/real/structure-beton.jpg" alt="Ouvrage béton armé en cours de construction" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
-                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+        <section id="genie-civil" class="svc-panel svc-panel--reverse reveal bg-background py-section-gap border-b border-outline-variant/30">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+                <span class="svc-panel__index" aria-hidden="true">02</span>
+                <div class="svc-panel__inner">
+                    <div class="svc-panel__visual">
+                        <div class="svc-panel__frame">
+                            <img src="photo/23.jpeg" alt="Ouvrage béton armé courbe — structure en cours" class="gallery-media-sharp" loading="lazy"/>
+                            <span class="svc-panel__badge">Structures complexes</span>
                         </div>
+                        <div class="svc-panel__frame-accent" aria-hidden="true"></div>
                     </div>
-                    <!-- Texte -->
-                    <div>
-                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Ingénierie Structure</span>
-                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 leading-tight">Génie civil &amp; Ouvrages d'art</h2>
-                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+                    <div class="svc-panel__content">
+                        <span class="svc-panel__tag"><span class="material-symbols-outlined !text-base">engineering</span> Ingénierie Structure</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-5 leading-tight">Génie civil &amp; Ouvrages d'art</h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 leading-relaxed">
                             <p>Le bureau d'études structures de AUGIC élabore des conceptions techniques de haute précision, rigoureusement conformes aux Eurocodes et aux normes de construction internationales.</p>
                             <p>Nous encadrons la réalisation de structures complexes nécessitant une technicité hors pair : fondations spéciales (pieux, micro-pieux), radiers monumentaux, soutènements de grande hauteur, pylônes et réservoirs industriels en béton armé ou en charpente métallique.</p>
                         </div>
-                        <ul class="space-y-3 font-body-md text-on-surface-variant font-medium">
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Études de béton armé et calculs de structures complexes (BIM)
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Fondations profondes et ouvrages de soutènement
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Ponts, passerelles et structures industrielles lourdes
-                            </li>
+                        <div class="svc-panel__chips">
+                            <span class="svc-chip"><span class="material-symbols-outlined">foundation</span> Fondations profondes</span>
+                            <span class="svc-chip"><span class="material-symbols-outlined">bridge</span> Ouvrages d'art</span>
+                            <span class="svc-chip"><span class="material-symbols-outlined">view_in_ar</span> Calculs BIM</span>
+                        </div>
+                        <ul class="svc-checklist mt-8">
+                            <li><span class="material-symbols-outlined">check_circle</span> Études de béton armé et calculs de structures complexes (BIM)</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Fondations profondes et ouvrages de soutènement</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Ponts, passerelles et structures industrielles lourdes</li>
                         </ul>
                     </div>
                 </div>
@@ -196,75 +236,67 @@
         </section>
 
         <!-- ===== SERVICE 3 : ROUTES ===== -->
-        <section id="routes" class="reveal bg-white py-20 border-b border-outline-variant/30 scroll-mt-24">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <!-- Texte -->
-                    <div class="order-2 md:order-1">
-                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Travaux Publics</span>
-                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 leading-tight">Infrastructures routières &amp; voiries</h2>
-                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+        <section id="routes" class="svc-panel reveal bg-white py-section-gap border-b border-outline-variant/30">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+                <span class="svc-panel__index" aria-hidden="true">03</span>
+                <div class="svc-panel__inner">
+                    <div class="svc-panel__content">
+                        <span class="svc-panel__tag"><span class="material-symbols-outlined !text-base">edit_road</span> Travaux Publics</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-5 leading-tight">Infrastructures routières &amp; voiries</h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 leading-relaxed">
                             <p>La connectivité et le désenclavement exigent des infrastructures routières de premier ordre. AUGIC dispose du matériel lourd et de l'expertise géotechnique pour mener à bien des chantiers routiers majeurs.</p>
                             <p>De l'étude de sol préliminaire aux terrassements généraux, nous réalisons la pose d'enrobés bitumineux de haute résistance, le pavage de voiries urbaines, ainsi que les réseaux divers d'assainissement (VRD) indispensables à la longévité des voies.</p>
                         </div>
-                        <ul class="space-y-3 font-body-md text-on-surface-variant font-medium">
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Routes nationales, pistes de désenclavement et voies express
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Voiries et Réseaux Divers (VRD) et évacuation des eaux pluviales
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Aménagements urbains, pavages et trottoirs
-                            </li>
+                        <div class="svc-panel__chips">
+                            <span class="svc-chip"><span class="material-symbols-outlined">route</span> Routes nationales</span>
+                            <span class="svc-chip"><span class="material-symbols-outlined">water_drop</span> VRD &amp; assainissement</span>
+                            <span class="svc-chip"><span class="material-symbols-outlined">landscape</span> Aménagements urbains</span>
+                        </div>
+                        <ul class="svc-checklist mt-8">
+                            <li><span class="material-symbols-outlined">check_circle</span> Routes nationales, pistes de désenclavement et voies express</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Voiries et Réseaux Divers (VRD) et évacuation des eaux pluviales</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Aménagements urbains, pavages et trottoirs</li>
                         </ul>
                     </div>
-                    <!-- Image -->
-                    <div class="order-1 md:order-2 group">
-                        <div class="relative overflow-hidden rounded-xl border border-outline-variant/40 shadow-lg">
-                            <img src="assets/images/real/compactage-voirie.jpg" alt="Compactage de plateforme routière" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
-                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                    <div class="svc-panel__visual">
+                        <div class="svc-panel__frame">
+                            <img src="photo/43.jpeg" alt="Compactage de plateforme routière avec rouleau compresseur" class="gallery-media-sharp" loading="lazy"/>
+                            <span class="svc-panel__badge">Travaux publics</span>
                         </div>
+                        <div class="svc-panel__frame-accent" aria-hidden="true"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===== SERVICE 4 : PROMOTION IMMOBILIÈRE ===== -->
-        <section id="vente-immobiliere" class="reveal bg-background py-20 border-b border-outline-variant/30 scroll-mt-24">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <!-- Image -->
-                    <div class="group">
-                        <div class="relative overflow-hidden rounded-xl border border-outline-variant/40 shadow-lg">
-                            <img src="assets/images/real/batiment-public.jpg" alt="Bâtiment public — promotion et Construction" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
-                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+        <section id="vente-immobiliere" class="svc-panel svc-panel--reverse reveal bg-background py-section-gap border-b border-outline-variant/30">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+                <span class="svc-panel__index" aria-hidden="true">04</span>
+                <div class="svc-panel__inner">
+                    <div class="svc-panel__visual">
+                        <div class="svc-panel__frame">
+                            <img src="assets/images/immobilier-prestige-interieur.jpg" alt="Salon contemporain haut de gamme — résidence de prestige AUGIC" class="gallery-media-sharp" loading="lazy"/>
+                            <span class="svc-panel__badge">Résidence de prestige</span>
                         </div>
+                        <div class="svc-panel__frame-accent" aria-hidden="true"></div>
                     </div>
-                    <!-- Texte -->
-                    <div>
-                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">Promotion Immobilière</span>
-                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 leading-tight">Promotion &amp; Vente immobilière de prestige</h2>
-                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+                    <div class="svc-panel__content">
+                        <span class="svc-panel__tag"><span class="material-symbols-outlined !text-base">home_work</span> Promotion Immobilière</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-5 leading-tight">Promotion &amp; Vente immobilière de prestige</h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 leading-relaxed">
                             <p>En tant que promoteur immobilier de référence, AUGIC conçoit et commercialise des programmes résidentiels d'exception dans les quartiers les plus recherchés.</p>
                             <p>Nos villas et appartements allient architecture avant-gardiste, confort haut de gamme et conformité légale absolue (titres fonciers sécurisés). Nous proposons un accompagnement sur mesure, du plan à la remise des clés.</p>
                         </div>
-                        <ul class="space-y-3 font-body-md text-on-surface-variant font-medium">
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Villas d'architectes haut de gamme et manoirs
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Penthouses de luxe avec panoramas d'exception
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Parcelles viabilisées dans des copropriétés sécurisées
-                            </li>
+                        <div class="svc-panel__chips">
+                            <span class="svc-chip"><span class="material-symbols-outlined">real_estate_agent</span> Programmes résidentiels</span>
+                            <span class="svc-chip"><span class="material-symbols-outlined">key</span> Clés en main</span>
+                            <span class="svc-chip"><span class="material-symbols-outlined">gavel</span> Titres sécurisés</span>
+                        </div>
+                        <ul class="svc-checklist mt-8">
+                            <li><span class="material-symbols-outlined">check_circle</span> Villas d'architectes haut de gamme et manoirs</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Penthouses de luxe avec panoramas d'exception</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Parcelles viabilisées dans des copropriétés sécurisées</li>
                         </ul>
                     </div>
                 </div>
@@ -272,77 +304,132 @@
         </section>
 
         <!-- ===== SERVICE 5 : ÉTUDES TECHNIQUES ===== -->
-        <section id="etudes-techniques" class="reveal bg-white py-20 border-b border-outline-variant/30 scroll-mt-24">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <!-- Texte -->
-                    <div class="order-2 md:order-1">
-                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-4">BIM &amp; Conception</span>
-                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6 leading-tight">Études techniques &amp; Modélisation</h2>
-                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 mb-8 leading-relaxed">
+        <section id="etudes-techniques" class="svc-panel reveal bg-white py-section-gap border-b border-outline-variant/30">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
+                <span class="svc-panel__index" aria-hidden="true">05</span>
+                <div class="svc-panel__inner">
+                    <div class="svc-panel__content">
+                        <span class="svc-panel__tag"><span class="material-symbols-outlined !text-base">architecture</span> BIM &amp; Conception</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-5 leading-tight">Études techniques &amp; Modélisation</h2>
+                        <div class="font-body-md text-body-md text-on-surface-variant space-y-4 leading-relaxed">
                             <p>La réussite d'un ouvrage haut de gamme commence par des études de conception rigoureuses. Notre équipe d'ingénieurs et de dessinateurs réalise des études techniques approfondies et des modélisations en 3D.</p>
                             <p>Grâce à la méthodologie BIM (Building Information Modeling), nous créons des jumeaux numériques des ouvrages pour optimiser l'agencement des réseaux, simuler le comportement structurel et planifier avec exactitude le déroulement du chantier.</p>
                         </div>
-                        <ul class="space-y-3 font-body-md text-on-surface-variant font-medium">
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Modélisation BIM 3D et détection de conflits
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Calculs réglementaires de structure, fluides et thermique
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <span class="material-symbols-outlined text-primary">check_circle</span>
-                                Audits de conformité technique et expertises géotechniques
-                            </li>
+                        <div class="svc-panel__chips">
+                            <span class="svc-chip"><span class="material-symbols-outlined">3d_rotation</span> Modélisation 3D</span>
+                            <span class="svc-chip"><span class="material-symbols-outlined">rule</span> Calculs réglementaires</span>
+                            <span class="svc-chip"><span class="material-symbols-outlined">fact_check</span> Audits techniques</span>
+                        </div>
+                        <ul class="svc-checklist mt-8">
+                            <li><span class="material-symbols-outlined">check_circle</span> Modélisation BIM 3D et détection de conflits</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Calculs réglementaires de structure, fluides et thermique</li>
+                            <li><span class="material-symbols-outlined">check_circle</span> Audits de conformité technique et expertises géotechniques</li>
                         </ul>
                     </div>
-                    <!-- Image -->
-                    <div class="order-1 md:order-2 group">
-                        <div class="relative overflow-hidden rounded-xl border border-outline-variant/40 shadow-lg">
-                            <img src="assets/images/real/equipe-chantier.jpg" alt="Équipe d'ingénieurs AUGIC réalisant des études techniques" class="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105"/>
-                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300"></div>
+                    <div class="svc-panel__visual">
+                        <div class="svc-panel__frame">
+                            <img src="photo/29.jpeg" alt="Fondations et ferraillage — études structurelles sur chantier" class="gallery-media-sharp" loading="lazy"/>
+                            <span class="svc-panel__badge">BIM &amp; études</span>
                         </div>
+                        <div class="svc-panel__frame-accent" aria-hidden="true"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== GALERIE & VIDÉOS CHANTIER ===== -->
+        <!-- ===== MÉTHODOLOGIE ===== -->
+        <section class="reveal bg-background py-section-gap border-b border-outline-variant/30">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                    <div>
+                        <span class="augic-tag">Notre méthode</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-5">Comment nous menons vos projets</h2>
+                        <div class="accent-line mt-4"></div>
+                        <p class="font-body-md text-on-surface-variant mt-6 leading-relaxed">
+                            Chaque mission suit un processus structuré, de l'étude de faisabilité à la réception des ouvrages. Nos ingénieurs et chefs de chantier assurent un suivi rigoureux à chaque étape.
+                        </p>
+                    </div>
+                    <div class="svc-method-band">
+                        <ol class="method-steps">
+                            <li>
+                                <h4>Étude &amp; faisabilité</h4>
+                                <p>Analyse géotechnique, dimensionnement, planning et chiffrage détaillé avant engagement.</p>
+                            </li>
+                            <li>
+                                <h4>Conception &amp; ingénierie</h4>
+                                <p>Plans d'exécution, modélisation BIM et validation technique par nos ingénieurs.</p>
+                            </li>
+                            <li>
+                                <h4>Exécution terrain</h4>
+                                <p>Mobilisation des engins, contrôle des matériaux et respect des normes HSE.</p>
+                            </li>
+                            <li>
+                                <h4>Réception &amp; garantie</h4>
+                                <p>Procès-verbal, dossier des ouvrages exécutés et accompagnement post-livraison.</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ENGAGEMENTS ===== -->
+        <section class="reveal bg-white py-section-gap border-b border-outline-variant/30">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-12">
+                    <span class="augic-tag">Nos engagements</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-5">Standards de qualité sur tous nos chantiers</h2>
+                    <div class="accent-line mx-auto mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="pro-pillar">
+                        <div class="pro-pillar__icon"><span class="material-symbols-outlined">health_and_safety</span></div>
+                        <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Sécurité &amp; HSE</h3>
+                        <p class="font-body-md text-on-surface-variant text-sm leading-relaxed">Protocoles de sécurité, EPI obligatoires, briefings quotidiens et zéro tolérance sur les risques majeurs.</p>
+                    </div>
+                    <div class="pro-pillar">
+                        <div class="pro-pillar__icon"><span class="material-symbols-outlined">verified</span></div>
+                        <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Qualité &amp; conformité</h3>
+                        <p class="font-body-md text-on-surface-variant text-sm leading-relaxed">Contrôle des matériaux, essais de compactage, vérification du ferraillage et traçabilité des coulages.</p>
+                    </div>
+                    <div class="pro-pillar">
+                        <div class="pro-pillar__icon"><span class="material-symbols-outlined">schedule</span></div>
+                        <h3 class="font-headline-md text-body-lg font-bold text-primary mb-2">Respect des délais</h3>
+                        <p class="font-body-md text-on-surface-variant text-sm leading-relaxed">Planning détaillé, reporting hebdomadaire et mobilisation de notre flotte logistique propre.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== MÉDIAS CHANTIER ===== -->
         <section class="reveal py-section-gap bg-background">
             <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
                 <div class="text-center mb-12">
                     <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Médias</span>
-                    <div class="accent-line mx-auto mt-3 mb-0"></div>
+                    <div class="accent-line mx-auto mt-3"></div>
                     <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-6">Nos chantiers en images et vidéos</h2>
+                    <p class="font-body-md text-on-surface-variant max-w-xl mx-auto mt-4">Terrassement, bétonnage, logistique lourde — retrouvez l'ensemble de nos visuels dans la médiathèque.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-                    <video class="w-full rounded-xl aspect-video object-cover bg-black shadow-md hover:shadow-xl transition-shadow duration-300" controls playsinline preload="metadata" poster="assets/images/real/engins-btp.jpg">
-                        <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
-                    </video>
-                    <video class="w-full rounded-xl aspect-video object-cover bg-black shadow-md hover:shadow-xl transition-shadow duration-300" controls playsinline preload="metadata" poster="assets/images/real/logistique-flotte.jpg">
-                        <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
-                    </video>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="assets/images/real/engins-btp.jpg" alt="Engins de terrassement" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                <div class="svc-media-band">
+                    <div class="svc-media-band__videos">
+                        <video controls playsinline preload="metadata">
+                            <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
+                        </video>
+                        <video controls playsinline preload="metadata">
+                            <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
+                        </video>
                     </div>
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="assets/images/real/genie-civil.jpg" alt="Préfabrication béton" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="assets/images/real/logistique-flotte.jpg" alt="Flotte logistique" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="assets/images/real/parc-camions.jpg" alt="Parc de camions" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="assets/images/real/hall-industriel.jpg" alt="Hall industriel" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
-                    </div>
-                    <div class="overflow-hidden rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <img src="assets/images/real/grue-levage.jpg" alt="Grue de levage" class="w-full h-32 object-cover transition-transform duration-500 hover:scale-105 cursor-zoom-in"/>
+                    <div class="svc-media-strip">
+                        <a href="galerie.html"><img src="photo/9.jpeg" alt="Engins de terrassement" loading="lazy"/></a>
+                        <a href="galerie.html"><img src="photo/20.jpeg" alt="Préfabrication béton — anneaux" loading="lazy"/></a>
+                        <a href="galerie.html"><img src="photo/42.jpeg" alt="Flotte logistique AUGIC" loading="lazy"/></a>
+                        <a href="galerie.html"><img src="photo/40.jpeg" alt="Semi-remorque logistique lourde" loading="lazy"/></a>
+                        <a href="galerie.html"><img src="photo/13.jpeg" alt="Dallage industriel de nuit" loading="lazy"/></a>
+                        <a href="galerie.html"><img src="photo/41.jpeg" alt="Transport de matériaux lourds" loading="lazy"/></a>
+                        <a href="galerie.html" class="svc-media-strip__cta">
+                            Voir toute la médiathèque
+                            <span class="material-symbols-outlined !text-lg">arrow_forward</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -530,10 +617,9 @@
             <div class="lg:col-span-2 space-y-4">
                 <h4 class="font-headline-md text-body-md font-bold text-white uppercase tracking-wider">Chantier Direct</h4>
                 <div class="relative overflow-hidden rounded-lg border border-white/10 aspect-video lg:aspect-square group">
-                    <video class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay muted loop playsinline poster="assets/images/real/logistique-flotte.jpg">
-                        <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
+                    <video class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay muted loop playsinline>
+                        <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
                     </video>
-                    <div class="absolute inset-0 bg-primary/15 pointer-events-none"></div>
                 </div>
             </div>
 
@@ -550,6 +636,7 @@
     </footer>
 
     <!-- Interactive JS File -->
+    <script src="media-manifest.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

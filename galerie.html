@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link rel="icon" href="assets/images/logo.png" type="image/png"/>
+    <title>Médiathèque chantiers | AUGIC</title>
+    <meta name="description" content="Médiathèque AUGIC — archives photos et vidéos de nos chantiers BTP et génie civil au Togo.">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="tailwind-theme.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="win-gallery-page bg-[#0c0c0c] text-white antialiased">
+
+    <header class="win-gallery-topbar">
+        <div class="win-gallery-topbar__inner">
+            <a href="a-propos.html" class="win-gallery-back">
+                <span class="material-symbols-outlined !text-xl">arrow_back</span>
+                À Propos
+            </a>
+            <nav class="win-gallery-breadcrumb" aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a>
+                <span class="material-symbols-outlined !text-sm opacity-50">chevron_right</span>
+                <a href="a-propos.html">À Propos</a>
+                <span class="material-symbols-outlined !text-sm opacity-50">chevron_right</span>
+                <span>Médiathèque</span>
+            </nav>
+            <a href="index.html" class="win-gallery-logo">
+                <img src="assets/images/logo.png" alt="AUGIC" class="h-8 w-auto"/>
+            </a>
+        </div>
+    </header>
+
+    <div class="win-gallery-shell">
+        <aside class="win-gallery-sidebar">
+            <div class="win-gallery-sidebar__head">
+                <span class="material-symbols-outlined !text-3xl text-secondary">collections</span>
+                <div>
+                    <h1 class="font-headline-md text-lg font-bold tracking-tight">Médiathèque chantiers</h1>
+                    <p id="mediaCountSummary" class="text-xs text-white/50 mt-1"></p>
+                </div>
+            </div>
+            <p class="win-gallery-sidebar__desc">
+                Archives visuelles de nos opérations terrain — engins, structures, équipes et livraisons. Sélectionnez un média dans la bande inférieure ou parcourez la collection.
+            </p>
+            <div class="win-gallery-filters" role="tablist">
+                <button type="button" data-gallery-filter="all" class="is-active" role="tab">Tout</button>
+                <button type="button" data-gallery-filter="photos" role="tab">Photos</button>
+                <button type="button" data-gallery-filter="videos" role="tab">Vidéos</button>
+            </div>
+            <div class="win-gallery-sidebar__meta">
+                <div class="win-gallery-meta-item">
+                    <span class="material-symbols-outlined !text-lg text-secondary">location_on</span>
+                    <span>Togo · Afrique de l'Ouest</span>
+                </div>
+                <div class="win-gallery-meta-item">
+                    <span class="material-symbols-outlined !text-lg text-secondary">engineering</span>
+                    <span>BTP · Génie civil · VRD</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="win-gallery-stage">
+            <div class="win-gallery-viewer" id="winGalleryViewer">
+                <p class="win-gallery-placeholder">Chargement de la collection…</p>
+            </div>
+            <div class="win-gallery-toolbar">
+                <button type="button" id="winGalleryPrev" class="win-gallery-nav-btn" aria-label="Précédent">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <div class="win-gallery-toolbar__center">
+                    <p id="winGalleryTitle" class="win-gallery-title">—</p>
+                    <p id="winGalleryCounter" class="win-gallery-counter">—</p>
+                </div>
+                <button type="button" id="winGalleryNext" class="win-gallery-nav-btn" aria-label="Suivant">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <footer class="win-gallery-filmstrip-wrap">
+        <div id="winGalleryFilmstrip" class="win-gallery-filmstrip" role="listbox" aria-label="Miniatures"></div>
+    </footer>
+
+    <script src="media-manifest.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

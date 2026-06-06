@@ -2,6 +2,19 @@
  * AUGIC BTP & IMMOBILIER - Client-side Interactive Scripting (Tailwind Edition)
  */
 
+const media = window.AUGIC_MEDIA || { photos: [], videos: [] };
+const REAL_SITE_PHOTOS = media.photos;
+const REAL_SITE_VIDEOS = media.videos;
+const encodeMediaUrl = (path) => {
+    if (!path) return '';
+    return path.split('/').map((part) => encodeURIComponent(part)).join('/');
+};
+
+const escAttr = (str) => String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;');
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const siteHeader = document.getElementById('siteHeader');
@@ -112,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'villa-horizon': {
             title: 'Hall Industriel — Dallage béton',
             category: 'Bâtiment / Industriel',
-            image: 'assets/images/real/chantier-industriel.jpg',
+            image: 'photo/14.jpeg',
             desc1: 'Réalisation du dallage béton armé d\'un hall industriel sous structure métallique. Coulage, nivellement et finition de plus de 1 200 m² de plateforme en conditions de chantier actif.',
             desc2: 'Coordination des équipes de coffrage, ferraillage et pompage béton avec respect des délais et contrôle qualité à chaque phase de cure.',
             client: 'Industriel privé',
@@ -123,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'autoroute-est': {
             title: 'Compactage plateforme voirie',
             category: 'Routes & Voiries',
-            image: 'assets/images/real/compactage-voirie.jpg',
+            image: 'photo/43.jpeg',
             desc1: 'Terrassement et compactage de plateforme routière avec rouleau compresseur. Préparation du sol de fondation pour voirie et ouvrages de drainage en zone tropicale.',
             desc2: 'Suivi des taux de compactage, contrôle des couches de remblai et coordination des engins de terrassement sur l\'ensemble du linéaire.',
             client: 'Collectivité / État',
@@ -134,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'onyx-tower': {
             title: 'Ouvrage béton armé — Structure courbe',
             category: 'Génie civil / Ouvrage',
-            image: 'assets/images/real/structure-beton.jpg',
+            image: 'photo/23.jpeg',
             desc1: 'Construction d\'un ouvrage en béton armé avec structure courbe : ferraillage dense, coffrage bois et coulage progressif sous supervision d\'ingénieurs sur site.',
             desc2: 'Maîtrise des phases de mise en place du ferraillage, du bétonnage et du décoffrage dans un environnement de chantier exigeant.',
             client: 'Maître d\'ouvrage public',
@@ -145,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'pont-lagune': {
             title: 'Préfabrication — Anneaux béton',
             category: 'Génie Civil / Infrastructure',
-            image: 'assets/images/real/genie-civil.jpg',
+            image: 'photo/20.jpeg',
             desc1: 'Fabrication sur site d\'anneaux en béton préfabriqué pour ouvrages d\'assainissement et infrastructures hydrauliques. Mise en œuvre des moules, ferraillage et coulage en série.',
             desc2: 'Organisation de la zone de préfabrication, gestion des matériaux (ciment, granulats) et contrôle dimensionnel des pièces avant pose.',
             client: 'Projet infrastructure',
@@ -156,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'prestige-marina': {
             title: 'Parc engins & logistique lourde',
             category: 'Équipements / Logistique',
-            image: 'assets/images/real/engins-btp.jpg',
+            image: 'photo/42.jpeg',
             desc1: 'Mobilisation de notre parc d\'engins de terrassement (bulldozers Liugong, niveleuses, camions bennes) pour grands travaux de plateforme et déblaiement.',
             desc2: 'Gestion logistique des flux matériaux, maintenance des engins et sécurité des opérateurs sur site industriel.',
             client: 'AUGIC — Parc interne',
@@ -403,20 +416,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================================================
-    // 9. Hero Background Slideshow (index.html)
+    // 9. Carrousels premium (accueil, à propos, galerie)
     // ==========================================================================
-    const initHeroSlideshow = () => {
-        const slidesContainer = document.getElementById('heroSlides');
-        if (!slidesContainer) return;
+    const initAugicCarousel = (root) => {
+        const stage = root.querySelector('.augic-carousel__stage');
+        if (!stage) return;
 
-        const slides = slidesContainer.querySelectorAll('.hero-slide');
+        const slides = [...stage.querySelectorAll('.augic-carousel__slide')];
         if (slides.length === 0) return;
+
+        const tagEl = root.querySelector('.augic-carousel__tag');
+        const labelEl = root.querySelector('.augic-carousel__label');
+        const progressBar = root.querySelector('.augic-carousel__progress span');
+        const dotsWrap = root.querySelector('.augic-carousel__dots');
+        const prevBtn = root.querySelector('.augic-carousel__arrow--prev');
+        const nextBtn = root.querySelector('.augic-carousel__arrow--next');
+        const autoplay = root.getAttribute('data-autoplay') !== 'false';
 
         let currentIdx = 0;
         let slideTimeout = null;
+        let progressInterval = null;
+        let slideStart = 0;
+        let slideDuration = 6000;
 
-        const showSlide = (index) => {
-            // Stop previous video if any
+        if (dotsWrap) {
+            dotsWrap.innerHTML = slides.map((_, i) =>
+                `<button type="button" class="augic-carousel__dot${i === 0 ? ' is-active' : ''}" data-index="${i}" aria-label="Slide ${i + 1}" role="tab"></button>`
+            ).join('');
+        }
+
+        const clearTimers = () => {
+            clearTimeout(slideTimeout);
+            clearInterval(progressInterval);
+            slideTimeout = null;
+            progressInterval = null;
+        };
+
+        const updateProgress = () => {
+            if (!progressBar) return;
+            const elapsed = Date.now() - slideStart;
+            const pct = Math.min(100, (elapsed / slideDuration) * 100);
+            progressBar.style.width = `${pct}%`;
+        };
+
+        const scheduleNext = (duration) => {
+            slideDuration = duration;
+            slideStart = Date.now();
+            if (progressBar) progressBar.style.width = '0%';
+            clearInterval(progressInterval);
+            progressInterval = setInterval(updateProgress, 80);
+            clearTimeout(slideTimeout);
+            slideTimeout = setTimeout(() => goTo((currentIdx + 1) % slides.length), duration);
+        };
+
+        const goTo = (index) => {
+            clearTimers();
+
             const prevSlide = slides[currentIdx];
             if (prevSlide) {
                 const prevVideo = prevSlide.querySelector('video');
@@ -424,57 +479,237 @@ document.addEventListener('DOMContentLoaded', () => {
                     prevVideo.pause();
                     prevVideo.currentTime = 0;
                 }
-                prevSlide.classList.remove('opacity-100');
-                prevSlide.classList.add('opacity-0');
+                prevSlide.classList.remove('is-active');
             }
 
             currentIdx = index;
             const activeSlide = slides[currentIdx];
-            activeSlide.classList.remove('opacity-0');
-            activeSlide.classList.add('opacity-100');
+            slides.forEach((s) => s.classList.remove('is-active'));
+            activeSlide.classList.add('is-active');
+
+            if (tagEl) tagEl.textContent = activeSlide.getAttribute('data-tag') || '';
+            if (labelEl) labelEl.textContent = activeSlide.getAttribute('data-label') || '';
+
+            dotsWrap?.querySelectorAll('.augic-carousel__dot').forEach((dot, i) => {
+                dot.classList.toggle('is-active', i === currentIdx);
+            });
 
             const slideType = activeSlide.getAttribute('data-type');
-            const customDuration = activeSlide.getAttribute('data-duration');
+            const customDuration = parseInt(activeSlide.getAttribute('data-duration'), 10) || 6000;
 
             if (slideType === 'video') {
                 const video = activeSlide.querySelector('video');
                 if (video) {
-                    video.play().catch(err => console.log("Video play interrupted:", err));
-                    
-                    // Transition when video ends
-                    const onVideoEnded = () => {
-                        video.removeEventListener('ended', onVideoEnded);
-                        nextSlide();
+                    video.play().catch(() => {});
+                    const onEnded = () => {
+                        video.removeEventListener('ended', onEnded);
+                        if (autoplay) goTo((currentIdx + 1) % slides.length);
                     };
-                    video.addEventListener('ended', onVideoEnded);
-
-                    // Safety fallback timeout in case it stalls or loops internally
-                    clearTimeout(slideTimeout);
-                    slideTimeout = setTimeout(() => {
-                        video.removeEventListener('ended', onVideoEnded);
-                        nextSlide();
-                    }, parseInt(customDuration) || 20000);
+                    video.addEventListener('ended', onEnded);
+                    scheduleNext(customDuration || 20000);
                 } else {
-                    clearTimeout(slideTimeout);
-                    slideTimeout = setTimeout(nextSlide, 5000);
+                    scheduleNext(5000);
                 }
-            } else {
-                // Image slide: transition after duration
-                const duration = parseInt(customDuration) || 6000;
-                clearTimeout(slideTimeout);
-                slideTimeout = setTimeout(nextSlide, duration);
+            } else if (autoplay) {
+                scheduleNext(customDuration);
             }
         };
 
-        const nextSlide = () => {
-            const nextIdx = (currentIdx + 1) % slides.length;
-            showSlide(nextIdx);
-        };
+        prevBtn?.addEventListener('click', () => {
+            goTo((currentIdx - 1 + slides.length) % slides.length);
+        });
+        nextBtn?.addEventListener('click', () => {
+            goTo((currentIdx + 1) % slides.length);
+        });
+        dotsWrap?.addEventListener('click', (e) => {
+            const dot = e.target.closest('.augic-carousel__dot');
+            if (!dot) return;
+            goTo(parseInt(dot.getAttribute('data-index'), 10));
+        });
 
-        // Start with first slide
-        showSlide(0);
+        goTo(0);
     };
 
-    initHeroSlideshow();
+    document.querySelectorAll('.augic-carousel').forEach((carousel) => {
+        if (carousel.id !== 'aboutGalleryPreview') {
+            initAugicCarousel(carousel);
+        }
+    });
+
+    // ==========================================================================
+    // 10. Compteur médiathèque (À Propos / galerie)
+    // ==========================================================================
+    const mediaCountEl = document.getElementById('mediaCountSummary');
+    if (mediaCountEl) {
+        mediaCountEl.textContent = `${REAL_SITE_PHOTOS.length} photos · ${REAL_SITE_VIDEOS.length} vidéos`;
+    }
+
+    // ==========================================================================
+    // 12. Médiathèque style Photos (galerie.html) — visionneuse + filmstrip
+    // ==========================================================================
+    const initWinGallery = () => {
+        const viewer = document.getElementById('winGalleryViewer');
+        const filmstrip = document.getElementById('winGalleryFilmstrip');
+        const counterEl = document.getElementById('winGalleryCounter');
+        const titleEl = document.getElementById('winGalleryTitle');
+        const prevBtn = document.getElementById('winGalleryPrev');
+        const nextBtn = document.getElementById('winGalleryNext');
+        if (!viewer || !filmstrip) return;
+
+        const photoItems = REAL_SITE_PHOTOS.map((p) => ({ ...p, type: 'image', label: p.alt }));
+        const videoItems = REAL_SITE_VIDEOS.map((v) => ({ ...v, type: 'video', label: v.title }));
+        let allItems = [...videoItems, ...photoItems];
+        let items = [...allItems];
+        let current = 0;
+
+        const pauseViewerMedia = () => {
+            const vid = viewer.querySelector('video');
+            if (vid) { vid.pause(); }
+        };
+
+        const renderViewer = (index) => {
+            if (!items.length) {
+                viewer.innerHTML = '<p class="win-gallery-placeholder">Aucun média dans cette collection.</p>';
+                return;
+            }
+            current = (index + items.length) % items.length;
+            const item = items[current];
+            const src = encodeMediaUrl(item.src);
+            const label = escAttr(item.label || item.alt || item.title);
+
+            pauseViewerMedia();
+            if (item.type === 'video') {
+                viewer.innerHTML = `<video class="gallery-media-sharp win-gallery-viewer__media" controls playsinline preload="metadata" autoplay><source src="${src}" type="video/mp4"></video>`;
+            } else {
+                viewer.innerHTML = `<img src="${src}" alt="${label}" class="gallery-media-sharp win-gallery-viewer__media">`;
+            }
+
+            if (titleEl) titleEl.textContent = item.label || item.alt || item.title || '';
+            if (counterEl) counterEl.textContent = `${current + 1} / ${items.length}`;
+
+            filmstrip.querySelectorAll('.win-gallery-thumb').forEach((thumb, i) => {
+                thumb.classList.toggle('is-active', i === current);
+                if (i === current) thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            });
+        };
+
+        const renderFilmstrip = () => {
+            filmstrip.innerHTML = items.map((item, i) => {
+                const src = encodeMediaUrl(item.src);
+                const isVideo = item.type === 'video';
+                const inner = isVideo
+                    ? `<video muted playsinline preload="metadata" class="win-gallery-thumb__media"><source src="${src}" type="video/mp4"></video><span class="win-gallery-thumb__badge material-symbols-outlined">play_circle</span>`
+                    : `<img src="${src}" alt="" loading="lazy" class="win-gallery-thumb__media">`;
+                return `<button type="button" class="win-gallery-thumb${i === current ? ' is-active' : ''}" data-index="${i}" aria-label="Média ${i + 1}">${inner}</button>`;
+            }).join('');
+
+            filmstrip.querySelectorAll('.win-gallery-thumb').forEach((thumb) => {
+                thumb.addEventListener('click', () => renderViewer(parseInt(thumb.dataset.index, 10)));
+            });
+        };
+
+        const applyFilter = (filter) => {
+            pauseViewerMedia();
+            if (filter === 'photos') items = [...photoItems];
+            else if (filter === 'videos') items = [...videoItems];
+            else items = [...allItems];
+            current = 0;
+            renderFilmstrip();
+            renderViewer(0);
+        };
+
+        if (prevBtn) prevBtn.addEventListener('click', () => renderViewer(current - 1));
+        if (nextBtn) nextBtn.addEventListener('click', () => renderViewer(current + 1));
+
+        document.addEventListener('keydown', (e) => {
+            if (!document.getElementById('winGalleryViewer')) return;
+            if (e.key === 'ArrowLeft') renderViewer(current - 1);
+            if (e.key === 'ArrowRight') renderViewer(current + 1);
+        });
+
+        document.querySelectorAll('.win-gallery-filters [data-gallery-filter]').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.win-gallery-filters [data-gallery-filter]').forEach((b) => b.classList.remove('is-active'));
+                btn.classList.add('is-active');
+                applyFilter(btn.getAttribute('data-gallery-filter'));
+            });
+        });
+
+        renderFilmstrip();
+        renderViewer(0);
+    };
+
+    initWinGallery();
+
+    // ==========================================================================
+    // 13. Sous-navigation Services (scroll spy)
+    // ==========================================================================
+    const svcSubnav = document.getElementById('svcSubnav');
+    if (svcSubnav) {
+        const links = [...svcSubnav.querySelectorAll('a[href^="#"]')];
+        const sections = links
+            .map((a) => document.querySelector(a.getAttribute('href')))
+            .filter(Boolean);
+
+        const setActive = (id) => {
+            links.forEach((link) => {
+                link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+            });
+        };
+
+        const spy = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) setActive(entry.target.id);
+            });
+        }, { rootMargin: '-40% 0px -45% 0px', threshold: 0 });
+
+        sections.forEach((section) => spy.observe(section));
+    }
+
+    // ==========================================================================
+    // 14. Aperçu médiathèque (a-propos.html)
+    // ==========================================================================
+    const aboutPreview = document.getElementById('aboutGalleryPreview');
+    if (aboutPreview) {
+        const previewPhotos = [
+            { src: 'photo/43.jpeg', tag: 'Voiries', label: 'Compactage de plateformes routières' },
+            { src: 'photo/13.jpeg', tag: 'Industriel', label: 'Dallage de halls — coulage de nuit' },
+            { src: 'photo/23.jpeg', tag: 'Structures', label: 'Ouvrages béton armé complexes' },
+            { src: 'photo/42.jpeg', tag: 'Logistique', label: 'Flotte d\'engins et camions AUGIC' },
+            { src: 'photo/20.jpeg', tag: 'Préfabrication', label: 'Anneaux et éléments béton' },
+            { src: 'photo/40.jpeg', tag: 'Transport', label: 'Semi-remorques et levage lourd' },
+        ];
+        aboutPreview.innerHTML = `
+            <div class="augic-carousel__stage">
+                ${previewPhotos.map((p) => `
+                    <div class="augic-carousel__slide" data-type="image" data-duration="4500" data-tag="${escAttr(p.tag)}" data-label="${escAttr(p.label)}">
+                        <div class="augic-carousel__media">
+                            <img src="${encodeMediaUrl(p.src)}" alt="${escAttr(p.label)}" loading="lazy"/>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="augic-carousel__chrome">
+                <div class="augic-carousel__caption">
+                    <span class="augic-carousel__tag"></span>
+                    <span class="augic-carousel__label"></span>
+                </div>
+                <div class="augic-carousel__progress" aria-hidden="true"><span></span></div>
+                <div class="augic-carousel__controls">
+                    <button type="button" class="augic-carousel__arrow augic-carousel__arrow--prev" aria-label="Photo précédente">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <div class="augic-carousel__dots" role="tablist"></div>
+                    <button type="button" class="augic-carousel__arrow augic-carousel__arrow--next" aria-label="Photo suivante">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            <a href="galerie.html" class="absolute top-3 right-3 z-20 inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-secondary text-primary hover:brightness-110 transition-all shadow-lg">
+                Tout voir <span class="material-symbols-outlined !text-sm">arrow_forward</span>
+            </a>
+        `;
+        initAugicCarousel(aboutPreview);
+    }
 });
 
