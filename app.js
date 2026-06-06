@@ -484,6 +484,26 @@ document.addEventListener('DOMContentLoaded', () => {
             ).join('');
         }
 
+        slides.forEach((slide) => {
+            const video = slide.querySelector('video');
+            if (!video) return;
+            video.muted = true;
+            video.loop = true;
+            video.setAttribute('playsinline', '');
+            video.setAttribute('webkit-playsinline', '');
+            video.preload = 'auto';
+        });
+
+        const playCarouselVideo = (video) => {
+            if (!video) return;
+            video.muted = true;
+            video.loop = true;
+            const promise = video.play();
+            if (promise && typeof promise.catch === 'function') {
+                promise.catch(() => {});
+            }
+        };
+
         const clearTimers = () => {
             clearTimeout(slideTimeout);
             clearInterval(progressInterval);
@@ -539,19 +559,18 @@ document.addEventListener('DOMContentLoaded', () => {
             if (slideType === 'video') {
                 const video = activeSlide.querySelector('video');
                 if (video) {
-                    video.play().catch(() => {});
-                    const onEnded = () => {
-                        video.removeEventListener('ended', onEnded);
-                        if (autoplay) goTo((currentIdx + 1) % slides.length);
-                    };
-                    video.addEventListener('ended', onEnded);
-                    scheduleNext(customDuration || 20000);
-                } else {
+                    playCarouselVideo(video);
+                    if (autoplay) scheduleNext(customDuration || 14000);
+                } else if (autoplay) {
                     scheduleNext(5000);
                 }
             } else if (autoplay) {
                 scheduleNext(customDuration);
             }
+
+            const nextIdx = (currentIdx + 1) % slides.length;
+            const nextVideo = slides[nextIdx]?.querySelector('video');
+            if (nextVideo && nextVideo.readyState < 2) nextVideo.load();
         };
 
         prevBtn?.addEventListener('click', () => {
