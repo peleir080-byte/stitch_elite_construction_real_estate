@@ -96,46 +96,18 @@
     <main class="pt-[80px] lg:pt-[120px]">
 
         <!-- ═══════════════════════════════════════════════
-             HERO SECTION
+             HERO SECTION — vidéo chantier en boucle continue
         ═══════════════════════════════════════════════ -->
-        <section class="augic-carousel augic-carousel--hero relative min-h-[88vh] overflow-hidden" id="homeHeroCarousel" data-autoplay="true">
-            <div class="augic-carousel__stage absolute inset-0 z-0 bg-black">
-                <div class="augic-carousel__slide" data-type="video" data-duration="18000" data-tag="Chantier filmé" data-label="Coulage et gros œuvre en direct">
-                    <div class="augic-carousel__media">
-                        <video class="hero-media-sharp" muted playsinline preload="auto">
-                            <source src="assets/videos/chantier-03.mp4" type="video/mp4"/>
-                        </video>
-                    </div>
-                </div>
-                <div class="augic-carousel__slide" data-type="video" data-duration="18000" data-tag="Terrain" data-label="Mobilisation d'engins et équipes">
-                    <div class="augic-carousel__media">
-                        <video class="hero-media-sharp" muted playsinline preload="auto">
-                            <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
-                        </video>
-                    </div>
-                </div>
-                <div class="augic-carousel__slide" data-type="image" data-duration="7000" data-tag="Ingénierie" data-label="Expertise BTP et infrastructures majeures">
-                    <div class="augic-carousel__media">
-                        <img src="assets/images/hero-services.jpg" alt="Chantier BTP AUGIC" class="hero-media-sharp"/>
-                    </div>
-                </div>
-                <div class="augic-carousel__slide" data-type="video" data-duration="16000" data-tag="Réalisations" data-label="Nos opérations sur le terrain">
-                    <div class="augic-carousel__media">
-                        <video class="hero-media-sharp" muted playsinline preload="auto">
-                            <source src="photo/video-3.mp4" type="video/mp4"/>
-                        </video>
-                    </div>
-                </div>
-                <div class="augic-carousel__slide" data-type="image" data-duration="7000" data-tag="Immobilier" data-label="Promotion immobilière de prestige">
-                    <div class="augic-carousel__media">
-                        <img src="assets/images/hero-immobilier.jpg" alt="Résidence de prestige AUGIC" class="hero-media-sharp"/>
-                    </div>
-                </div>
+        <section class="augic-hero augic-hero--video relative min-h-[88vh] overflow-hidden" id="homeHero">
+            <div class="augic-hero__stage absolute inset-0 z-0 bg-black">
+                <video id="homeHeroVideo" class="augic-hero__video hero-media-sharp" autoplay muted loop playsinline preload="auto" data-loop-video>
+                    <source src="photo/video-2.mp4" type="video/mp4"/>
+                </video>
             </div>
-            <div class="augic-carousel__vivid-overlay augic-hero__overlay"></div>
-            <div class="augic-carousel__frame" aria-hidden="true"></div>
+            <div class="augic-carousel__vivid-overlay augic-hero__overlay absolute inset-0 z-[1]"></div>
+            <div class="augic-carousel__frame absolute inset-0 z-[4]" aria-hidden="true"></div>
 
-            <div class="augic-carousel__content relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-white">
+            <div class="augic-hero__content relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-white">
                 <div class="max-w-3xl">
                     <div class="augic-carousel__live-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-6 text-[11px] font-bold font-label-md tracking-widest uppercase animate-float">
                         <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
@@ -157,20 +129,10 @@
                 </div>
             </div>
 
-            <div class="augic-carousel__chrome">
-                <div class="augic-carousel__caption">
-                    <span class="augic-carousel__tag"></span>
-                    <span class="augic-carousel__label"></span>
-                </div>
-                <div class="augic-carousel__progress" aria-hidden="true"><span></span></div>
-                <div class="augic-carousel__controls">
-                    <button type="button" class="augic-carousel__arrow augic-carousel__arrow--prev" aria-label="Slide précédent">
-                        <span class="material-symbols-outlined">chevron_left</span>
-                    </button>
-                    <div class="augic-carousel__dots" role="tablist" aria-label="Slides du carrousel"></div>
-                    <button type="button" class="augic-carousel__arrow augic-carousel__arrow--next" aria-label="Slide suivant">
-                        <span class="material-symbols-outlined">chevron_right</span>
-                    </button>
+            <div class="augic-hero__live-strip relative z-10">
+                <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                    <span class="augic-hero__live-tag">Chantier filmé</span>
+                    <span class="augic-hero__live-label">Coulage et gros œuvre en direct sur nos opérations</span>
                 </div>
             </div>
         </section>
@@ -308,8 +270,8 @@
                 </div>
                 <div class="featured-realisations">
                     <div class="featured-realisations__media rounded-xl overflow-hidden shadow-xl border border-outline-variant/60">
-                        <video class="w-full h-full min-h-[280px] md:min-h-[360px] object-cover gallery-media-sharp" muted playsinline preload="metadata" controls>
-                            <source src="photo/video-3.mp4" type="video/mp4"/>
+                        <video class="w-full h-full min-h-[280px] md:min-h-[360px] object-cover gallery-media-sharp" autoplay muted loop playsinline preload="auto" data-loop-video>
+                            <source src="photo/video-5.mp4" type="video/mp4"/>
                         </video>
                         <span class="featured-realisations__badge">Chantier filmé</span>
                     </div>

@@ -17,6 +17,45 @@ const escAttr = (str) => String(str || '')
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ==========================================================================
+    // Vidéos en boucle — lecture continue (hero, réalisations, footer…)
+    // ==========================================================================
+    const initLoopVideos = () => {
+        const videos = document.querySelectorAll('video[data-loop-video], video[autoplay][loop]');
+        videos.forEach((video) => {
+            video.muted = true;
+            video.setAttribute('playsinline', '');
+            video.setAttribute('webkit-playsinline', '');
+
+            const tryPlay = () => {
+                const promise = video.play();
+                if (promise && typeof promise.catch === 'function') {
+                    promise.catch(() => {});
+                }
+            };
+
+            tryPlay();
+            video.addEventListener('loadeddata', tryPlay, { once: true });
+            video.addEventListener('canplay', tryPlay, { once: true });
+            video.addEventListener('ended', () => {
+                video.currentTime = 0;
+                tryPlay();
+            });
+
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden && video.paused) tryPlay();
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && video.paused) tryPlay();
+                });
+            }, { threshold: 0.15 });
+            observer.observe(video);
+        });
+    };
+    initLoopVideos();
+
     const siteHeader = document.getElementById('siteHeader');
     if (siteHeader) {
         const onScroll = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 20);
