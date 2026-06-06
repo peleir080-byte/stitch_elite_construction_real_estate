@@ -93,184 +93,236 @@
     </div>
 
     <main class="pt-[80px] lg:pt-[120px]">
-        <!-- Page Hero -->
-        <section class="reveal relative h-[50vh] flex items-center overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <img src="photo/42.jpeg" alt="Parc d'engins et flotte logistique AUGIC" class="w-full h-full object-cover">
-                <div class="absolute inset-0 augic-hero__overlay"></div>
+
+        <!-- Hero -->
+        <section class="augic-carousel augic-carousel--hero augic-carousel--compact reveal relative min-h-[52vh] overflow-hidden" id="contactHeroCarousel" data-autoplay="true">
+            <div class="augic-carousel__stage absolute inset-0 z-0 bg-black">
+                <div class="augic-carousel__slide" data-type="image" data-duration="6000" data-tag="Contact" data-label="Parlez à nos ingénieurs — réponse sous 24h">
+                    <div class="augic-carousel__media">
+                        <img src="assets/images/hero-services.jpg" alt="Chantier AUGIC" class="hero-media-sharp"/>
+                    </div>
+                </div>
+                <div class="augic-carousel__slide" data-type="image" data-duration="6000" data-tag="Équipes" data-label="Bureaux à Lomé, Abidjan et Kigali">
+                    <div class="augic-carousel__media">
+                        <img src="photo/42.jpeg" alt="Flotte AUGIC" class="hero-media-sharp"/>
+                    </div>
+                </div>
+                <div class="augic-carousel__slide" data-type="image" data-duration="6000" data-tag="Projets" data-label="Devis BTP, génie civil et immobilier">
+                    <div class="augic-carousel__media">
+                        <img src="photo/38.jpeg" alt="Bâtiment en construction" class="hero-media-sharp"/>
+                    </div>
+                </div>
             </div>
-            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
+            <div class="augic-carousel__vivid-overlay augic-hero__overlay"></div>
+            <div class="augic-carousel__frame" aria-hidden="true"></div>
+
+            <div class="augic-carousel__content relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-white">
                 <div class="max-w-3xl">
+                    <div class="augic-carousel__live-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-5 text-[11px] font-bold tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        Contactez AUGIC
+                    </div>
                     <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-shadow-hero">
-                        Parlons de votre projet
+                        Parlons de votre <span class="text-secondary">projet</span>
                     </h1>
-                    <p class="font-body-lg text-body-lg opacity-90 leading-relaxed max-w-2xl">
-                        Que vous ayez un projet de Construction d'immeuble, de voiries d'envergure ou d'acquisition d'une villa de prestige, nos équipes vous répondent sous 24h.
+                    <p class="font-body-lg text-body-lg text-slate-100 leading-relaxed max-w-2xl">
+                        Construction, voiries, génie civil ou immobilier de prestige — nos équipes vous répondent sous 24 heures ouvrées.
                     </p>
+                </div>
+            </div>
+
+            <div class="augic-carousel__chrome">
+                <div class="augic-carousel__caption">
+                    <span class="augic-carousel__tag"></span>
+                    <span class="augic-carousel__label"></span>
+                </div>
+                <div class="augic-carousel__progress" aria-hidden="true"><span></span></div>
+                <div class="augic-carousel__controls">
+                    <button type="button" class="augic-carousel__arrow augic-carousel__arrow--prev" aria-label="Slide précédent">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <div class="augic-carousel__dots" role="tablist"></div>
+                    <button type="button" class="augic-carousel__arrow augic-carousel__arrow--next" aria-label="Slide suivant">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <section class="py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="text-center bg-surface-container-low rounded-xl p-8 border border-outline-variant">
-                <p class="font-body-md text-on-surface-variant mb-4">Découvrez l'ensemble de nos photos et vidéos de chantier dans la médiathèque.</p>
-                <a href="a-propos.html#mediatheque" class="inline-flex items-center gap-2 text-primary font-semibold text-sm border-b-2 border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors">
-                    Voir la médiathèque
-                    <span class="material-symbols-outlined !text-lg">collections</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Contact Channels & Form -->
-        <section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-                
-                <!-- Left: Offices Channels -->
-                <div class="reveal space-y-8">
-                    <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block">Nos implantations</span>
-                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-2">Nos bureaux régionaux</h2>
-                    <p class="font-body-lg text-body-md text-on-surface-variant leading-relaxed mb-8">
-                        AUGIC s'est déployée dans des zones économiques stratégiques d'Afrique pour être au plus proche de vos chantiers et opportunités immobilières.
-                    </p>
-                    
-                    <div class="flex flex-col gap-6">
-                        <!-- Office 1: Lome HQ -->
-                        <div class="bg-white border border-outline-variant p-6 rounded hover:shadow-lg transition-shadow duration-300">
-                            <h3 class="font-headline-md text-body-lg font-bold text-primary flex items-center gap-2 mb-3">
-                                <svg viewBox="0 0 24 24" class="w-5 h-5 fill-secondary"><path d="M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2M12,4A5,5 0 0,1 17,9C17,12.24 13.6,17.59 12,19.4C10.41,17.59 7,12.24 7,9A5,5 0 0,1 12,4M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6Z"/></svg>
-                                Siège Principal — Lomé, Togo
-                            </h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-4">
-                                Boulevard du 13 Janvier, Quartier Dekon. BP 1245, Lomé.<br>
-                                Tél : +228 22 00 00 00 / WhatsApp : +228 90 00 00 00<br>
-                                E-mail : lome@AUGIC-btp.com
-                            </p>
-                            <a href="https://wa.me/22890000000" target="_blank" rel="noopener noreferrer" class="text-secondary font-label-md text-label-md hover:underline flex items-center gap-1">
-                                Nous écrire sur WhatsApp &rarr;
-                            </a>
+        <!-- Bandeau contact rapide -->
+        <section class="reveal contact-quick-band">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="contact-quick-grid">
+                    <a href="tel:+22822210000" class="contact-quick-item">
+                        <span class="contact-quick-item__icon"><span class="material-symbols-outlined">phone</span></span>
+                        <div>
+                            <span class="contact-quick-item__label">Téléphone</span>
+                            <span class="contact-quick-item__value">+228 22 21 00 00</span>
                         </div>
-
-                        <!-- Office 2: Abidjan -->
-                        <div class="bg-white border border-outline-variant p-6 rounded hover:shadow-lg transition-shadow duration-300">
-                            <h3 class="font-headline-md text-body-lg font-bold text-primary flex items-center gap-2 mb-3">
-                                <svg viewBox="0 0 24 24" class="w-5 h-5 fill-secondary"><path d="M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2M12,4A5,5 0 0,1 17,9C17,12.24 13.6,17.59 12,19.4C10.41,17.59 7,12.24 7,9A5,5 0 0,1 12,4M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6Z"/></svg>
-                                Filiale Côte d'Ivoire — Abidjan
-                            </h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                                Immeuble CCIA, Plateau Center, Abidjan.<br>
-                                Tél : +225 27 00 00 00 / +225 07 00 00 00<br>
-                                E-mail : abidjan@AUGIC-btp.com
-                            </p>
+                    </a>
+                    <a href="mailto:contact@augic.com" class="contact-quick-item">
+                        <span class="contact-quick-item__icon"><span class="material-symbols-outlined">mail</span></span>
+                        <div>
+                            <span class="contact-quick-item__label">E-mail</span>
+                            <span class="contact-quick-item__value">contact@augic.com</span>
                         </div>
-
-                        <!-- Office 3: Kigali -->
-                        <div class="bg-white border border-outline-variant p-6 rounded hover:shadow-lg transition-shadow duration-300">
-                            <h3 class="font-headline-md text-body-lg font-bold text-primary flex items-center gap-2 mb-3">
-                                <svg viewBox="0 0 24 24" class="w-5 h-5 fill-secondary"><path d="M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2M12,4A5,5 0 0,1 17,9C17,12.24 13.6,17.59 12,19.4C10.41,17.59 7,12.24 7,9A5,5 0 0,1 12,4M12,6A3,3 0 0,0 9,9A3,3 0 0,0 12,12A3,3 0 0,0 15,9A3,3 0 0,0 12,6Z"/></svg>
-                                Bureau Afrique de l'Est — Kigali, Rwanda
-                            </h3>
-                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                                Century Park, Nyarutarama Road, Kigali.<br>
-                                Tél : +250 788 000 000<br>
-                                E-mail : kigali@AUGIC-btp.com
-                            </p>
+                    </a>
+                    <a href="https://wa.me/22822210000" target="_blank" rel="noopener noreferrer" class="contact-quick-item">
+                        <span class="contact-quick-item__icon"><span class="material-symbols-outlined">chat</span></span>
+                        <div>
+                            <span class="contact-quick-item__label">WhatsApp</span>
+                            <span class="contact-quick-item__value">Écrire maintenant</span>
+                        </div>
+                    </a>
+                    <div class="contact-quick-item contact-quick-item--static">
+                        <span class="contact-quick-item__icon"><span class="material-symbols-outlined">schedule</span></span>
+                        <div>
+                            <span class="contact-quick-item__label">Délai de réponse</span>
+                            <span class="contact-quick-item__value">Sous 24 h ouvrées</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Right: Advanced inquiry form -->
-                <div class="bg-white p-10 border border-outline-variant shadow-lg hover:shadow-xl transition-shadow duration-300 rounded reveal">
-                    <form id="contactForm" class="space-y-6">
-                        <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase block mb-1">Formulaire de demande</span>
-                        <h2 class="font-headline-lg text-2xl text-primary font-bold mb-6">Demander une consultation d'experts</h2>
-                        
-                        <div class="space-y-2">
-                            <label for="formName" class="block font-label-md text-caption text-outline mb-1">Nom complet</label>
-                            <input type="text" id="formName" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all placeholder:text-surface-variant font-body-md text-on-surface" placeholder="Ex: Jean Koffi" required>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label for="formPhone" class="block font-label-md text-caption text-outline mb-1">Téléphone</label>
-                                <input type="tel" id="formPhone" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all placeholder:text-surface-variant font-body-md text-on-surface" placeholder="Ex: +228 90 00 00 00" required>
-                            </div>
-                            <div class="space-y-2">
-                                <label for="formEmail" class="block font-label-md text-caption text-outline mb-1">E-mail</label>
-                                <input type="email" id="formEmail" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all placeholder:text-surface-variant font-body-md text-on-surface" placeholder="Ex: jean@gmail.com" required>
-                            </div>
-                        </div>
-                        
-                        <div class="space-y-2">
-                            <label for="formService" class="block font-label-md text-caption text-outline mb-1">Service concerné</label>
-                            <select id="formService" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all text-on-surface-variant font-body-md" required>
-                                <option value="" class="text-on-surface">Sélectionnez une expertise...</option>
-                                <option value="batiment" class="text-on-surface">Construction de bâtiments</option>
-                                <option value="routes" class="text-on-surface">Infrastructures routières</option>
-                                <option value="genie" class="text-on-surface">Bureau d'études Génie Civil</option>
-                                <option value="immobilier" class="text-on-surface">Achat immobilier de prestige</option>
-                                <option value="suivi" class="text-on-surface">Contrôle technique et suivi de chantier</option>
-                            </select>
-                        </div>
-
-                        <div class="space-y-2">
-                            <label for="formBudget" class="block font-label-md text-caption text-outline mb-1">Budget prévisionnel (USD)</label>
-                            <select id="formBudget" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all text-on-surface-variant font-body-md" required>
-                                <option value="" class="text-on-surface">Sélectionnez une tranche...</option>
-                                <option value="inf100" class="text-on-surface">Moins de 100 000 $</option>
-                                <option value="100-300" class="text-on-surface">100 000 $ - 300 000 $</option>
-                                <option value="300-600" class="text-on-surface">300 000 $ - 600 000 $</option>
-                                <option value="sup600" class="text-on-surface">Plus de 600 000 $</option>
-                            </select>
-                        </div>
-                        
-                        <div class="space-y-2">
-                            <label for="formMessage" class="block font-label-md text-caption text-outline mb-1">Description du projet</label>
-                            <textarea id="formMessage" rows="4" class="w-full border-0 border-b border-outline-variant bg-transparent py-3 focus:ring-0 focus:border-primary transition-all placeholder:text-surface-variant font-body-md text-on-surface" placeholder="Décrivez succinctement les dimensions du terrain, le type de structure ou vos objectifs..." required></textarea>
-                            <button type="submit" class="augic-btn-orange w-full justify-center py-4">
-                            Envoyer le cahier des charges
-                        </button>
-                    </form>
-                </div>
-
+        <!-- Bureaux + Formulaire -->
+        <section class="reveal py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="text-center mb-14">
+                <span class="augic-tag">Nous joindre</span>
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mt-5">Bureaux &amp; demande de consultation</h2>
+                <div class="accent-line mx-auto mt-4"></div>
             </div>
 
-            <!-- Footprint Map (SVG Interactive) -->
-            <div class="reveal mt-20 relative bg-primary rounded overflow-hidden border border-outline-variant shadow-lg h-[450px] flex items-center justify-center">
-                <div class="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
-                
-                <!-- Simple high-end stylised SVG map of Africa (lines connecting offices) -->
-                <svg class="w-full max-w-[400px] h-auto z-10" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Network paths -->
-                    <path d="M120 180 L 180 200 L 300 240 L 120 180 Z" stroke="#FD8B00" stroke-width="1.5" stroke-dasharray="4 4" fill="none" opacity="0.6"/>
-                    <path d="M120 180 L 130 90 L 180 200" stroke="#FD8B00" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.4"/>
-                    
-                    <!-- Dakar Office node -->
-                    <circle cx="70" cy="140" r="4" fill="#FFFFFF"/>
-                    <circle cx="70" cy="140" r="10" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
-                    <text x="50" y="125" fill="#FFFFFF" font-size="10" font-family="Montserrat" font-weight="700">Dakar (SN)</text>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
+                <!-- Bureaux -->
+                <div class="lg:col-span-5 space-y-5">
+                    <article class="contact-office-card contact-office-card--hq">
+                        <span class="contact-office-card__badge">Siège</span>
+                        <div class="contact-office-card__head">
+                            <span class="contact-office-card__icon"><span class="material-symbols-outlined">location_on</span></span>
+                            <h3>Lomé, Togo</h3>
+                        </div>
+                        <p class="contact-office-card__addr">Boulevard du 13 Janvier, Lomé</p>
+                        <div class="contact-office-card__links">
+                            <a href="tel:+22822210000">+228 22 21 00 00</a>
+                            <a href="mailto:contact@augic.com">contact@augic.com</a>
+                        </div>
+                    </article>
 
-                    <!-- Abidjan Office node -->
-                    <circle cx="120" cy="180" r="6" fill="#FD8B00"/>
-                    <circle cx="120" cy="180" r="14" fill="none" stroke="#FD8B00" stroke-width="1" opacity="0.6"/>
-                    <text x="100" y="165" fill="#FFFFFF" font-size="11" font-family="Montserrat" font-weight="700">Abidjan (CI)</text>
+                    <article class="contact-office-card">
+                        <div class="contact-office-card__head">
+                            <span class="contact-office-card__icon"><span class="material-symbols-outlined">location_on</span></span>
+                            <h3>Abidjan, Côte d'Ivoire</h3>
+                        </div>
+                        <p class="contact-office-card__addr">Plateau Center, Abidjan</p>
+                        <div class="contact-office-card__links">
+                            <a href="mailto:abidjan@augic.com">abidjan@augic.com</a>
+                        </div>
+                    </article>
 
-                    <!-- Lome HQ node -->
-                    <circle cx="180" cy="200" r="8" fill="#FD8B00"/>
-                    <circle cx="180" cy="200" r="18" fill="none" stroke="#FD8B00" stroke-width="2">
-                        <animate attributeName="r" values="8;24;8" dur="3s" repeatCount="indefinite" />
-                        <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite" />
-                    </circle>
-                    <text x="195" y="205" fill="#FD8B00" font-size="12" font-family="Montserrat" font-weight="800">Lomé (TG) - Siège</text>
+                    <article class="contact-office-card">
+                        <div class="contact-office-card__head">
+                            <span class="contact-office-card__icon"><span class="material-symbols-outlined">location_on</span></span>
+                            <h3>Kigali, Rwanda</h3>
+                        </div>
+                        <p class="contact-office-card__addr">Nyarutarama Road, Kigali</p>
+                        <div class="contact-office-card__links">
+                            <a href="mailto:kigali@augic.com">kigali@augic.com</a>
+                        </div>
+                    </article>
 
-                    <!-- Kigali Office node -->
-                    <circle cx="300" cy="240" r="6" fill="#FD8B00"/>
-                    <circle cx="300" cy="240" r="14" fill="none" stroke="#FD8B00" stroke-width="1" opacity="0.6"/>
-                    <text x="280" y="225" fill="#FFFFFF" font-size="11" font-family="Montserrat" font-weight="700">Kigali (RW)</text>
-                </svg>
+                    <a href="a-propos.html#mediatheque" class="contact-media-link">
+                        <span class="material-symbols-outlined">collections</span>
+                        Voir nos chantiers en images et vidéos
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
 
-                <div class="absolute bottom-6 left-6 right-6 md:right-auto md:max-w-sm bg-white/10 backdrop-blur-md p-6 border border-white/10 rounded text-white z-20">
-                    <h3 class="font-headline-md text-body-lg font-bold text-secondary-fixed mb-1">Réseau Panafricain AUGIC</h3>
-                    <p class="font-body-md text-caption text-white/80 leading-relaxed">Une synergie d'ingénierie reliant l'Afrique de l'Ouest et de l'Est.</p>
+                <!-- Formulaire -->
+                <div class="lg:col-span-7">
+                    <div class="contact-form-panel reveal">
+                        <div class="contact-form-panel__head">
+                            <span class="augic-tag">Formulaire</span>
+                            <h2 class="font-headline-lg text-2xl text-primary font-bold mt-3">Demander une consultation</h2>
+                            <p class="text-sm text-on-surface-variant mt-2">Décrivez votre projet — un ingénieur AUGIC vous recontacte rapidement.</p>
+                        </div>
+                        <form id="contactForm" class="contact-form-panel__body space-y-5">
+                            <div class="contact-field">
+                                <label for="formName">Nom complet</label>
+                                <input type="text" id="formName" placeholder="Ex : Jean Koffi" required>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div class="contact-field">
+                                    <label for="formPhone">Téléphone</label>
+                                    <input type="tel" id="formPhone" placeholder="Ex : +228 90 00 00 00" required>
+                                </div>
+                                <div class="contact-field">
+                                    <label for="formEmail">E-mail</label>
+                                    <input type="email" id="formEmail" placeholder="Ex : jean@email.com" required>
+                                </div>
+                            </div>
+                            <div class="contact-field">
+                                <label for="formService">Service concerné</label>
+                                <select id="formService" required>
+                                    <option value="">Sélectionnez une expertise…</option>
+                                    <option value="batiment">Construction de bâtiments</option>
+                                    <option value="routes">Infrastructures routières &amp; VRD</option>
+                                    <option value="genie">Génie civil &amp; ouvrages d'art</option>
+                                    <option value="immobilier">Achat immobilier de prestige</option>
+                                    <option value="suivi">Études techniques &amp; suivi de chantier</option>
+                                </select>
+                            </div>
+                            <div class="contact-field">
+                                <label for="formBudget">Budget prévisionnel (USD)</label>
+                                <select id="formBudget" required>
+                                    <option value="">Sélectionnez une tranche…</option>
+                                    <option value="inf100">Moins de 100 000 $</option>
+                                    <option value="100-300">100 000 $ – 300 000 $</option>
+                                    <option value="300-600">300 000 $ – 600 000 $</option>
+                                    <option value="sup600">Plus de 600 000 $</option>
+                                </select>
+                            </div>
+                            <div class="contact-field">
+                                <label for="formMessage">Description du projet</label>
+                                <textarea id="formMessage" rows="4" placeholder="Terrain, type d'ouvrage, délais souhaités…" required></textarea>
+                            </div>
+                            <button type="submit" class="augic-btn-orange w-full justify-center !py-4">
+                                Envoyer ma demande
+                                <span class="material-symbols-outlined !text-lg">send</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Réseau panafricain -->
+        <section class="reveal px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+            <div class="contact-network-map">
+                <div class="contact-network-map__content">
+                    <span class="text-secondary font-label-md text-label-md tracking-[0.2em] uppercase">Présence régionale</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mt-4 mb-3">Réseau AUGIC en Afrique</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed max-w-md mb-6">Trois implantations stratégiques pour accompagner vos projets BTP et immobiliers en Afrique de l'Ouest et de l'Est.</p>
+                    <ul class="contact-network-map__list">
+                        <li><span class="contact-network-map__dot"></span> Lomé — Siège social (Togo)</li>
+                        <li><span class="contact-network-map__dot"></span> Abidjan — Filiale (Côte d'Ivoire)</li>
+                        <li><span class="contact-network-map__dot"></span> Kigali — Bureau (Rwanda)</li>
+                    </ul>
+                </div>
+                <div class="contact-network-map__visual" aria-hidden="true">
+                    <svg viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-sm mx-auto">
+                        <path d="M90 150 L 160 165 L 280 195" stroke="#d4af37" stroke-width="2" stroke-dasharray="6 4" fill="none" opacity="0.7"/>
+                        <circle cx="90" cy="150" r="7" fill="#d4af37"/>
+                        <text x="55" y="135" fill="#fff" font-size="11" font-family="Montserrat" font-weight="600">Abidjan</text>
+                        <circle cx="160" cy="165" r="10" fill="#d4af37"/>
+                        <circle cx="160" cy="165" r="18" fill="none" stroke="#d4af37" stroke-width="1.5" opacity="0.5">
+                            <animate attributeName="r" values="10;22;10" dur="3s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <text x="175" y="170" fill="#d4af37" font-size="12" font-family="Montserrat" font-weight="800">Lomé</text>
+                        <circle cx="280" cy="195" r="7" fill="#d4af37"/>
+                        <text x="250" y="180" fill="#fff" font-size="11" font-family="Montserrat" font-weight="600">Kigali</text>
+                    </svg>
                 </div>
             </div>
         </section>
