@@ -92,10 +92,10 @@
     </div>
 
     <main class="pt-[80px] lg:pt-[120px]">
-        <!-- Hero Section -->
-        <section class="reveal relative h-[50vh] flex items-center overflow-hidden">
+        <!-- ===== HERO SECTION ===== -->
+        <section class="reveal relative min-h-[55vh] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img alt="Parc d'engins et chantiers AUGIC" class="w-full h-full object-cover scale-105" src="assets/images/real/hero.jpg"/>
+                <img alt="Parc d'engins et chantiers AUGIC" class="w-full h-full object-cover scale-105" src="assets/images/real/genie-civil.jpg"/>
                 <div class="absolute inset-0 augic-hero__overlay"></div>
             </div>
             <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full text-on-primary">
@@ -284,8 +284,9 @@
 
     <footer class="augic-footer pt-20 pb-10" role="contentinfo">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+
             <!-- Col 1: Logo & Info & Socials -->
-            <div class="lg:col-span-4 space-y-6">
+            <div class="lg:col-span-3 space-y-6">
                 <a class="inline-block bg-white rounded-lg p-2.5 shadow-sm" href="index.html">
                     <img src="assets/images/logo.png" alt="AUGIC" class="h-10 w-auto object-contain"/>
                 </a>
@@ -314,8 +315,8 @@
                 </ul>
             </div>
 
-            <!-- Col 3: Contact Details & Offices -->
-            <div class="lg:col-span-3 space-y-4">
+            <!-- Col 3: Contact & Bureaux -->
+            <div class="lg:col-span-2 space-y-4">
                 <h4 class="font-headline-md text-body-md font-bold text-white uppercase tracking-wider">Contact &amp; Bureaux</h4>
                 <div class="space-y-3 font-body-md text-caption text-slate-300">
                     <p class="flex items-start gap-2">
@@ -346,6 +347,18 @@
                     <button type="submit" class="w-full bg-secondary hover:bg-secondary/80 text-primary text-xs font-bold uppercase tracking-wider py-2.5 rounded transition-all cursor-pointer">Envoyer</button>
                 </form>
             </div>
+
+            <!-- Col 5: Chantiers en Direct -->
+            <div class="lg:col-span-2 space-y-4">
+                <h4 class="font-headline-md text-body-md font-bold text-white uppercase tracking-wider">Chantier Direct</h4>
+                <div class="relative overflow-hidden rounded-lg border border-white/10 aspect-video lg:aspect-square group">
+                    <video class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" autoplay muted loop playsinline poster="assets/images/real/logistique-flotte.jpg">
+                        <source src="assets/videos/chantier-04.mp4" type="video/mp4"/>
+                    </video>
+                    <div class="absolute inset-0 bg-primary/15 pointer-events-none"></div>
+                </div>
+            </div>
+
         </div>
 
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-400">

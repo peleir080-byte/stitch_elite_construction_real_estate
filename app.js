@@ -401,5 +401,80 @@ document.addEventListener('DOMContentLoaded', () => {
             counterObserver.observe(counter);
         });
     }
+
+    // ==========================================================================
+    // 9. Hero Background Slideshow (index.html)
+    // ==========================================================================
+    const initHeroSlideshow = () => {
+        const slidesContainer = document.getElementById('heroSlides');
+        if (!slidesContainer) return;
+
+        const slides = slidesContainer.querySelectorAll('.hero-slide');
+        if (slides.length === 0) return;
+
+        let currentIdx = 0;
+        let slideTimeout = null;
+
+        const showSlide = (index) => {
+            // Stop previous video if any
+            const prevSlide = slides[currentIdx];
+            if (prevSlide) {
+                const prevVideo = prevSlide.querySelector('video');
+                if (prevVideo) {
+                    prevVideo.pause();
+                    prevVideo.currentTime = 0;
+                }
+                prevSlide.classList.remove('opacity-100');
+                prevSlide.classList.add('opacity-0');
+            }
+
+            currentIdx = index;
+            const activeSlide = slides[currentIdx];
+            activeSlide.classList.remove('opacity-0');
+            activeSlide.classList.add('opacity-100');
+
+            const slideType = activeSlide.getAttribute('data-type');
+            const customDuration = activeSlide.getAttribute('data-duration');
+
+            if (slideType === 'video') {
+                const video = activeSlide.querySelector('video');
+                if (video) {
+                    video.play().catch(err => console.log("Video play interrupted:", err));
+                    
+                    // Transition when video ends
+                    const onVideoEnded = () => {
+                        video.removeEventListener('ended', onVideoEnded);
+                        nextSlide();
+                    };
+                    video.addEventListener('ended', onVideoEnded);
+
+                    // Safety fallback timeout in case it stalls or loops internally
+                    clearTimeout(slideTimeout);
+                    slideTimeout = setTimeout(() => {
+                        video.removeEventListener('ended', onVideoEnded);
+                        nextSlide();
+                    }, parseInt(customDuration) || 20000);
+                } else {
+                    clearTimeout(slideTimeout);
+                    slideTimeout = setTimeout(nextSlide, 5000);
+                }
+            } else {
+                // Image slide: transition after duration
+                const duration = parseInt(customDuration) || 6000;
+                clearTimeout(slideTimeout);
+                slideTimeout = setTimeout(nextSlide, duration);
+            }
+        };
+
+        const nextSlide = () => {
+            const nextIdx = (currentIdx + 1) % slides.length;
+            showSlide(nextIdx);
+        };
+
+        // Start with first slide
+        showSlide(0);
+    };
+
+    initHeroSlideshow();
 });
 
